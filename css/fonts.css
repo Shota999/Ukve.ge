@@ -1,0 +1,48 @@
+@font-face {
+	font-family: 'bpg_gel';
+	src: url('../fonts/-BPG-GEL-v2.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'myriad_geo_bold';
+	src: url('../fonts/MyriadGEOBold.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'myriad_geo_medium';
+	src: url('../fonts/MyriadGEOMedium.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'myriad_geo_mtavruli_bold';
+	src: url('../fonts/MyriadGEOMtavruliBold.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'myriad_geo_mtavruli_medium';
+	src: url('../fonts/MyriadGEOMtavruliMedium.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'myriad_pro_regular';
+	src: url('../fonts/MYRIADPROREGULAR.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'poppins_black';
+	src: url('../fonts/Poppins-Black.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'poppins_bold';
+	src: url('../fonts/Poppins-Bold.ttf');
+	font-weight: normal;
+	font-style: normal;
+}

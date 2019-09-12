@@ -1,0 +1,602 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+
+body header .top_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 56px 139px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+body header .top_header .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .top_header .left span {
+  color: #6D6E71;
+  display: block;
+  font-family: 'myriad_geo_bold';
+  font-size: 14px;
+  margin-left: 16px;
+}
+
+body header .top_header .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .top_header .right a {
+  display: block;
+  color: #c14a68;
+  font-family: 'poppins_black';
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+body header .top_header .right svg {
+  cursor: pointer;
+}
+
+body header .bottom_header {
+  padding: 0 139px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body header .bottom_header h1 {
+  max-width: 104px;
+  max-height: 96px;
+}
+
+body header .bottom_header h1 a {
+  display: block;
+}
+
+body header .bottom_header h1 a img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body header .bottom_header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .bottom_header nav ul li {
+  margin-right: 60px;
+}
+
+body header .bottom_header nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #6d6e71;
+  font-family: "myriad_geo_bold";
+  font-size: 14px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 74px 0;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  position: relative;
+}
+
+body header .bottom_header nav ul li a img {
+  margin-bottom: 16px;
+}
+
+body header .bottom_header nav ul li a:hover {
+  color: #a8a8a8;
+}
+
+body header .bottom_header nav ul li a:hover::before {
+  opacity: 1;
+}
+
+body header .bottom_header nav ul li .active {
+  border-top: 1px solid #c13458;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body header .bottom_header nav ul li .active:hover {
+  color: #6d6e71;
+}
+
+body header .bottom_header nav ul li:last-child {
+  margin-right: 0;
+}
+
+body header .bottom_header .profile_cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .bottom_header .profile_cart .profile {
+  -webkit-box-shadow: 0 30px 30px rgba(240, 240, 240, 0.32);
+          box-shadow: 0 30px 30px rgba(240, 240, 240, 0.32);
+  background-color: #f0f0f0;
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+body header .bottom_header .profile_cart .profile span {
+  color: #6d6e71;
+  font-family: "myriad_geo_bold";
+  font-size: 13px;
+  margin-left: 16px;
+  line-height: 17px;
+}
+
+body header .bottom_header .profile_cart .cart {
+  margin-left: 40px;
+  padding: 16px;
+  cursor: pointer;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 23px;
+  position: relative;
+}
+
+body header .bottom_header .profile_cart .cart .onhover {
+  display: none;
+}
+
+body header .bottom_header .profile_cart .cart:hover {
+  background: #c13458;
+}
+
+body header .bottom_header .profile_cart .cart:hover svg {
+  display: none;
+}
+
+body header .bottom_header .profile_cart .cart:hover .onhover {
+  display: block;
+}
+
+body header .bottom_header .profile_cart .cart span {
+  border-radius: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  top: -5px;
+  right: -10px;
+  width: 25px;
+  height: 25px;
+  background-color: #ffffff;
+  color: #c13458;
+  font-family: "myriad_geo_bold";
+  font-size: 12px;
+}
+
+body .special {
+  padding: 72px 0 72px 139px;
+  padding-top: 356px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .special .top_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 72px;
+}
+
+body .special .top_container svg {
+  padding: 20px;
+  background-color: #c13458;
+  border-radius: 50%;
+}
+
+body .special .top_container p {
+  color: #6d6e71;
+  font-family: "myriad_geo_mtavruli_bold";
+  font-size: 24px;
+  margin-left: 16px;
+  width: 50%;
+}
+
+body .background {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 44px 139px;
+}
+
+body .background h2 {
+  color: #ffffff;
+  font-family: "myriad_geo_mtavruli_bold";
+  font-size: 32px;
+}
+
+body .sushi {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(193, 52, 88, 0.85)), to(rgba(193, 52, 88, 0.85))), url("../images/background_images/sushi_background.png");
+  background-image: linear-gradient(to bottom, rgba(193, 52, 88, 0.85), rgba(193, 52, 88, 0.85)), url("../images/background_images/sushi_background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #c13458;
+  opacity: 0.85;
+}
+
+body .content {
+  margin: 56px 139px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .content .container {
+  border-radius: 11px;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  width: 352px;
+  margin-left: 16px;
+  margin-top: 24px;
+}
+
+body .content .container:first-child {
+  margin-left: 0;
+}
+
+body .content .container .top_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .content .container .top_container .sale {
+  width: 71px;
+  height: 40px;
+  background-color: #c13458;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 11px 0;
+}
+
+body .content .container .top_container .sale span {
+  color: #ffffff;
+  font-family: "myriad_geo_mtavruli_bold";
+  font-size: 14px;
+  display: block;
+  background-color: #c13458;
+}
+
+body .content .container .top_container .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .content .container .top_container .left .choose {
+  width: 32px;
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 12px;
+  border: 2px solid #c13458;
+  margin-right: 16px;
+  cursor: pointer;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body .content .container .top_container .left .choose:hover {
+  background-color: #c13458;
+}
+
+body .content .container .top_container .left .choose:last-child {
+  margin-right: 8px;
+}
+
+body .content .container .image_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .content .container .image_container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 34px 0 75px 0;
+}
+
+body .content .container .image_container a img {
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .content .container .bottom_container {
+  background-color: #c13458;
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .content .container .bottom_container .title_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .content .container .bottom_container .title_price h3 {
+  color: #ffffff;
+  font-family: "myriad_geo_mtavruli_bold";
+  font-size: 13px;
+}
+
+body .content .container .bottom_container .title_price .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+body .content .container .bottom_container .title_price .price del {
+  color: #d8d8d8;
+  font-family: "myriad_geo_bold";
+  font-size: 17px;
+  margin-right: 4px;
+}
+
+body .content .container .bottom_container .title_price .price span {
+  display: block;
+  color: #ffffff;
+  font-family: "bpg_gel";
+  font-size: 24px;
+  font-weight: 700;
+}
+
+body .content .container .bottom_container .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 16px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body .content .container .bottom_container .actions .sauce {
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+  padding: 6px 14px;
+}
+
+body .content .container .bottom_container .actions .sauce p {
+  margin-right: 7px;
+  opacity: 0.64;
+  color: #ffffff;
+  font-family: "myriad_geo_bold";
+  font-size: 12px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body .content .container .bottom_container .actions .sauce:hover p {
+  opacity: 1;
+}
+
+body .content .container .bottom_container .actions .add_cart {
+  border-radius: 20px;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 16px;
+}
+
+body .content .container .bottom_container .actions .add_cart .point {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .content .container .bottom_container .actions .add_cart .point svg {
+  width: 6px;
+  height: 4px;
+  cursor: pointer;
+}
+
+body .content .container .bottom_container .actions .add_cart .point span {
+  display: block;
+  color: #676767;
+  font-family: "myriad_geo_bold";
+  font-size: 16px;
+  margin: 0 16px;
+}
+
+body .content .container .bottom_container .actions .add_cart a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 32px;
+}
+
+body .content .container .bottom_container .actions .add_cart a svg {
+  width: 16px;
+  height: 16px;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,451 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    header {
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        position: fixed;
+        width: 100%;
+        z-index: 99;
+
+        .top_header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 56px 139px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+
+            .left {
+                display: flex;
+                align-items: center;
+
+                span {
+                    color: #6D6E71;
+                    display: block;
+                    font-family: 'myriad_geo_bold';
+                    font-size: 14px;
+                    margin-left: 16px;
+                }
+            }
+
+            .right {
+                display: flex;
+                align-items: center;
+
+                a {
+                    display: block;
+                    color: #c14a68;
+                    font-family: 'poppins_black';
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    margin-right: 40px;
+                    cursor: pointer;
+                }
+
+                svg {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .bottom_header {
+            padding: 0 139px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h1 {
+                max-width: 104px;
+                max-height: 96px;
+
+                a {
+                    display: block;
+
+                    img {
+                        // width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            nav {
+
+                ul {
+                    display: flex;
+                    align-items: center;
+
+                    li {
+                        margin-right: 60px;
+
+                        a {
+                            display: flex;
+                            flex-direction: column;
+                            color: #6d6e71;
+                            font-family: "myriad_geo_bold";
+                            font-size: 14px;
+                            align-items: center;
+                            padding: 74px 0;
+                            transition: .2s ease-in-out;
+                            position: relative;
+
+                            img {
+                                margin-bottom: 16px;
+                            }
+
+                            &:hover {
+                                color: #a8a8a8;
+                            }
+
+                            &:hover::before {
+                                opacity: 1;
+                            }
+                        }
+
+                        .active {
+                            border-top: 1px solid #c13458;
+                            transition: .2s ease-in-out;
+
+                            &:hover {
+                                color: #6d6e71;
+                            }
+                        }
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+
+            .profile_cart {
+                display: flex;
+                align-items: center;
+
+                .profile {
+                    box-shadow: 0 30px 30px rgba(240, 240, 240, 0.32);
+                    background-color: #f0f0f0;
+                    padding: 16px;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    span {
+                        color: #6d6e71;
+                        font-family: "myriad_geo_bold";
+                        font-size: 13px;
+                        margin-left: 16px;
+                        line-height: 17px;
+                    }
+                }
+
+                .cart {
+                    margin-left: 40px;
+                    padding: 16px;
+                    cursor: pointer;
+                    transition: .2s ease-in-out;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 23px;
+                    position: relative;
+
+                    .onhover {
+                        display: none;
+                    }
+
+                    &:hover {
+                        background: #c13458;
+                    }
+
+                    &:hover svg {
+                        display: none;
+                    }
+
+                    &:hover .onhover {
+                        display: block;
+                    }
+
+                    span {
+                        border-radius: 23px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        top: -5px;
+                        right: -10px;
+                        width: 25px;
+                        height: 25px;
+                        background-color: #ffffff;
+                        color: #c13458;
+                        font-family: "myriad_geo_bold";
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .special {
+        padding: 72px 0 72px 139px;
+        padding-top: 356px;
+        display: flex;
+        flex-direction: column;
+
+        .top_container {
+            display: flex;
+            align-items: center;
+            margin-top: 72px;
+
+            svg {
+                padding: 20px;
+                background-color: #c13458;
+                border-radius: 50%;
+            }
+
+            p {
+                color: #6d6e71;
+                font-family: "myriad_geo_mtavruli_bold";
+                font-size: 24px;
+                margin-left: 16px;
+                width: 50%;
+            }
+        }
+    }
+
+    .background {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 44px 139px;
+
+
+        h2 {
+            color: #ffffff;
+            font-family: "myriad_geo_mtavruli_bold";
+            font-size: 32px;
+        }
+    }
+
+    .sushi {
+        background-image:
+            linear-gradient(to bottom, rgba(193, 52, 88, 0.85), rgba(193, 52, 88, 0.85)),
+            url('../images/background_images/sushi_background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #c13458;
+        opacity: 0.85;
+    }
+
+    .content {
+        margin: 56px 139px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .container {
+            border-radius: 11px;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            width: 352px;
+            margin-left: 16px;
+            margin-top: 24px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            .top_container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .sale {
+                    width: 71px;
+                    height: 40px;
+                    background-color: #c13458;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 11px 0;
+
+                    span {
+                        color: #ffffff;
+                        font-family: "myriad_geo_mtavruli_bold";
+                        font-size: 14px;
+                        display: block;
+                        background-color: #c13458;
+                    }
+                }
+
+                .left {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    justify-content: flex-end;
+
+                    .choose {
+                        width: 32px;
+                        height: 32px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 12px;
+                        border: 2px solid #c13458;
+                        margin-right: 16px;
+                        cursor: pointer;
+                        transition: .2s ease-in-out;
+
+                        &:hover {
+                            background-color: #c13458;
+                            ;
+                        }
+
+                        &:last-child {
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+
+            .image_container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                a {
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 34px 0 75px 0;
+
+
+                    img {
+                        width: auto;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .bottom_container {
+                background-color: #c13458;
+                padding: 8px;
+                display: flex;
+                flex-direction: column;
+
+                .title_price {
+                    display: flex;
+
+                    h3 {
+                        color: #ffffff;
+                        font-family: "myriad_geo_mtavruli_bold";
+                        font-size: 13px;
+                    }
+
+                    .price {
+                        display: flex;
+                        align-items: baseline;
+
+                        del {
+                            color: #d8d8d8;
+                            font-family: "myriad_geo_bold";
+                            font-size: 17px;
+                            margin-right: 4px;
+                        }
+
+                        span {
+                            display: block;
+                            color: #ffffff;
+                            font-family: "bpg_gel";
+                            font-size: 24px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                .actions {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 16px;
+                    align-items: flex-end;
+
+                    .sauce {
+                        border-radius: 20px;
+                        border: 2px solid #ffffff;
+                        display: flex;
+                        align-items: center;
+                        transition: .2s ease-in-out;
+                        cursor: pointer;
+                        padding: 6px 14px;
+
+                        p {
+                            margin-right: 7px;
+                            opacity: 0.64;
+                            color: #ffffff;
+                            font-family: "myriad_geo_bold";
+                            font-size: 12px;
+                            transition: .2s ease-in-out;
+                        }
+
+                        &:hover p {
+                            opacity: 1;
+                        }
+                    }
+
+                    .add_cart {
+                        border-radius: 20px;
+                        background-color: #ffffff;
+                        display: flex;
+                        align-items: center;
+                        padding: 10px 16px;
+
+                        .point {
+                            display: flex;
+                            align-items: center;
+
+                            svg {
+                                width: 6px;
+                                height: 4px;
+                                cursor: pointer;
+                            }
+
+                            span {
+                                display: block;
+                                color: #676767;
+                                font-family: "myriad_geo_bold";
+                                font-size: 16px;
+                                margin: 0 16px;
+                            }
+                        }
+
+                        a {
+                            display: flex;
+                            margin-left: 32px;
+
+                            svg {
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
