@@ -1180,13 +1180,7 @@ body .content .drinks .bottom_container .actions {
   margin-top: 0;
 }
 
-body footer {
-  padding: 0 140px;
-  padding-bottom: 10px;
-}
-
-body footer .scroll_top {
-  width: 100%;
+body .scroll_top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1197,9 +1191,10 @@ body footer .scroll_top {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 10px;
+  padding: 0 140px;
 }
 
-body footer .scroll_top svg {
+body .scroll_top svg {
   cursor: pointer;
   padding: 16px 11px;
   border-radius: 20px;
@@ -1207,12 +1202,18 @@ body footer .scroll_top svg {
   transition: .2s ease-in-out;
 }
 
-body footer .scroll_top svg:hover {
+body .scroll_top svg:hover {
   background-color: #c13458;
 }
 
-body footer .scroll_top svg:hover path {
+body .scroll_top svg:hover path {
   fill: #fff;
+}
+
+body footer {
+  padding: 30px 140px;
+  padding-bottom: 10px;
+  background: #fff;
 }
 
 body footer .logo_social {

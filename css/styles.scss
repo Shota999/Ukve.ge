@@ -957,32 +957,33 @@ body {
             }
         }
     }
-
-    footer{
+    .scroll_top{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 10px;
         padding: 0 140px;
-        padding-bottom: 10px;
 
-        .scroll_top{
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            margin-bottom: 10px;
+        svg{
+            cursor: pointer;
+            padding: 16px 11px;
+            border-radius: 20px;
+            transition: .2s ease-in-out;
 
-            svg{
-                cursor: pointer;
-                padding: 16px 11px;
-                border-radius: 20px;
-                transition: .2s ease-in-out;
-
-                &:hover{
-                    background-color: #c13458;
-                }
-                &:hover path{
-                    fill: #fff;
-                }
+            &:hover{
+                background-color: #c13458;
+            }
+            &:hover path{
+                fill: #fff;
             }
         }
+    }
+    footer{
+        padding: 30px 140px;
+        padding-bottom: 10px;
+        background: #fff;
+
+        
         .logo_social{
             display: flex;
             justify-content: space-between;
