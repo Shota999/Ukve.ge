@@ -44,7 +44,7 @@ $(document).ready(function () {
     // Menu Scroll
 
     function scrollNav() {
-        $('.nav a').click(function () {
+        $('.nav a , .drink_button a').click(function () {
             //Toggle Class
             $(".active").toggleClass("active");
             $(this).closest('li').addClass("active");

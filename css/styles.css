@@ -1074,7 +1074,8 @@ body .content .container .bottom_container .actions .more form .radio {
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
   cursor: pointer;
-  margin: 20px 0;
+  border-bottom: 1px solid #f4f4f4;
+  padding: 10px 0 10px 0;
   line-height: 11px;
 }
 
@@ -1092,11 +1093,59 @@ body .content .container .bottom_container .actions .more form .radio:hover {
 }
 
 body .content .container .bottom_container .actions .more form .radio:first-child {
-  margin-top: 0;
+  padding-top: 0;
 }
 
 body .content .container .bottom_container .actions .more form .radio:last-child {
   margin-bottom: 0;
+}
+
+body .content .container .bottom_container .actions .more form .radio input[type="radio"] {
+  display: none;
+}
+
+body .content .container .bottom_container .actions .more form .radio label {
+  position: relative;
+  display: block;
+  padding-left: 19px;
+}
+
+body .content .container .bottom_container .actions .more form .radio label::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #c13458;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+body .content .container .bottom_container .actions .more form .radio label::after {
+  content: "";
+  display: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 0;
+  background-color: #6d6e71;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+body .content .container .bottom_container .actions .more form .radio input[type="radio"]:checked + label::after {
+  display: inline-block;
 }
 
 body .content .container .bottom_container .actions .active {
@@ -1213,7 +1262,9 @@ body .scroll_top svg:hover path {
 body footer {
   padding: 30px 140px;
   padding-bottom: 10px;
-  background: #fff;
+  background-image: url("../images/background_images/footer_background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 body footer .logo_social {

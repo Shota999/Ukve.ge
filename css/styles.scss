@@ -605,14 +605,15 @@ body {
         background-repeat: no-repeat;
         background-position: center;
 
-        svg{
+        svg {
             width: 93px;
             height: 66px;
 
-            path{
+            path {
                 fill: #ffffff;
             }
         }
+
         h2 {
             color: #ffffff;
             font-family: "myriad_geo_mtavruli_bold";
@@ -863,7 +864,8 @@ body {
                                 font-size: 10px;
                                 transition: .2s ease-in-out;
                                 cursor: pointer;
-                                margin: 20px 0;
+                                border-bottom: 1px solid #f4f4f4;
+                                padding: 10px 0 10px 0;
                                 line-height: 11px;
 
                                 input {
@@ -880,11 +882,53 @@ body {
                                 }
 
                                 &:first-child {
-                                    margin-top: 0
+                                    padding-top: 0
                                 }
 
                                 &:last-child {
                                     margin-bottom: 0;
+                                }
+
+                                input[type="radio"] {
+                                    display: none;
+                                }
+
+                                label {
+                                    position: relative;
+                                    display: block;
+                                    padding-left: 19px;
+                                }
+
+                                label::before {
+                                    content: "";
+                                    display: inline-block;
+                                    width: 10px;
+                                    height: 10px;
+                                    border-radius: 50%;
+                                    border: 2px solid #c13458;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                }
+
+                                label::after {
+                                    content: "";
+                                    display: none;
+                                    width: 6px;
+                                    height: 6px;
+                                    border-radius: 50%;
+                                    border: 0;
+                                    background-color: #6d6e71;
+                                    position: absolute;
+                                    top: 4px;
+                                    left: 4px;
+                                }
+
+                                input[type="radio"]:checked+label::after {
+                                    display: inline-block;
                                 }
                             }
                         }
@@ -957,44 +1001,49 @@ body {
             }
         }
     }
-    .scroll_top{
+
+    .scroll_top {
         display: flex;
         justify-content: flex-end;
         align-items: center;
         margin-bottom: 10px;
         padding: 0 140px;
 
-        svg{
+        svg {
             cursor: pointer;
             padding: 16px 11px;
             border-radius: 20px;
             transition: .2s ease-in-out;
 
-            &:hover{
+            &:hover {
                 background-color: #c13458;
             }
-            &:hover path{
+
+            &:hover path {
                 fill: #fff;
             }
         }
     }
-    footer{
+
+    footer {
         padding: 30px 140px;
         padding-bottom: 10px;
-        background: #fff;
+        background-image: url('../images/background_images/footer_background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
 
-        
-        .logo_social{
+
+        .logo_social {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             margin-top: 40px;
 
-            .social{
+            .social {
                 display: flex;
                 align-items: center;
 
-                .icon{
+                .icon {
                     width: 32px;
                     height: 32px;
                     border-radius: 20px;
@@ -1005,19 +1054,20 @@ body {
                     align-items: center;
                     justify-content: center;
 
-                    &:last-child{
+                    &:last-child {
                         margin-right: 0;
                     }
                 }
             }
         }
-        .bottom_container{
+
+        .bottom_container {
             margin-top: 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            p{
+            p {
                 width: 95px;
                 color: #676767;
                 font-family: "myriad_geo_bold";
@@ -1027,56 +1077,65 @@ body {
             }
         }
     }
-    .colors{
+
+    .colors {
         display: flex;
 
-        .color{
+        .color {
             flex: 1;
             height: 2px;
         }
-        .color1{
+
+        .color1 {
             background-color: #6d6e71;
         }
-        .color2{
+
+        .color2 {
             background-color: #f99d1c;
         }
-        .color3{
+
+        .color3 {
             background-color: #72b55b;
         }
-        .color4{
+
+        .color4 {
             background-color: #c94163;
         }
-        .color5{
+
+        .color5 {
             background-color: #5a4975;
         }
     }
-    
-    .drink_button{
+
+    .drink_button {
         position: fixed;
         bottom: 382px;
         left: 74px;
 
-        a{
+        a {
             display: block;
             border-radius: 20px;
             transition: .2s ease-in-out;
 
-            svg{
+            svg {
                 width: 9px;
                 height: 28px;
                 border-radius: 20px;
                 padding: 16px;
                 cursor: pointer;
             }
-            &:hover{
+
+            &:hover {
                 background-color: #c13458;
             }
-            &:hover svg path{
+
+            &:hover svg path {
                 fill: #ffffff;
             }
         }
     }
-    .messenger_button{
+
+    .messenger_button {
         position: fixed;
         bottom: 327px;
         right: 0;
@@ -1086,7 +1145,7 @@ body {
         display: flex;
         cursor: pointer;
 
-        svg{
+        svg {
             width: 18px;
             height: 18px;
             padding: 11px;
