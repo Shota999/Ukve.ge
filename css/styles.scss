@@ -1152,6 +1152,61 @@ body {
         }
     }
 
+    // Password page
+    
+    .not_fixed{
+        position: initial;
+    }
+    .password_content{
+        margin: 32px 139px 40px 139px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 6px;
+        background-color: #ffffff;
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2{
+            color: #676767;
+            font-family: "myriad_geo_mtavruli_bold";
+            font-size: 24px;
+        }
+        .link{
+            display: flex;
+            align-items: center;
+
+            p{
+                color: #676767;
+                font-family: "myriad_geo_bold";
+                font-size: 14px;
+            }
+            svg{
+                margin: 0 18px 0 16px;
+            }
+            span{
+                opacity: 0.5;
+                color: #676767;
+                font-family: "myriad_geo_bold";
+                font-size: 14px; 
+            }
+        }
+    }
+    .password_container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 305px;
+        margin: 0 auto;
+        text-align: center;
+        
+        h3{
+            color: #676767;
+            font-family: "myriad_geo_bold";
+            font-size: 14px;
+        }
+    }
     /* width */
     ::-webkit-scrollbar {
         width: 3px;

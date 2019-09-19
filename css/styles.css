@@ -1415,6 +1415,85 @@ body .messenger_button svg {
   padding: 11px;
 }
 
+body .not_fixed {
+  position: initial;
+}
+
+body .password_content {
+  margin: 32px 139px 40px 139px;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  background-color: #ffffff;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .password_content h2 {
+  color: #676767;
+  font-family: "myriad_geo_mtavruli_bold";
+  font-size: 24px;
+}
+
+body .password_content .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .password_content .link p {
+  color: #676767;
+  font-family: "myriad_geo_bold";
+  font-size: 14px;
+}
+
+body .password_content .link svg {
+  margin: 0 18px 0 16px;
+}
+
+body .password_content .link span {
+  opacity: 0.5;
+  color: #676767;
+  font-family: "myriad_geo_bold";
+  font-size: 14px;
+}
+
+body .password_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 305px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body .password_container h3 {
+  color: #676767;
+  font-family: "myriad_geo_bold";
+  font-size: 14px;
+}
+
 body ::-webkit-scrollbar {
   width: 3px;
 }
