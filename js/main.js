@@ -76,4 +76,22 @@ $(document).ready(function () {
             $('.scroll_top').fadeOut();
         }
     });
+
+    // Profile
+
+    $('.section').click(function () {
+        $('.profile_dropdown').toggleClass('show');
+    });
+    
+    $('.registration').click(function () {
+        $(this).parents('.user_profile_dropdown_inside').find('.registration_side').addClass('show');
+        $(this).parents('.user_profile_dropdown_inside').find('.registration_side').removeClass('hide');
+        $(this).parents('.user_profile_dropdown_inside').find('.authorization').addClass('hide');
+        $(this).parents('.user_profile_dropdown_inside').addClass('height');
+    });
+    $('.back').click(function () {
+        $(this).parents('.user_profile_dropdown_inside').find('.authorization').removeClass('hide');
+        $(this).parents('.user_profile_dropdown_inside').find('.registration_side').addClass('hide');
+        $(this).parents('.user_profile_dropdown_inside').removeClass('height');
+    });
 });
