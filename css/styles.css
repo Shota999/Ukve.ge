@@ -1374,6 +1374,7 @@ body .content .container .top_container .left .choose {
   cursor: pointer;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
+  position: relative;
 }
 
 body .content .container .top_container .left .choose:hover {
@@ -1386,6 +1387,73 @@ body .content .container .top_container .left .choose:hover svg path {
 
 body .content .container .top_container .left .choose:last-child {
   margin-right: 8px;
+}
+
+body .content .container .top_container .left .choose .hide_container {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 20px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  background-color: #c13458;
+  position: absolute;
+  top: 45px;
+  left: -55px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .content .container .top_container .left .choose .hide_container p {
+  color: #f4f4f4;
+  font-family: "myriad_geo_bold";
+  font-size: 12px;
+  padding: 8px;
+}
+
+body .content .container .top_container .left .choose .hide_container:before {
+  border-bottom: 7px solid #c13458;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  content: "";
+  left: 47%;
+  top: -5px;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+body .content .container .top_container .left .choose .salati {
+  left: -37px;
+  background-image: none;
+}
+
+body .content .container .top_container .left .choose .info_blog {
+  left: -62px;
+}
+
+body .content .container .top_container .left .choose .info_blog .info {
+  width: 141px;
+  height: 152px;
+  overflow: hidden;
+  margin: 8px;
+}
+
+body .content .container .top_container .left .choose .info_blog .info p {
+  padding: 0;
+}
+
+body .content .container .top_container .left .choose:hover .hide_container {
+  opacity: 1;
+  visibility: visible;
 }
 
 body .content .container .image_container {

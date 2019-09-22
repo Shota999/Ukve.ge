@@ -1123,6 +1123,7 @@ body {
                         margin-right: 16px;
                         cursor: pointer;
                         transition: .2s ease-in-out;
+                        position: relative;
 
                         &:hover {
                             background-color: #c13458;
@@ -1134,6 +1135,60 @@ body {
 
                         &:last-child {
                             margin-right: 8px;
+                        }
+                        .hide_container{
+                            width: max-content;
+                            box-shadow: 0 20px 20px rgba(0, 0, 0, 0.05);
+                            border-radius: 6px;
+                            background-color: #c13458;
+                            position: absolute;
+                            top: 45px;
+                            left: -55px;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: .2s ease-in-out;
+                            display: flex;
+                            align-items: center;
+
+                            p{
+                                color: #f4f4f4;
+                                font-family: "myriad_geo_bold";
+                                font-size: 12px;
+                                padding: 8px;
+                            }
+                            &:before{
+                                border-bottom: 7px solid #c13458;
+                                border-left: 4px solid transparent;
+                                border-right: 4px solid transparent;
+                                content: "";
+                                left: 47%;
+                                top: -5px;
+                                position: absolute;
+                                width: 0;
+                                height: 0;
+                            }
+                        }
+                        .salati{
+                            left: -37px;
+                            background-image: none;
+                        }
+                        .info_blog{
+                            left: -62px;
+
+                            .info{
+                                width: 141px;
+                                height: 152px;
+                                overflow: hidden;
+                                margin: 8px;
+    
+                                p{
+                                    padding: 0;
+                                }
+                            }
+                        }
+                        &:hover .hide_container{
+                            opacity: 1;
+                            visibility: visible;
                         }
                     }
                 }
