@@ -1836,11 +1836,14 @@ body footer .logo_social .social {
 }
 
 body footer .logo_social .social .icon {
+  margin-right: 8px;
+}
+
+body footer .logo_social .social .icon a {
   width: 32px;
   height: 32px;
   border-radius: 20px;
   background-color: #c13458;
-  margin-right: 8px;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;

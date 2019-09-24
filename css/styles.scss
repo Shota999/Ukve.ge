@@ -1494,16 +1494,18 @@ body {
                 align-items: center;
 
                 .icon {
-                    width: 32px;
-                    height: 32px;
-                    border-radius: 20px;
-                    background-color: #c13458;
                     margin-right: 8px;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
 
+                    a{
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 20px;
+                        background-color: #c13458;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
                     &:last-child {
                         margin-right: 0;
                     }
