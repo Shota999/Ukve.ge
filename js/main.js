@@ -51,9 +51,11 @@ $(document).ready(function () {
             var theClass = $(this).attr("class");
             $('.' + theClass).parent('li').addClass('active');
             //Animate
+            $speed =  Math.abs($(window).scrollTop() - $($(this).attr('href')).offset().top) / 1.3 ;
+            console.log($speed);
             $('html, body').stop().animate({
                 scrollTop: $($(this).attr('href')).offset().top - 160
-            }, 400);
+            }, $speed);
             return false;
         });
         $('.scrollTop a').scrollTop();
@@ -68,14 +70,6 @@ $(document).ready(function () {
         }, 600);
         return false;
     });
-    
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 600) {
-            $('.scroll_top').fadeIn();
-        } else {
-            $('.scroll_top').fadeOut();
-        }
-    });
 
     // Profile
 
@@ -84,14 +78,13 @@ $(document).ready(function () {
     });
     
     $('.registration').click(function () {
-        $(this).parents('.user_profile_dropdown_inside').find('.registration_side').addClass('show');
-        $(this).parents('.user_profile_dropdown_inside').find('.registration_side').removeClass('hide');
-        $(this).parents('.user_profile_dropdown_inside').find('.authorization').addClass('hide');
-        $(this).parents('.user_profile_dropdown_inside').addClass('height');
+        $('.registration_side').addClass('show').removeClass('hide');
+        $('.authorization').addClass('hide');
+        $('.user_profile_dropdown_inside').addClass('height');
     });
     $('.back').click(function () {
-        $(this).parents('.user_profile_dropdown_inside').find('.authorization').removeClass('hide');
-        $(this).parents('.user_profile_dropdown_inside').find('.registration_side').addClass('hide');
-        $(this).parents('.user_profile_dropdown_inside').removeClass('height');
+        $('.authorization').removeClass('hide');
+        $('.registration_side').addClass('hide');
+        $('.user_profile_dropdown_inside').removeClass('height');
     });
 });

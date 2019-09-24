@@ -244,14 +244,18 @@ body {
                 align-items: center;
 
                 .profile {
-                    box-shadow: 0 30px 30px rgba(240, 240, 240, 0.32);
-                    background-color: #f0f0f0;
-                    padding: 16px;
-                    display: flex;
-                    align-items: center;
-                    cursor: pointer;
-                    border-radius: 25px;
                     position: relative;
+
+                    section{
+                        cursor: pointer;
+                        border-radius: 25px;
+                        padding: 16px;
+                        display: flex;
+                        align-items: center;
+                        background-color: #f0f0f0;
+                        box-shadow: 0 30px 30px rgba(240, 240, 240, 0.32);
+
+                    }
 
                     span {
                         color: #6d6e71;
@@ -310,6 +314,7 @@ body {
                                         display: flex;
                                         align-items: center;
                                         margin-bottom: 8px;
+                                        
 
                                         input {
                                             width: 100%;
@@ -317,17 +322,19 @@ body {
                                             outline: none;
                                             border-radius: 6px;
                                             padding: 8px;
+                                            font-family: "myriad_geo_medium";
+                                            font-size: 10px;
+                                            font-weight: 500;
+
 
                                             &::placeholder {
                                                 color: #959595;
-                                                font-family: "myriad_geo_medium";
                                                 font-size: 10px;
                                                 font-weight: 500;
                                             }
 
                                             &:focus {
                                                 color: #959595;
-                                                font-family: "myriad_geo_medium";
                                                 font-size: 10px;
                                                 font-weight: 500;
                                             }
@@ -345,123 +352,123 @@ body {
                                         }
                                     }
 
-                                    .forgot_password {
-                                        width: 100%;
-                                        text-align: right;
+                                }
+                                .forgot_password {
+                                    width: 100%;
+                                    text-align: right;
 
-                                        a {
-                                            color: #6d6e71;
-                                            font-family: "myriad_geo_medium";
-                                            font-size: 9px;
-                                            text-decoration: underline;
-                                            transition: .2s ease-in-out;
+                                    a {
+                                        color: #6d6e71;
+                                        font-family: "myriad_geo_medium";
+                                        font-size: 9px;
+                                        text-decoration: underline;
+                                        transition: .2s ease-in-out;
 
-                                            &:hover {
-                                                opacity: 0.64;
-                                            }
+                                        &:hover {
+                                            opacity: 0.64;
                                         }
                                     }
+                                }
 
-                                    .buttons {
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: space-between;
-                                        margin-top: 8px;
+                                .buttons {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    margin-top: 8px;
 
-                                        .sign_in {
-                                            border-radius: 6px;
-                                            background-color: #c13458;
-                                            padding: 8px 16px;
-                                            border: none;
-                                            outline: none;
-                                            cursor: pointer;
-                                            color: #ffffff;
-                                            font-family: "myriad_geo_mtavruli_bold";
-                                            font-size: 10px;
-                                            transition: .2s ease-in-out;
-
-                                            &:hover {
-                                                color: #c13458;
-                                                background-color: #ffffff;
-                                            }
-                                        }
-
-                                        .registration {
-                                            color: #c13458;
-                                            font-family: "myriad_geo_bold";
-                                            font-size: 10px;
-                                            transition: .2s ease-in-out;
-                                            border: none;
-                                            outline: none;
-                                            cursor: pointer;
-                                            background-color: transparent;
-                                            padding: 8px 16px;
-
-                                            &:hover {
-                                                opacity: 0.64;
-                                            }
-                                        }
-                                    }
-
-                                    .or {
-                                        color: #cccccc;
-                                        font-family: "myriad_geo_bold";
-                                        font-size: 10px;
-                                        position: relative;
-                                        text-align: center;
-                                        width: 57px;
-                                        margin: 0 auto;
-                                        margin-top: 8px;
-                                        margin-bottom: 16px;
-
-                                        &:before {
-                                            content: "";
-                                            height: 1px;
-                                            border-radius: 1px;
-                                            background-color: #e5e5e5;
-                                            position: absolute;
-                                            top: 50%;
-                                            left: 0;
-                                            width: 19px;
-                                            height: 1px;
-                                        }
-
-                                        &:after {
-                                            content: "";
-                                            height: 1px;
-                                            border-radius: 1px;
-                                            background-color: #e5e5e5;
-                                            position: absolute;
-                                            top: 50%;
-                                            right: 0;
-                                            width: 19px;
-                                            height: 1px;
-                                        }
-                                    }
-
-                                    .facebook_registration {
+                                    .sign_in {
                                         border-radius: 6px;
-                                        background-color: #3b5c9f;
+                                        background-color: #c13458;
                                         padding: 8px 16px;
-                                        width: 100%;
                                         border: none;
                                         outline: none;
                                         cursor: pointer;
-                                        display: flex;
-                                        justify-content: flex-start;
-                                        align-items: center;
                                         color: #ffffff;
+                                        font-family: "myriad_geo_mtavruli_bold";
+                                        font-size: 10px;
+                                        transition: .2s ease-in-out;
+
+                                        &:hover {
+                                            color: #c13458;
+                                            background-color: #ffffff;
+                                        }
+                                    }
+
+                                    .registration {
+                                        color: #c13458;
                                         font-family: "myriad_geo_bold";
                                         font-size: 10px;
+                                        transition: .2s ease-in-out;
+                                        border: none;
+                                        outline: none;
+                                        cursor: pointer;
+                                        background-color: transparent;
+                                        padding: 8px 16px;
 
-                                        svg {
-                                            width: 7px;
-                                            height: 14px;
-                                            padding-right: 16px;
-                                            border-right: 1px solid;
-                                            border-color: rgba(255, 255, 255, 0.08);
-                                            margin-right: 26px;
+                                        &:hover {
+                                            opacity: 0.64;
                                         }
+                                    }
+                                }
+
+                                .or {
+                                    color: #cccccc;
+                                    font-family: "myriad_geo_bold";
+                                    font-size: 10px;
+                                    position: relative;
+                                    text-align: center;
+                                    width: 57px;
+                                    margin: 0 auto;
+                                    margin-top: 8px;
+                                    margin-bottom: 16px;
+
+                                    &:before {
+                                        content: "";
+                                        height: 1px;
+                                        border-radius: 1px;
+                                        background-color: #e5e5e5;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 0;
+                                        width: 19px;
+                                        height: 1px;
+                                    }
+
+                                    &:after {
+                                        content: "";
+                                        height: 1px;
+                                        border-radius: 1px;
+                                        background-color: #e5e5e5;
+                                        position: absolute;
+                                        top: 50%;
+                                        right: 0;
+                                        width: 19px;
+                                        height: 1px;
+                                    }
+                                }
+
+                                .facebook_registration {
+                                    border-radius: 6px;
+                                    background-color: #3b5c9f;
+                                    padding: 8px 16px;
+                                    width: 100%;
+                                    border: none;
+                                    outline: none;
+                                    cursor: pointer;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    color: #ffffff;
+                                    font-family: "myriad_geo_bold";
+                                    font-size: 10px;
+
+                                    svg {
+                                        width: 7px;
+                                        height: 14px;
+                                        padding-right: 16px;
+                                        border-right: 1px solid;
+                                        border-color: rgba(255, 255, 255, 0.08);
+                                        margin-right: 26px;
                                     }
                                 }
                             }
@@ -478,6 +485,10 @@ body {
                                         display: flex;
                                         align-items: center;
                                         margin-bottom: 8px;
+
+                                        .back{
+                                            cursor: pointer;
+                                        }
 
                                         h4 {
                                             color: #6d6e71;
@@ -814,7 +825,6 @@ body {
             .swiper-slide {
                 text-align: center;
                 font-size: 18px;
-                width: 29%;
                 /* Center slide text vertically */
                 display: flex;
                 overflow: hidden;
@@ -825,20 +835,22 @@ body {
                 .inner-slider {
                     .swiper-wrapper {
                         .swiper-slide {
-                            width: 100%;
                             flex-direction: column;
 
                             .image_container {
                                 width: 100%;
-                                height: 217px;
                                 border-radius: 6px;
                                 position: relative;
                                 overflow: hidden;
 
                                 img {
-                                    width: 100%;
-                                    height: 100%;
-                                    object-fit: contain;
+                                    min-width: 100%;
+                                    min-height: 100%;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    max-width: 120%;
                                 }
 
                                 .info_container {
@@ -984,9 +996,7 @@ body {
                 }
             }
 
-            .swiper-slide-next+.swiper-slide+.swiper-slide {
-                opacity: 0.6;
-            }
+           
         }
     }
 

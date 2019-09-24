@@ -1,0 +1,128 @@
+$desktop-xl: 2560px;
+$desktop-l: 1440px;
+$desktop-m: 1024px;
+$desktop-s: 970px;
+$tablet-width: 768px;
+$phone-width: 610px;
+$phone-width-s: 425px;
+
+@media (max-width: #{$desktop-xl}) {
+    .swiper-slide {
+        width: 16.4vw;
+        .inner-slider {
+            .swiper-wrapper {
+                .swiper-slide {
+                    .image_container {
+                        height: 11vw;
+                    }
+                }
+                
+            }
+            
+        }
+        
+    }
+    .main-slider-wrapper{
+        .swiper-slide-next+.swiper-slide+.swiper-slide +.swiper-slide +.swiper-slide{
+            opacity: 0.6;
+        }
+    }
+
+}
+
+@media (max-width: #{$desktop-l}) {
+    .swiper-slide {
+        width: 19vw;
+        .inner-slider {
+            .swiper-wrapper {
+                .swiper-slide {
+                    .image_container {
+                        height: 12.8vw;
+                    }
+                }
+                
+            }
+            
+        }
+        
+    }
+    .main-slider-wrapper{
+        .swiper-slide-next+.swiper-slide+.swiper-slide +.swiper-slide {
+            opacity: 0.6;
+        }
+    }
+}
+@media (max-width: #{$desktop-m}) {
+
+    .swiper-slide {
+        width: 23vw;
+        .inner-slider {
+            .swiper-wrapper {
+                .swiper-slide {
+                    .image_container {
+                        height: 15vw;
+                    }
+                }
+                
+            }
+            
+        }
+        
+    }
+    .main-slider-wrapper{
+        .swiper-slide-next+.swiper-slide+.swiper-slide  {
+            opacity: 0.6;
+        }
+    }
+
+}
+@media (max-width: #{$desktop-s}) {
+    .swiper-slide {
+        width: 30vw;
+        .inner-slider {
+            .swiper-wrapper {
+                .swiper-slide {
+                    .image_container {
+                        height: 20vw;
+                    }
+                }
+                
+            }
+            
+        }
+        
+    }
+    .main-slider-wrapper{
+        .swiper-slide-next+.swiper-slide{
+            opacity: 0.6;
+        }
+    }
+}
+@media (max-width: #{$tablet-width}) {
+    .swiper-slide {
+        width: 50vw;
+        .inner-slider {
+            .swiper-wrapper {
+                .swiper-slide {
+                    .image_container {
+                        height: 33vw;
+                    }
+                }
+                
+            }
+            
+        }
+        
+    }
+    .main-slider-wrapper{
+        .swiper-slide-next{
+            opacity: 0.6;
+        }
+    }
+    
+}
+@media (max-width: #{$phone-width}) {
+
+    
+
+}
