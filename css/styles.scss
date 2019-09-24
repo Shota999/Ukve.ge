@@ -24,7 +24,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 16px 139px;
+            padding: 16px 10%;
 
             .left {
                 display: flex;
@@ -168,7 +168,7 @@ body {
         }
 
         .bottom_header {
-            padding: 0 139px;
+            padding: 0 10%;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -512,19 +512,17 @@ body {
                                             outline: none;
                                             border-radius: 6px;
                                             padding: 8px;
+                                            font-family: "myriad_geo_medium";
+                                            font-size: 10px;
+                                            font-weight: 500;
 
                                             &::placeholder {
                                                 color: #959595;
-                                                font-family: "myriad_geo_medium";
-                                                font-size: 10px;
-                                                font-weight: 500;
+                                                
                                             }
 
                                             &:focus {
                                                 color: #959595;
-                                                font-family: "myriad_geo_medium";
-                                                font-size: 10px;
-                                                font-weight: 500;
                                             }
                                         }
 
@@ -649,48 +647,71 @@ body {
 
                 .cart {
                     margin-left: 40px;
-                    padding: 16px;
-                    cursor: pointer;
-                    transition: .2s ease-in-out;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 23px;
                     position: relative;
-                    background-color: #F0F0F0;
-
-                    .onhover {
-                        display: none;
-                    }
-
-                    &:hover {
-                        background: #c13458;
-                    }
-
-                    &:hover svg {
-                        display: none;
-                    }
-
-                    &:hover .onhover {
-                        display: block;
-                    }
-
-                    span {
-                        border-radius: 23px;
+                    
+                    .cart_button{
+                        padding: 16px;
+                        cursor: pointer;
+                        transition: .2s ease-in-out;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        position: absolute;
-                        top: -8px;
-                        right: -13px;
-                        width: 23px;
-                        height: 23px;
-                        color: #c13458;
-                        font-family: "myriad_geo_bold";
-                        font-size: 12px;
-                        border: 2px solid #fff;
-                        background: #F0F0F0;
+                        border-radius: 23px;
+                        position: relative;
+                        background-color: #F0F0F0;
+                        .onhover {
+                            display: none;
+                        }
+    
+                        &:hover {
+                            background: #c13458;
+                        }
+    
+                        &:hover svg {
+                            display: none;
+                        }
+    
+                        &:hover .onhover {
+                            display: block;
+                        }
+    
+                        span {
+                            border-radius: 23px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: absolute;
+                            top: -8px;
+                            right: -13px;
+                            width: 23px;
+                            height: 23px;
+                            color: #c13458;
+                            font-family: "myriad_geo_bold";
+                            font-size: 12px;
+                            border: 2px solid #fff;
+                            background: #F0F0F0;
+                        }
                     }
+
+                    .cart_body{
+                        width: 192px;
+                        position: absolute;
+                        top: 62px;
+                        right: 0px;
+                        -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.05);
+                        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.05);
+                        border-radius: 6px;
+                        background-color: #f0f0f0;
+                        opacity: 0;
+                        visibility: hidden;
+
+                        &.show{
+                            opacity: 1;
+                            visibility: visible; 
+                        }
+                    }
+
+                    
                 }
             }
         }
@@ -701,7 +722,7 @@ body {
         transition: all .5s ease-in-out;
 
         .top_header {
-            padding: 16px 139px;
+            padding: 16px 10%;
             border-bottom: 1px solid #f0f0f0;
         }
 
@@ -730,7 +751,7 @@ body {
     }
 
     .special {
-        padding: 72px 0 72px 139px;
+        padding: 72px 0 72px 10%;
         display: flex;
         flex-direction: column;
         padding-top: 356px;
@@ -738,7 +759,6 @@ body {
         .top_container {
             display: flex;
             align-items: center;
-            margin-top: 72px;
 
             svg {
                 padding: 20px;
@@ -773,7 +793,7 @@ body {
                     align-items: center;
                     justify-content: flex-end;
                     margin-top: 14px;
-                    margin-right: 139px;
+                    margin-right: 10%;
 
                     .slider_button_next {}
 
@@ -850,7 +870,7 @@ body {
                                     top: 50%;
                                     left: 50%;
                                     transform: translate(-50%, -50%);
-                                    max-width: 120%;
+                                    max-width: 110%;
                                 }
 
                                 .info_container {
@@ -878,16 +898,35 @@ body {
                                     }
 
                                     .info {
-                                        width: 24px;
-                                        height: 24px;
-                                        background-color: #c13458;
-                                        border-radius: 50%;
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        margin-top: 8px;
-                                        margin-right: 8px;
-                                        cursor: pointer;
+                                        position: relative;
+                                        .info_button{
+                                            width: 24px;
+                                            height: 24px;
+                                            background-color: #c13458;
+                                            border-radius: 50%;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            margin-top: 8px;
+                                            margin-right: 8px;
+                                            cursor: pointer;
+                                        }
+                                        .info_body{
+                                            width: 192px;
+                                            position: absolute;
+                                            top: 30px;
+                                            right: 10px;
+                                            -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.05);
+                                            box-shadow: 0 20px 20px rgba(0, 0, 0, 0.05);
+                                            border-radius: 6px;
+                                            background-color: #f0f0f0;
+                                            opacity: 0;
+                                            visibility: hidden;
+                                            &.show{
+                                                opacity: 1;
+                                                visibility: visible;
+                                            }
+                                        }
                                     }
                                 }
 
@@ -1004,7 +1043,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 44px 139px;
+        padding: 44px 10%;
         opacity: 0.85;
         background-size: cover;
         background-repeat: no-repeat;
@@ -1062,19 +1101,17 @@ body {
     }
 
     .content {
-        margin: 56px 139px;
+        margin: 56px 10%;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
 
         .container {
             border-radius: 11px;
             background-color: #ffffff;
             display: flex;
             flex-direction: column;
-            width: 352px;
-            margin-left: 16px;
             margin-top: 24px;
 
             &:first-child {
@@ -1188,7 +1225,8 @@ body {
                             .info{
                                 width: 141px;
                                 height: 152px;
-                                overflow: hidden;
+                                overflow-x: hidden;
+                                overflow-y: auto;
                                 margin: 8px;
     
                                 p{
@@ -1199,6 +1237,15 @@ body {
                         &:hover .hide_container{
                             opacity: 1;
                             visibility: visible;
+                        }
+                        .hidden_checkbox{
+                            display: none;
+                        }
+                        &.checked{
+                            background-color: #c13458;
+                            svg path {
+                                fill: #fff;
+                            }
                         }
                     }
                 }
@@ -1220,7 +1267,8 @@ body {
 
                     img {
                         width: auto;
-                        object-fit: cover;
+                        max-width: 90%;
+                        max-height: 90%;
                     }
                 }
             }
@@ -1621,7 +1669,7 @@ body {
     }
 
     .password_content {
-        margin: 32px 139px 40px 139px;
+        margin: 32px 10% 40px 10%;
         box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
         border-radius: 6px;
         background-color: #ffffff;

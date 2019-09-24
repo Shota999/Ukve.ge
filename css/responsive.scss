@@ -8,12 +8,12 @@ $phone-width-s: 425px;
 
 @media (max-width: #{$desktop-xl}) {
     .swiper-slide {
-        width: 16.4vw;
+        width: 15.5vw;
         .inner-slider {
             .swiper-wrapper {
                 .swiper-slide {
                     .image_container {
-                        height: 11vw;
+                        height: 10.5vw;
                     }
                 }
                 
@@ -27,12 +27,17 @@ $phone-width-s: 425px;
             opacity: 0.6;
         }
     }
+    .content {
+        .container {
+            width: 28%;
+        }
+    }
 
 }
 
 @media (max-width: #{$desktop-l}) {
     .swiper-slide {
-        width: 19vw;
+        width: 18.5vw;
         .inner-slider {
             .swiper-wrapper {
                 .swiper-slide {
@@ -49,6 +54,11 @@ $phone-width-s: 425px;
     .main-slider-wrapper{
         .swiper-slide-next+.swiper-slide+.swiper-slide +.swiper-slide {
             opacity: 0.6;
+        }
+    }
+    .content {
+        .container {
+            width: 32%;
         }
     }
 }
@@ -72,6 +82,11 @@ $phone-width-s: 425px;
     .main-slider-wrapper{
         .swiper-slide-next+.swiper-slide+.swiper-slide  {
             opacity: 0.6;
+        }
+    }
+    .content {
+        .container {
+            width: 28%;
         }
     }
 
@@ -99,6 +114,10 @@ $phone-width-s: 425px;
     }
 }
 @media (max-width: #{$tablet-width}) {
+  
+    
+}
+@media (max-width: #{$phone-width}) {
     .swiper-slide {
         width: 50vw;
         .inner-slider {
@@ -119,10 +138,6 @@ $phone-width-s: 425px;
             opacity: 0.6;
         }
     }
-    
-}
-@media (max-width: #{$phone-width}) {
-
     
 
 }
