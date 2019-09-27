@@ -246,7 +246,7 @@ body {
                 .profile {
                     position: relative;
 
-                    section{
+                    section {
                         cursor: pointer;
                         border-radius: 25px;
                         padding: 16px;
@@ -314,7 +314,7 @@ body {
                                         display: flex;
                                         align-items: center;
                                         margin-bottom: 8px;
-                                        
+
 
                                         input {
                                             width: 100%;
@@ -353,6 +353,7 @@ body {
                                     }
 
                                 }
+
                                 .forgot_password {
                                     width: 100%;
                                     text-align: right;
@@ -486,7 +487,7 @@ body {
                                         align-items: center;
                                         margin-bottom: 8px;
 
-                                        .back{
+                                        .back {
                                             cursor: pointer;
                                         }
 
@@ -518,7 +519,7 @@ body {
 
                                             &::placeholder {
                                                 color: #959595;
-                                                
+
                                             }
 
                                             &:focus {
@@ -555,10 +556,11 @@ body {
                                         transition: .2s ease-in-out;
                                         margin-top: 8px;
 
-                                        &:hover{
-                                            color: rgba( 255 , 255 , 255 , 0.64 );
+                                        &:hover {
+                                            color: rgba(255, 255, 255, 0.64);
                                         }
                                     }
+
                                     .or {
                                         color: #cccccc;
                                         font-family: "myriad_geo_bold";
@@ -639,7 +641,8 @@ body {
                             height: 389px;
                         }
                     }
-                    .show{
+
+                    .show {
                         opacity: 1;
                         visibility: visible;
                     }
@@ -648,8 +651,8 @@ body {
                 .cart {
                     margin-left: 40px;
                     position: relative;
-                    
-                    .cart_button{
+
+                    .cart_button {
                         padding: 16px;
                         cursor: pointer;
                         transition: .2s ease-in-out;
@@ -659,22 +662,23 @@ body {
                         border-radius: 23px;
                         position: relative;
                         background-color: #F0F0F0;
+
                         .onhover {
                             display: none;
                         }
-    
+
                         &:hover {
                             background: #c13458;
                         }
-    
+
                         &:hover svg {
                             display: none;
                         }
-    
+
                         &:hover .onhover {
                             display: block;
                         }
-    
+
                         span {
                             border-radius: 23px;
                             display: flex;
@@ -693,8 +697,8 @@ body {
                         }
                     }
 
-                    .cart_body{
-                        width: 192px;
+                    .cart_body {
+                        width: 218px;
                         position: absolute;
                         top: 62px;
                         right: 0px;
@@ -704,14 +708,141 @@ body {
                         background-color: #f0f0f0;
                         opacity: 0;
                         visibility: hidden;
+                        padding: 16px;
 
-                        &.show{
+                        &.show {
                             opacity: 1;
-                            visibility: visible; 
+                            visibility: visible;
+                        }
+
+                        &:before {
+                            border-bottom: 9px solid #f0f0f0;
+                            border-left: 6px solid transparent;
+                            border-right: 6px solid transparent;
+                            content: "";
+                            right: 16px;
+                            top: -7px;
+                            position: absolute;
+                            width: 0;
+                            height: 0;
+                        }
+
+                        h4 {
+                            color: #6d6e71;
+                            font-family: "myriad_geo_bold";
+                            font-size: 13px;
+                        }
+
+                        .cart_items {
+                            overflow-y: auto;
+                            max-height: 171px;
+                            width: 100%;
+                            margin: 15px 0;
+
+                            .item {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                border-bottom: 1px solid #e3e3e3;
+                                padding-bottom: 4px;
+                                margin-top: 15px;
+                                align-items: flex-start;
+                                cursor: pointer;
+
+                                &:first-child {
+                                    margin-top: 0;
+                                }
+
+                                .item_content {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    height: 100%;
+
+                                    svg {
+                                        cursor: pointer;
+                                        flex: none;
+                                    }
+
+                                    .cart_image {
+                                        width: 39px;
+                                        height: 30px;
+                                        box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+                                        border-radius: 6px;
+                                        overflow: hidden;
+                                        margin-left: 8px;
+                                        margin-right: 4px;
+                                        flex: none;
+
+                                        img {
+                                            object-fit: cover;
+                                            width: 39px;
+                                            height: 30px;
+                                        }
+                                    }
+
+                                    h5 {
+                                        color: #909090;
+                                        font-family: "myriad_geo_mtavruli_bold";
+                                        font-size: 10px;
+                                        line-height: 11px;
+                                    }
+                                }
+
+                                .price {
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    width: 100%;
+
+                                    span {
+                                        display: block;
+                                        color: #c13458;
+                                        font-family: "myriad_geo_mtavruli_bold";
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .all_price {
+                            width: 100%;
+                            display: flex;
+                            justify-content: flex-end;
+
+                            p {
+                                color: #6d6e71;
+                                font-family: "myriad_geo_mtavruli_bold";
+                                font-size: 10px;
+                                line-height: 12px;
+                                display: flex;
+
+                                span {
+                                    display: block;
+                                    color: #c13458;
+                                    font-family: "myriad_geo_mtavruli_bold";
+                                    font-size: 12px;
+                                    margin-left: 8px;
+                                }
+                            }
+                        }
+                        .buy{
+                            margin-top: 24px;
+                            display: flex;
+                            justify-content: center;
+
+                            button{
+                                border-radius: 6px;
+                                background-color: #c13458;
+                                color: #ffffff;
+                                font-family: "myriad_geo_bold";
+                                font-size: 10px;
+                                padding: 8px 16px;
+                                border: none;
+                                outline: none;
+                                cursor: pointer;
+                            }
                         }
                     }
-
-                    
                 }
             }
         }
@@ -899,7 +1030,8 @@ body {
 
                                     .info {
                                         position: relative;
-                                        .info_button{
+
+                                        .info_button {
                                             width: 24px;
                                             height: 24px;
                                             background-color: #c13458;
@@ -911,7 +1043,8 @@ body {
                                             margin-right: 8px;
                                             cursor: pointer;
                                         }
-                                        .info_body{
+
+                                        .info_body {
                                             width: 192px;
                                             position: absolute;
                                             top: 30px;
@@ -922,7 +1055,8 @@ body {
                                             background-color: #f0f0f0;
                                             opacity: 0;
                                             visibility: hidden;
-                                            &.show{
+
+                                            &.show {
                                                 opacity: 1;
                                                 visibility: visible;
                                             }
@@ -931,78 +1065,83 @@ body {
                                 }
 
                             }
+                        }
+                    }
 
-                            h2 {
-                                color: #6d6e71;
-                                font-family: "myriad_geo_mtavruli_medium";
-                                font-size: 16px;
-                                font-weight: 700;
-                                margin-top: 8px;
+                    .slide_content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
 
-                                span {
-                                    font-family: "poppins_black";
+                        h2 {
+                            color: #6d6e71;
+                            font-family: "myriad_geo_mtavruli_medium";
+                            font-size: 15px;
+                            font-weight: 700;
+
+                            span {
+                                font-family: "poppins_black";
+                            }
+                        }
+
+                        .price {
+                            display: flex;
+                            justify-content: center;
+
+                            .sale {
+                                color: #676767;
+                                font-family: "myriad_geo_bold";
+
+                                del {
+                                    font-size: 16px;
                                 }
                             }
 
-                            .price {
-                                display: flex;
-                                justify-content: center;
+                            span {
+                                display: block;
+                                color: #bf3357;
+                                font-family: "poppins_black";
+                                font-size: 24px;
+                                margin-left: 4px;
 
-                                .sale {
-                                    color: #676767;
-                                    font-family: "myriad_geo_bold";
-
-                                    del {
-                                        font-size: 16px;
-                                    }
-                                }
-
-                                span {
-                                    display: block;
-                                    color: #bf3357;
-                                    font-family: "poppins_black";
-                                    font-size: 24px;
-                                    margin-left: 4px;
-
-                                    small {
-                                        font-family: "bpg_gel";
-                                        margin-left: 1px;
-                                    }
+                                small {
+                                    font-family: "bpg_gel";
+                                    margin-left: 1px;
                                 }
                             }
+                        }
 
-                            .cart {
-                                width: 40px;
-                                height: 40px;
-                                background-color: #c03357;
-                                cursor: pointer;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                border-radius: 50%;
-                                margin-top: 5px;
-                                transition: .2s ease-in-out;
+                        .cart {
+                            width: 40px;
+                            height: 40px;
+                            background-color: #c03357;
+                            cursor: pointer;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+                            margin-top: 5px;
+                            transition: .2s ease-in-out;
 
-                                svg {
-                                    width: 16px;
-                                    height: 16px;
-                                }
+                            svg {
+                                width: 16px;
+                                height: 16px;
+                            }
 
-                                .onhover {
-                                    display: none;
-                                }
+                            .onhover {
+                                display: none;
+                            }
 
-                                &:hover {
-                                    background-color: #ffffff;
-                                }
+                            &:hover {
+                                background-color: #ffffff;
+                            }
 
-                                &:hover svg {
-                                    display: none;
-                                }
+                            &:hover svg {
+                                display: none;
+                            }
 
-                                &:hover .onhover {
-                                    display: block;
-                                }
+                            &:hover .onhover {
+                                display: block;
                             }
                         }
                     }
@@ -1012,7 +1151,7 @@ body {
                         height: 34px;
                         border-radius: 16px 0px 0px 16px;
                         background-color: #c13458;
-                        top: 27%;
+                        top: 75px;
                         margin-top: 0;
                         left: auto;
                         background-image: none;
@@ -1035,7 +1174,7 @@ body {
                 }
             }
 
-           
+
         }
     }
 
@@ -1183,7 +1322,8 @@ body {
                         &:last-child {
                             margin-right: 8px;
                         }
-                        .hide_container{
+
+                        .hide_container {
                             width: max-content;
                             box-shadow: 0 20px 20px rgba(0, 0, 0, 0.05);
                             border-radius: 6px;
@@ -1197,13 +1337,14 @@ body {
                             display: flex;
                             align-items: center;
 
-                            p{
+                            p {
                                 color: #f4f4f4;
                                 font-family: "myriad_geo_bold";
                                 font-size: 12px;
                                 padding: 8px;
                             }
-                            &:before{
+
+                            &:before {
                                 border-bottom: 7px solid #c13458;
                                 border-left: 4px solid transparent;
                                 border-right: 4px solid transparent;
@@ -1215,34 +1356,40 @@ body {
                                 height: 0;
                             }
                         }
-                        .salati{
+
+                        .salati {
                             left: -37px;
                             background-image: none;
                         }
-                        .info_blog{
+
+                        .info_blog {
                             left: -62px;
 
-                            .info{
+                            .info {
                                 width: 141px;
                                 height: 152px;
                                 overflow-x: hidden;
                                 overflow-y: auto;
                                 margin: 8px;
-    
-                                p{
+
+                                p {
                                     padding: 0;
                                 }
                             }
                         }
-                        &:hover .hide_container{
+
+                        &:hover .hide_container {
                             opacity: 1;
                             visibility: visible;
                         }
-                        .hidden_checkbox{
+
+                        .hidden_checkbox {
                             display: none;
                         }
-                        &.checked{
+
+                        &.checked {
                             background-color: #c13458;
+
                             svg path {
                                 fill: #fff;
                             }
@@ -1554,7 +1701,7 @@ body {
                 .icon {
                     margin-right: 8px;
 
-                    a{
+                    a {
                         width: 32px;
                         height: 32px;
                         border-radius: 20px;
@@ -1564,6 +1711,7 @@ body {
                         align-items: center;
                         justify-content: center;
                     }
+
                     &:last-child {
                         margin-right: 0;
                     }
