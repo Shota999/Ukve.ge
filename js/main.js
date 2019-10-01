@@ -51,7 +51,7 @@ $(document).ready(function () {
             var theClass = $(this).attr("class");
             $('.' + theClass).parent('li').addClass('active');
             //Animate
-            $speed =  Math.abs($(window).scrollTop() - $($(this).attr('href')).offset().top) / 1.3 ;
+            $speed = Math.abs($(window).scrollTop() - $($(this).attr('href')).offset().top) / 1.3;
             $('html, body').stop().animate({
                 scrollTop: $($(this).attr('href')).offset().top - 160
             }, $speed);
@@ -75,7 +75,7 @@ $(document).ready(function () {
     $('.section').click(function () {
         $('.profile_dropdown').toggleClass('show');
     });
-    
+
     $('.registration').click(function () {
         $('.registration_side').addClass('show').removeClass('hide');
         $('.authorization').addClass('hide');
@@ -88,7 +88,7 @@ $(document).ready(function () {
         $('.user_profile_dropdown_inside').removeClass('height');
     });
 
-    
+
     // kalata
 
     $('.cart_button').click(function () {
@@ -97,44 +97,61 @@ $(document).ready(function () {
 
     // info
     $('.info_button').click(function () {
-       $(this).parent().find('.info_body').toggleClass('show');
+        $(this).parent().find('.info_body').toggleClass('show');
     });
 
     // gverdze ro daaklikeb ro gaqres gamochenili elementi
 
-    $("body").click(function(n) {
-        if($('.profile_dropdown').hasClass('show') && n.target.closest(".profile") == null ){
+    $("body").click(function (n) {
+        if ($('.profile_dropdown').hasClass('show') && n.target.closest(".profile") == null) {
             $('.profile_dropdown').toggleClass('show');
         }
 
-        if($('.cart_body').hasClass('show') && n.target.closest(".cart") == null ){
+        if ($('.cart_body').hasClass('show') && n.target.closest(".cart") == null) {
             $('.cart_body').toggleClass('show');
         }
 
-        if($('.info_body').hasClass('show') && n.target.closest(".info") == null ){
+        if ($('.info_body').hasClass('show') && n.target.closest(".info") == null) {
             $('.info_body').toggleClass('show');
         }
 
-        if($('.more').hasClass('show') && n.target.closest(".actions") == null ){
+        if ($('.more').hasClass('show') && n.target.closest(".actions") == null) {
             changeText();
         }
-       
+
     });
 
     $('.choose').click(function () {
         $(this).toggleClass('checked');
         return false;
-     });
+    });
 
-     $('.radio').click(function () {
-         changeText(this.innerText);
-     });
+    $('.radio').click(function () {
+        changeText(this.innerText);
+    });
 
-     function changeText(str = null){
-         if(str){
-            $('.sauce.active p').text(str.length > 12 ? str.slice(0,12) + "..." : str);
-         }
+    function changeText(str = null) {
+        if (str) {
+            $('.sauce.active p').text(str.length > 12 ? str.slice(0, 12) + "..." : str);
+        }
         $('.more.show').removeClass('show');
-     }
+    }
 
+
+    //  Alert
+
+    $('.radio').click(function () {
+        if ($("#mySelect ")[0].selectedIndex <= 0) {
+            alert("Not selected");
+        }
+    });
+
+    // Count
+
+    $('.counter_plus').click(function() {
+        $('.count').html(function(i, val) { return val*1+1 });
+    });
+    $('.counter_minus').click(function() {
+        $('.count').html(function(i, val) { return val*1-1 });
+    });
 });
