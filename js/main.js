@@ -151,9 +151,13 @@ $(document).ready(function () {
     // Count
 
     $('.counter_plus').click(function() {
-        $('.count').html(function(i, val) { return val*1+1 });
+        // $('.count').html(function(i, val) { return val*1+1 });
+
+        if ($(".count").html( function(i, val) { return val*1+1 } ) > 0 ){
+            // $('.count').html(function(i, val) { return val*1+1 });
+        }
     });
-    $('.counter_minus').click(function() {
-        $('.count').html(function(i, val) { return val*1-1 });
-    });
+    // $('.counter_minus').click(function() {
+    //     $('.count').html(function(i, val) { return val*1-1 });
+    // });
 });
