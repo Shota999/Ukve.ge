@@ -2169,16 +2169,17 @@ body .content .container .bottom_container .actions .add_cart .point span {
   margin: 0 16px;
 }
 
-body .content .container .bottom_container .actions .add_cart a {
+body .content .container .bottom_container .actions .add_cart .check_cart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-left: 16px;
   border-left: 1px solid rgba(112, 112, 112, 0.15);
   padding-left: 16px;
+  cursor: pointer;
 }
 
-body .content .container .bottom_container .actions .add_cart a svg {
+body .content .container .bottom_container .actions .add_cart .check_cart svg {
   width: 16px;
   height: 16px;
 }

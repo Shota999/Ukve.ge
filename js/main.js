@@ -140,10 +140,12 @@ $(document).ready(function () {
 
     //  Alert
 
-    $('.radio').click(function () {
-        if ($("#mySelect ")[0].selectedIndex <= 0) {
-            alert("Not selected");
-        }
+    $('.check_cart').click(function () {
+        // if ($("input[name='group1']")) {
+        //     // alert();
+        //     console.log();
+        // }
+        console.log("input[name='group1']".val());
     });
 
     // Count

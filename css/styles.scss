@@ -1812,11 +1812,12 @@ body {
                             }
                         }
 
-                        a {
+                        .check_cart {
                             display: flex;
                             margin-left: 16px;
                             border-left: 1px solid rgba(112, 112, 112, 0.15);
                             padding-left: 16px;
+                            cursor: pointer;
 
                             svg {
                                 width: 16px;
