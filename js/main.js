@@ -161,4 +161,11 @@ $(document).ready(function () {
     // $('.counter_minus').click(function() {
     //     $('.count').html(function(i, val) { return val*1-1 });
     // });
+
+    // Item Remove
+
+    // $('.close').click(function() {
+    //     $(this).closest(".item").addClass('none');
+    // });
+
 });

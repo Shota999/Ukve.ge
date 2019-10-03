@@ -1033,6 +1033,10 @@ body header .bottom_header .profile_cart .cart .cart_body .cart_items .item .pri
   font-size: 12px;
 }
 
+body header .bottom_header .profile_cart .cart .cart_body .cart_items .none {
+  display: none;
+}
+
 body header .bottom_header .profile_cart .cart .cart_body .all_price {
   width: 100%;
   display: -webkit-box;
@@ -1505,6 +1509,15 @@ body .special .slider_content .swiper-slide .inner-slider .inner_button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body .special .slider_content .swiper-slide .inner-slider:hover .inner_button {
+  opacity: 1;
+  visibility: visible;
 }
 
 body .special .slider_content .swiper-slide .inner-slider .inner_button_next {
@@ -1591,9 +1604,9 @@ body .content {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body .content .container {
@@ -1608,6 +1621,7 @@ body .content .container {
           flex-direction: column;
   margin-top: 24px;
   position: relative;
+  margin-right: 16px;
 }
 
 body .content .container .alert {
@@ -2349,7 +2363,7 @@ body .dont_add p {
 }
 
 body footer {
-  padding: 30px 140px;
+  padding: 1px 140px;
   padding-bottom: 10px;
   background-image: url("../images/background_images/footer_background.png");
   background-size: cover;

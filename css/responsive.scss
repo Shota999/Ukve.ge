@@ -39,32 +39,38 @@ $phone-width-s: 425px;
 }
 
 @media (max-width: #{$desktop-l}) {
-    .swiper-slide {
-        width: 18.5vw;
-
-        .inner-slider {
-            .swiper-wrapper {
+    body{
+        .special{
+            .slider_content{
                 .swiper-slide {
-                    .image_container {
-                        height: 12.8vw;
+                    width: 18.5vw;
+            
+                    .inner-slider {
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                .image_container {
+                                    height: 12.8vw;
+                                }
+                            }
+            
+                        }
+                        .inner_button{
+                            top: 65px;
+                        }
                     }
                 }
-
             }
-
         }
-
-    }
-
-    .main-slider-wrapper {
-        .swiper-slide-next+.swiper-slide+.swiper-slide+.swiper-slide {
-            opacity: 0.6;
+        .main-slider-wrapper {
+            .swiper-slide-next+.swiper-slide+.swiper-slide+.swiper-slide {
+                opacity: 0.6;
+            }
         }
-    }
-
-    .content {
-        .container {
-            width: 32%;
+    
+        .content {
+            .container {
+                width: 31%;
+            }
         }
     }
 }

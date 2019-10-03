@@ -789,6 +789,7 @@ body {
                             width: 100%;
                             margin: 15px 0;
 
+                            
                             .item {
                                 width: 100%;
                                 display: flex;
@@ -851,6 +852,9 @@ body {
                                         font-size: 12px;
                                     }
                                 }
+                            }
+                            .none{
+                                display: none;
                             }
                         }
 
@@ -1248,8 +1252,15 @@ body {
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: .2s ease-in-out;
                     }
 
+                    &:hover .inner_button{
+                        opacity: 1;
+                        visibility: visible;
+                    }
                     .inner_button_next {
                         right: 0;
                     }
@@ -1334,7 +1345,7 @@ body {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
 
         .container {
             border-radius: 11px;
@@ -1343,6 +1354,7 @@ body {
             flex-direction: column;
             margin-top: 24px;
             position: relative;
+            margin-right: 16px;
 
             .alert {
                 position: absolute;
@@ -1964,7 +1976,7 @@ body {
     }
 
     footer {
-        padding: 30px 140px;
+        padding: 1px 140px;
         padding-bottom: 10px;
         background-image: url('../images/background_images/footer_background.png');
         background-size: cover;
