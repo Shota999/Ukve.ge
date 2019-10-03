@@ -29,7 +29,7 @@ $(document).ready(function () {
         navigation: {
             nextEl: '.slider_button_next',
             prevEl: '.slider_button_prev',
-        }
+        },
     });
 
     var swiper = new Swiper('.inner-slider', {

@@ -25,10 +25,27 @@ body {
             align-items: center;
             justify-content: space-between;
             padding: 16px 10%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
 
             .left {
                 display: flex;
                 align-items: center;
+                
+                .tel{
+                    width: 32px;
+                    height: 32px;
+                    border: 2px solid #E2E2E2;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    svg{
+                        path{
+                            fill: #C13458;
+                        }
+                    }
+                }
 
                 a {
                     color: #6D6E71;
@@ -172,7 +189,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+
 
             h1 {
                 max-width: 104px;
@@ -889,9 +906,12 @@ body {
         .top_header {
             padding: 16px 10%;
             border-bottom: 1px solid #f0f0f0;
+            box-shadow: none;
         }
 
         .bottom_header {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+
             h1 {
                 a {
                     width: 52px;
@@ -925,11 +945,16 @@ body {
             display: flex;
             align-items: center;
 
-            svg {
-                padding: 20px;
+            .star {
+                width: 64px;
+                height: 64px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 background-color: #c13458;
                 border-radius: 50%;
             }
+
 
             p {
                 color: #6d6e71;
@@ -1319,7 +1344,7 @@ body {
             margin-top: 24px;
             position: relative;
 
-            .alert{
+            .alert {
                 position: absolute;
                 top: -50px;
                 left: 0;
@@ -1335,12 +1360,13 @@ body {
                 opacity: 0;
                 visibility: hidden;
 
-                svg{
-                    path{
+                svg {
+                    path {
                         fill: #c13458;
                     }
                 }
-                p{
+
+                p {
                     margin-left: 39px;
                     color: #c13458;
                     font-family: "myriad_geo_bold";
@@ -1348,6 +1374,7 @@ body {
                     line-height: 18px;
                 }
             }
+
             &:first-child {
                 margin-left: 0;
             }
@@ -1490,6 +1517,7 @@ body {
                             }
                         }
                     }
+
                     .choose_info {
                         width: 32px;
                         height: 32px;
@@ -1774,6 +1802,7 @@ body {
 
                     .active {
                         border-radius: 20px 20px 0 0;
+                        border-color: #c74768;
 
                         p {
                             opacity: 1;
@@ -1856,6 +1885,7 @@ body {
             padding: 16px 11px;
             border-radius: 20px;
             transition: .2s ease-in-out;
+            background-color: #ffffff;
 
             &:hover {
                 background-color: #c13458;
@@ -1877,6 +1907,7 @@ body {
         position: relative;
         opacity: 0;
         visibility: hidden;
+        display: none;
 
         &:before {
             border-top: 9px solid #72b55b;
@@ -1909,6 +1940,7 @@ body {
         position: relative;
         opacity: 0;
         visibility: hidden;
+        display: none;
 
         &:before {
             border-top: 9px solid #c13458;
@@ -2025,6 +2057,7 @@ body {
             display: block;
             border-radius: 20px;
             transition: .2s ease-in-out;
+            background-color: #ffffff;
 
             svg {
                 width: 9px;
