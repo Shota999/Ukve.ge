@@ -136,17 +136,32 @@ $(document).ready(function () {
             $('.sauce.active p').text(str.length > 12 ? str.slice(0, 12) + "..." : str);
         }
         $('.more.show').removeClass('show');
+        $('.sauce.active').removeClass('active');
     }
 
 
     //  Alert
 
     $('.check_cart').click(function () {
-        // if ($("input[name='group1']")) {
-        //     // alert();
-        //     console.log();
-        // }
-        console.log("input[name='group1']".val());
+        let check = false;
+        let actions =  $(this).closest('.actions');
+        actions.find('input[type=radio]').each(function () {
+            if(this.checked){
+                check = true;
+            }            
+        });
+        if (!check) {
+            actions.find('.sauce').addClass('bounce');
+            actions.closest('.bottom_container').siblings('.top_container').append($('<div>გთხოვთ აირჩიოთ სოუსი</div>')
+            .addClass("souceError")
+        )
+            setTimeout( function(){
+                actions.find('.sauce').removeClass('bounce');
+            }, 300 )
+            setTimeout( function(){
+                $('.souceError').remove();
+            }, 2000 )
+        }
     });
 
     // Count

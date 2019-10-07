@@ -2049,6 +2049,11 @@ body .content .container .bottom_container .actions .sauce {
   z-index: 1;
 }
 
+body .content .container .bottom_container .actions .sauce.bounce {
+  -webkit-animation: bounce 0.3s;
+          animation: bounce 0.3s;
+}
+
 body .content .container .bottom_container .actions .sauce p {
   margin-right: 7px;
   opacity: 0.64;
@@ -2613,5 +2618,43 @@ body ::-webkit-scrollbar-track {
 body ::-webkit-scrollbar-thumb {
   background: #c13458;
   border-radius: 12px;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  40% {
+    -webkit-transform: translate(2px);
+            transform: translate(2px);
+  }
+  80% {
+    -webkit-transform: translate(-2px);
+            transform: translate(-2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  40% {
+    -webkit-transform: translate(2px);
+            transform: translate(2px);
+  }
+  80% {
+    -webkit-transform: translate(-2px);
+            transform: translate(-2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
