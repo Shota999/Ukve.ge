@@ -8,9 +8,11 @@ $(document).ready(function () {
     });
     $('.nav_button').click(function () {
         $(".menu").addClass('show');
+        $('body').addClass('hidden');
     });
-    $('.close').click(function () {
-        $(this).parent('.menu').removeClass('show');
+    $('.close_button').click(function () {
+        $(this).parents('.menu').removeClass('show');
+        $('body').removeClass('hidden');
     });
 
     $(window).scroll(function () {
@@ -113,7 +115,7 @@ $(document).ready(function () {
         }
 
         if ($('.info_body').hasClass('show') && n.target.closest(".info") == null) {
-            $('.info_body').toggleClass('show');
+            $('.info_body').removeClass('show');
         }
 
         if ($('.more').hasClass('show') && n.target.closest(".actions") == null) {
@@ -144,32 +146,32 @@ $(document).ready(function () {
 
     $('.check_cart').click(function () {
         let check = false;
-        let actions =  $(this).closest('.actions');
+        let actions = $(this).closest('.actions');
         actions.find('input[type=radio]').each(function () {
-            if(this.checked){
+            if (this.checked) {
                 check = true;
-            }            
+            }
         });
         if (!check) {
             actions.find('.sauce').addClass('bounce');
-            actions.closest('.bottom_container').siblings('.top_container').append($('<div>გთხოვთ აირჩიოთ სოუსი</div>')
-            .addClass("souceError")
-        )
-            setTimeout( function(){
+            actions.closest('.bottom_container').siblings('.top_container').find('.alert').addClass('show')
+            setTimeout(function () {
                 actions.find('.sauce').removeClass('bounce');
-            }, 300 )
-            setTimeout( function(){
-                $('.souceError').remove();
-            }, 2000 )
+            }, 300)
+            setTimeout(function () {
+                $('.alert').removeClass('show');
+            }, 2000)
         }
     });
 
     // Count
 
-    $('.counter_plus').click(function() {
+    $('.counter_plus').click(function () {
         // $('.count').html(function(i, val) { return val*1+1 });
 
-        if ($(".count").html( function(i, val) { return val*1+1 } ) > 0 ){
+        if ($(".count").html(function (i, val) {
+                return val * 1 + 1
+            }) > 0) {
             // $('.count').html(function(i, val) { return val*1+1 });
         }
     });
@@ -179,8 +181,9 @@ $(document).ready(function () {
 
     // Item Remove
 
-    // $('.close').click(function() {
-    //     $(this).closest(".item").addClass('none');
-    // });
+    $('.close').click(function() {
+        $(this).closest(".item").fadeOut();
+        // setTimeout(function(){ $(".item").remove(); }, 3000);
+    });
 
 });
