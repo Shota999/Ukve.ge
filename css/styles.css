@@ -1555,10 +1555,6 @@ body .special .slider_content .swiper-slide .inner-slider .inner_button_prev {
   border-radius: 0px 16px 16px 0px;
 }
 
-body .special .slider_content .swiper-slide .inner-slider .swiper-button-disabled {
-  opacity: 1;
-}
-
 body .background {
   display: -webkit-box;
   display: -ms-flexbox;
