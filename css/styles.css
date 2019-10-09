@@ -2229,7 +2229,7 @@ body .content .container .bottom_container .actions .add_cart {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 16px;
+  padding: 0 16px;
 }
 
 body .content .container .bottom_container .actions .add_cart .point {
@@ -2245,6 +2245,7 @@ body .content .container .bottom_container .actions .add_cart .point svg {
   width: 6px;
   height: 4px;
   cursor: pointer;
+  padding: 18px 3px;
 }
 
 body .content .container .bottom_container .actions .add_cart .point span {
@@ -2252,16 +2253,16 @@ body .content .container .bottom_container .actions .add_cart .point span {
   color: #676767;
   font-family: "myriad_geo_bold";
   font-size: 16px;
-  margin: 0 16px;
+  margin: 0 10px;
 }
 
 body .content .container .bottom_container .actions .add_cart .check_cart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 16px;
+  margin-left: 10px;
   border-left: 1px solid rgba(112, 112, 112, 0.15);
-  padding-left: 16px;
+  padding-left: 10px;
   cursor: pointer;
 }
 
@@ -2464,7 +2465,7 @@ body footer .bottom_container {
           align-items: center;
 }
 
-body footer .bottom_container p {
+body footer .bottom_container a {
   width: 95px;
   color: #676767;
   font-family: "myriad_geo_bold";

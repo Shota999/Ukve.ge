@@ -202,7 +202,7 @@ body {
                 }
             }
 
-            nav {   
+            nav {
 
                 ul {
                     display: flex;
@@ -246,7 +246,7 @@ body {
                         position: relative;
                         width: 100%;
 
-                        &::before{
+                        &::before {
                             transition: .2s ease-in-out;
                             position: absolute;
                             top: -1px;
@@ -257,6 +257,7 @@ body {
                             background-color: #c13458;
                             border-radius: 20px;
                         }
+
                         &:hover {
                             color: #6d6e71;
                         }
@@ -860,12 +861,13 @@ body {
                                         font-family: "myriad_geo_mtavruli_bold";
                                         font-size: 12px;
 
-                                        small{
+                                        small {
                                             font-family: "bpg_gel";
                                         }
                                     }
                                 }
-                                &:hover h5{
+
+                                &:hover h5 {
                                     color: #c13458;
                                 }
                             }
@@ -1613,6 +1615,7 @@ body {
                         }
                     }
                 }
+
                 .alert {
                     position: absolute;
                     top: -50px;
@@ -1628,13 +1631,13 @@ body {
                     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
                     opacity: 0;
                     visibility: hidden;
-    
+
                     svg {
                         path {
                             fill: #c13458;
                         }
                     }
-    
+
                     p {
                         margin-left: 39px;
                         color: #c13458;
@@ -1643,7 +1646,8 @@ body {
                         line-height: 18px;
                     }
                 }
-                .show{
+
+                .show {
                     top: 0;
                     opacity: 1;
                     visibility: visible;
@@ -1854,7 +1858,7 @@ body {
                         background-color: #ffffff;
                         display: flex;
                         align-items: center;
-                        padding: 10px 16px;
+                        padding: 0 16px;
 
                         .point {
                             display: flex;
@@ -1864,6 +1868,7 @@ body {
                                 width: 6px;
                                 height: 4px;
                                 cursor: pointer;
+                                padding: 18px 3px;
                             }
 
                             span {
@@ -1871,15 +1876,15 @@ body {
                                 color: #676767;
                                 font-family: "myriad_geo_bold";
                                 font-size: 16px;
-                                margin: 0 16px;
+                                margin: 0 10px;
                             }
                         }
 
                         .check_cart {
                             display: flex;
-                            margin-left: 16px;
+                            margin-left: 10px;
                             border-left: 1px solid rgba(112, 112, 112, 0.15);
-                            padding-left: 16px;
+                            padding-left: 10px;
                             cursor: pointer;
 
                             svg {
@@ -2042,7 +2047,7 @@ body {
             justify-content: space-between;
             align-items: center;
 
-            p {
+            a {
                 width: 95px;
                 color: #676767;
                 font-family: "myriad_geo_bold";
@@ -2207,7 +2212,7 @@ body {
     }
 }
 
-.hidden{
+.hidden {
     overflow: hidden;
 }
 
