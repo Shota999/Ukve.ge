@@ -1175,7 +1175,7 @@ body {
                                                     color: #f4f4f4;
                                                     font-family: "myriad_geo_bold";
                                                     font-size: 12px;
-                                                    text-align: left;
+                                                    text-align: justify;
                                                 }
                                             }
 
@@ -1185,12 +1185,9 @@ body {
                                             }
 
                                             &:before {
-                                                // border-bottom: 7px solid #c13458;
-                                                // border-left: 4px solid transparent;
-                                                // border-right: 4px solid transparent;
                                                 content: url('../images/icons/info_arrow.svg');
                                                 right: 6px;
-                                                top: -13px;
+                                                top: -12px;
                                                 position: absolute;
 
                                             }
@@ -1228,7 +1225,8 @@ body {
                                 del {
                                     font-size: 16px;
                                 }
-                                span{
+
+                                span {
                                     border-radius: 20px;
                                 }
                             }
@@ -1407,7 +1405,6 @@ body {
             .top_container {
                 display: flex;
                 justify-content: space-between;
-                align-items: center;
 
                 .sale {
                     width: 89px;
@@ -1483,6 +1480,7 @@ body {
                             transition: .2s ease-in-out;
                             display: flex;
                             align-items: center;
+                            cursor: auto;
 
                             p {
                                 color: #f4f4f4;
@@ -1492,15 +1490,10 @@ body {
                             }
 
                             &:before {
-                                border-bottom: 7px solid #c13458;
-                                border-left: 4px solid transparent;
-                                border-right: 4px solid transparent;
-                                content: "";
+                                content: url('../images/icons/info_arrow.svg');
                                 left: 47%;
-                                top: -5px;
+                                top: -10px;
                                 position: absolute;
-                                width: 0;
-                                height: 0;
                             }
                         }
 
@@ -1582,6 +1575,7 @@ body {
                             display: flex;
                             align-items: center;
                             z-index: 1;
+                            cursor: auto;
 
 
                             p {
@@ -1592,15 +1586,10 @@ body {
                             }
 
                             &:before {
-                                border-bottom: 7px solid #c13458;
-                                border-left: 4px solid transparent;
-                                border-right: 4px solid transparent;
-                                content: "";
-                                left: 47%;
-                                top: -5px;
+                                content: url('../images/icons/info_arrow.svg');
+                                left: 65px;
+                                top: -10px;
                                 position: absolute;
-                                width: 0;
-                                height: 0;
                             }
                         }
 
@@ -1610,10 +1599,10 @@ body {
                         }
 
                         .info_blog {
-                            left: -62px;
+                            left: -52px;
 
                             .info {
-                                width: 141px;
+                                width: 125px;
                                 height: 152px;
                                 overflow-x: hidden;
                                 overflow-y: auto;
@@ -1709,6 +1698,7 @@ body {
                         color: #ffffff;
                         font-family: "myriad_geo_mtavruli_bold";
                         font-size: 13px;
+                        line-height: 18px;
                     }
 
                     .price {
@@ -1751,12 +1741,11 @@ body {
                         z-index: 1;
 
                         &.bounce {
-                            animation: bounce 0.3s;
+                            animation: bounce .3s;
                         }
 
                         p {
                             margin-right: 7px;
-                            opacity: 0.64;
                             color: #ffffff;
                             font-family: "myriad_geo_bold";
                             font-size: 12px;
@@ -1764,104 +1753,105 @@ body {
                         }
 
                         &:hover p {
-                            opacity: 1;
+                            opacity: 0.64;
                         }
-
-
                     }
 
-                    .more {
+                    .hidden_more {
                         position: absolute;
                         top: 0;
                         left: 0;
-                        box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
-                        border-radius: 0 0 20px 20px;
-                        width: 120px;
-                        height: 115px;
-                        box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
-                        background-color: #ffffff;
-                        opacity: 0;
-                        -webkit-transition: .4s ease-in-out;
-                        transition: .4s ease-in-out;
-                        overflow-y: auto;
-                        border-radius: 0px 0px 0px 20px;
-                        padding: 10px 8px 4px 8px;
+                        width: 136px;
                         z-index: 1;
+                        border-radius: 0 0 20px 20px;
+                        box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
                         visibility: hidden;
+                        opacity: 0;
+                        transition: .4s ease-in-out;
+                        background-color: #ffffff;
+                        overflow: hidden;
 
-                        .radio {
-                            display: flex;
-                            align-items: center;
-                            color: #6d6e71;
-                            font-family: "myriad_geo_bold";
-                            font-size: 10px;
-                            transition: .2s ease-in-out;
-                            cursor: pointer;
-                            border-bottom: 1px solid #f4f4f4;
-                            padding: 10px 0 10px 0;
-                            line-height: 11px;
+                        .more {
+                            height: 126px;
+                            overflow-y: auto;
+                            padding: 10px 8px 4px 8px;
 
-                            input {
-                                margin-right: 6px;
-                                cursor: pointer;
-                            }
-
-                            label {
-                                cursor: pointer;
-                            }
-
-                            &:hover {
-                                color: #a8a8a8;
-                            }
-
-                            &:first-child {
-                                padding-top: 0
-                            }
-
-                            &:last-child {
-                                margin-bottom: 0;
-                            }
-
-                            input[type="radio"] {
-                                display: none;
-                            }
-
-                            label {
-                                position: relative;
-                                display: block;
-                                padding-left: 19px;
-                            }
-
-                            label::before {
-                                content: "";
-                                display: inline-block;
-                                width: 10px;
-                                height: 10px;
-                                border-radius: 50%;
-                                border: 2px solid #c13458;
+                            .radio {
                                 display: flex;
                                 align-items: center;
-                                justify-content: center;
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                            }
+                                color: #6d6e71;
+                                font-family: "myriad_geo_bold";
+                                font-size: 10px;
+                                transition: .2s ease-in-out;
+                                cursor: pointer;
+                                border-bottom: 1px solid #f4f4f4;
+                                padding: 10px 0 10px 0;
+                                line-height: 11px;
 
-                            label::after {
-                                content: "";
-                                display: none;
-                                width: 6px;
-                                height: 6px;
-                                border-radius: 50%;
-                                border: 0;
-                                background-color: #6d6e71;
-                                position: absolute;
-                                top: 4px;
-                                left: 4px;
-                            }
+                                input {
+                                    margin-right: 6px;
+                                    cursor: pointer;
+                                }
 
-                            input[type="radio"]:checked+label::after {
-                                display: inline-block;
+                                label {
+                                    cursor: pointer;
+                                }
+
+                                &:hover {
+                                    color: #a8a8a8;
+                                }
+
+                                &:first-child {
+                                    padding-top: 0;
+                                }
+
+                                &:last-child {
+                                    margin-bottom: 0;
+                                }
+
+                                input[type="radio"] {
+                                    display: none;
+                                }
+
+                                label {
+                                    position: relative;
+                                    display: flex;
+                                    padding-left: 19px;
+                                    align-items: center;
+                                    height: 26px;
+                                }
+
+                                label::before {
+                                    content: "";
+                                    display: inline-block;
+                                    width: 10px;
+                                    height: 10px;
+                                    border-radius: 50%;
+                                    border: 2px solid #c13458;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    position: absolute;
+                                    top: 7px;
+                                    left: 0;
+                                }
+
+                                label::after {
+                                    content: "";
+                                    display: none;
+                                    width: 6px;
+                                    height: 6px;
+                                    border-radius: 50%;
+                                    border: 0;
+                                    background-color: #6d6e71;
+                                    position: absolute;
+                                    top: 4px;
+                                    left: 4px;
+                                }
+
+                                input[type="radio"]:checked+label::after {
+                                    display: inline-block;
+                                }
                             }
                         }
                     }
@@ -1871,7 +1861,7 @@ body {
                         border-color: #c74768;
 
                         p {
-                            opacity: 1;
+                            opacity: 0.64;
                         }
                     }
 

@@ -4,7 +4,7 @@ $(document).ready(function () {
         $(this).toggleClass('active');
     });
     $('.sauce').click(function () {
-        $(this).parent('.actions').find('.more').toggleClass('show');
+        $(this).parent('.actions').find('.hidden_more').toggleClass('show');
     });
     $('.nav_button').click(function () {
         $(".menu").addClass('show');
