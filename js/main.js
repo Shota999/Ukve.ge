@@ -29,6 +29,7 @@ $(document).ready(function () {
         slidesPerView: 'auto',
         spaceBetween: 16,
         loop: true,
+        grabCursor: true,
         navigation: {
             nextEl: '.slider_button_next',
             prevEl: '.slider_button_prev',

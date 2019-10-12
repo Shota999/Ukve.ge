@@ -72,7 +72,9 @@ body {
 
                 svg {
                     cursor: pointer;
+                }
 
+                .nav_button {
                     rect {
                         transition: .2s ease-in-out;
                     }
@@ -109,7 +111,7 @@ body {
                     justify-content: space-around;
 
                     nav {
-                        height: 60vh;
+                        height: 79vh;
 
                         ul {
                             height: 100%;
@@ -127,9 +129,51 @@ body {
                                     text-transform: uppercase;
                                     transition: .2s ease-in-out;
                                     margin-right: 0;
+                                    display: inline-block;
 
                                     &:hover {
                                         color: #a8a8a8;
+                                    }
+                                }
+                            }
+
+                            .nav_footer {
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-self: center;
+
+                                ul {
+                                    display: flex;
+                                    align-items: center;
+                                    flex-direction: initial;
+
+                                    li {
+                                        margin-right: 16px;
+
+                                        a {
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            width: 28px;
+                                            height: 28px;
+                                            border-radius: 20px;
+                                            background-color: #c13458;
+                                            border: 2px solid #c13458;
+                                            transition: .2s ease-in-out;
+
+                                            &:hover {
+                                                background-color: #ffffff;
+                                            }
+
+                                            &:hover svg path {
+                                                fill: #c13458;
+                                            }
+                                        }
+
+                                        &:last-child {
+                                            margin-right: 0;
+                                        }
                                     }
                                 }
                             }
@@ -140,39 +184,17 @@ body {
                         display: flex;
                         align-items: center;
                         justify-content: flex-end;
+                        position: absolute;
+                        top: 40px;
+                        right: 36px;
 
                         svg {
                             border: 4px solid #c13458;
                             border-radius: 50%;
-                            padding: 16px;
-                            margin-right: 40px;
+                            padding: 12px;
                         }
                     }
 
-                    .nav_footer {
-                        width: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-self: center;
-
-                        ul {
-                            display: flex;
-                            align-items: center;
-
-                            li {
-                                a {
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    width: 32px;
-                                    height: 32px;
-                                    border-radius: 20px;
-                                    background-color: #c13458;
-                                    margin-right: 16px;
-                                }
-                            }
-                        }
-                    }
                 }
 
                 .show {
@@ -249,7 +271,7 @@ body {
                         &::before {
                             transition: .2s ease-in-out;
                             position: absolute;
-                            top: -1px;
+                            top: -2px;
                             left: 0;
                             content: "";
                             width: 100%;
@@ -279,8 +301,6 @@ body {
                         display: flex;
                         align-items: center;
                         background-color: #f0f0f0;
-                        box-shadow: 0 30px 30px rgba(240, 240, 240, 0.32);
-
                     }
 
                     span {
@@ -289,6 +309,11 @@ body {
                         font-size: 13px;
                         margin-left: 16px;
                         line-height: 17px;
+                        transition: .2s ease-in-out;
+                    }
+
+                    &:hover span {
+                        color: #a8a8a8;
                     }
 
                     .profile_dropdown {
@@ -970,7 +995,7 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: #c13458;
+                background-color: #f99d1c;
                 border-radius: 50%;
             }
 
@@ -993,7 +1018,7 @@ body {
                 position: initial;
 
                 .swiper-wrapper {
-                    margin-bottom: 14px;
+                    margin-bottom: 4px;
                     z-index: 0;
                 }
 
@@ -1001,7 +1026,7 @@ body {
                     display: flex;
                     align-items: center;
                     justify-content: flex-end;
-                    margin-top: 14px;
+                    margin-top: 55px;
                     margin-right: 10%;
 
                     .slider_button_next {}
@@ -1091,7 +1116,7 @@ body {
                                     justify-content: space-between;
 
                                     .sale {
-                                        width: 58px;
+                                        width: 77px;
                                         height: 31px;
                                         background-color: #c13458;
                                         display: flex;
@@ -1150,6 +1175,7 @@ body {
                                                     color: #f4f4f4;
                                                     font-family: "myriad_geo_bold";
                                                     font-size: 12px;
+                                                    text-align: left;
                                                 }
                                             }
 
@@ -1159,20 +1185,18 @@ body {
                                             }
 
                                             &:before {
-                                                border-bottom: 7px solid #c13458;
-                                                border-left: 4px solid transparent;
-                                                border-right: 4px solid transparent;
-                                                content: "";
+                                                // border-bottom: 7px solid #c13458;
+                                                // border-left: 4px solid transparent;
+                                                // border-right: 4px solid transparent;
+                                                content: url('../images/icons/info_arrow.svg');
                                                 right: 6px;
-                                                top: -5px;
+                                                top: -13px;
                                                 position: absolute;
-                                                width: 0;
-                                                height: 0;
+
                                             }
                                         }
                                     }
                                 }
-
                             }
                         }
                     }
@@ -1204,6 +1228,9 @@ body {
                                 del {
                                     font-size: 16px;
                                 }
+                                span{
+                                    border-radius: 20px;
+                                }
                             }
 
                             span {
@@ -1211,11 +1238,12 @@ body {
                                 color: #bf3357;
                                 font-family: "poppins_black";
                                 font-size: 24px;
-                                margin-left: 4px;
+                                margin-left: 7px;
 
                                 small {
                                     font-family: "bpg_gel";
                                     margin-left: 1px;
+                                    font-size: 16px;
                                 }
                             }
                         }
@@ -1917,21 +1945,25 @@ body {
         justify-content: flex-end;
         align-items: center;
         margin-bottom: 10px;
-        padding: 0 140px;
+        padding: 0 63px;
 
         svg {
             cursor: pointer;
             padding: 16px 11px;
             border-radius: 20px;
             transition: .2s ease-in-out;
-            background-color: #ffffff;
+            background-color: #c13458;
+
+            path {
+                fill: #ffffff;
+            }
 
             &:hover {
-                background-color: #c13458;
+                background-color: #ffffff;
             }
 
             &:hover path {
-                fill: #fff;
+                fill: #c13458;
             }
         }
     }
@@ -2027,11 +2059,21 @@ body {
                         width: 32px;
                         height: 32px;
                         border-radius: 20px;
-                        background-color: #c13458;
                         cursor: pointer;
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        background-color: #c13458;
+                        border: 2px solid #c13458;
+                        transition: .2s ease-in-out;
+
+                        &:hover {
+                            background-color: #ffffff;
+                        }
+
+                        &:hover svg path {
+                            fill: #c13458;
+                        }
                     }
 
                     &:last-child {
@@ -2089,14 +2131,14 @@ body {
 
     .drink_button {
         position: fixed;
-        bottom: 382px;
+        bottom: 300px;
         left: 74px;
 
         a {
             display: flex;
             border-radius: 20px;
             transition: .2s ease-in-out;
-            background-color: #ffffff;
+            background-color: #c13458;
 
             svg {
                 width: 9px;
@@ -2104,14 +2146,18 @@ body {
                 border-radius: 20px;
                 padding: 16px;
                 cursor: pointer;
+
+                path {
+                    fill: #ffffff;
+                }
             }
 
             &:hover {
-                background-color: #c13458;
+                background-color: #ffffff;
             }
 
             &:hover svg path {
-                fill: #ffffff;
+                fill: #c13458;
             }
         }
     }
