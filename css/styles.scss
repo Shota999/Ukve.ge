@@ -513,6 +513,7 @@ body {
                                     color: #ffffff;
                                     font-family: "myriad_geo_bold";
                                     font-size: 10px;
+                                    transition: .2s ease-in-out;
 
                                     svg {
                                         width: 7px;
@@ -521,6 +522,9 @@ body {
                                         border-right: 1px solid;
                                         border-color: rgba(255, 255, 255, 0.08);
                                         margin-right: 26px;
+                                    }
+                                    &:hover{
+                                        color: rgba(255, 255, 255, 0.64);
                                     }
                                 }
                             }
@@ -832,7 +836,6 @@ body {
                                 padding-bottom: 4px;
                                 margin-top: 15px;
                                 align-items: flex-start;
-                                cursor: pointer;
 
                                 &:first-child {
                                     margin-top: 0;
@@ -891,9 +894,8 @@ body {
                                         }
                                     }
                                 }
-
-                                &:hover h5 {
-                                    color: #c13458;
+                                &:last-child{
+                                    border-bottom: none;
                                 }
                             }
                         }
@@ -1648,6 +1650,7 @@ body {
                     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
                     opacity: 0;
                     visibility: hidden;
+                    transition: .2s ease-in-out;
 
                     svg {
                         path {
@@ -2244,7 +2247,7 @@ body {
     /* Handle */
     ::-webkit-scrollbar-thumb {
         background: #c13458;
-        border-radius: 12px;
+        border-radius: 20px;
     }
 }
 

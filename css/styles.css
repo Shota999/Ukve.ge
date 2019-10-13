@@ -646,6 +646,8 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   color: #ffffff;
   font-family: "myriad_geo_bold";
   font-size: 10px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .facebook_registration svg {
@@ -655,6 +657,10 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   border-right: 1px solid;
   border-color: rgba(255, 255, 255, 0.08);
   margin-right: 26px;
+}
+
+body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .facebook_registration:hover {
+  color: rgba(255, 255, 255, 0.64);
 }
 
 body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side {
@@ -1011,7 +1017,6 @@ body header .bottom_header .profile_cart .cart .cart_body .cart_items .item {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  cursor: pointer;
 }
 
 body header .bottom_header .profile_cart .cart .cart_body .cart_items .item:first-child {
@@ -1089,8 +1094,8 @@ body header .bottom_header .profile_cart .cart .cart_body .cart_items .item .pri
   font-family: "bpg_gel";
 }
 
-body header .bottom_header .profile_cart .cart .cart_body .cart_items .item:hover h5 {
-  color: #c13458;
+body header .bottom_header .profile_cart .cart .cart_body .cart_items .item:last-child {
+  border-bottom: none;
 }
 
 body header .bottom_header .profile_cart .cart .cart_body .all_price {
@@ -1978,6 +1983,8 @@ body .content .container .top_container .alert {
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 body .content .container .top_container .alert svg path {
@@ -2695,7 +2702,7 @@ body ::-webkit-scrollbar-track {
 
 body ::-webkit-scrollbar-thumb {
   background: #c13458;
-  border-radius: 12px;
+  border-radius: 20px;
 }
 
 .hidden {
