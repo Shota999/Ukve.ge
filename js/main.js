@@ -43,6 +43,7 @@ $(document).ready(function () {
             nextEl: '.inner_button_next',
             prevEl: '.inner_button_prev',
         },
+        loop: true,
     });
 
     // Menu Scroll
@@ -158,7 +159,7 @@ $(document).ready(function () {
             actions.closest('.bottom_container').siblings('.top_container').find('.alert').addClass('show')
             setTimeout(function () {
                 actions.find('.sauce').removeClass('bounce');
-            }, 300)
+            }, 700)
             setTimeout(function () {
                 $('.alert').removeClass('show');
             }, 2000)
@@ -168,15 +169,12 @@ $(document).ready(function () {
     // Count
 
     $('.counter_plus').click(function () {
-
-        if ($(".count").html(function (i, val) {
-                return val * 1 + 1
-            }) > 0) {
-        }
+        $(this).siblings(".count").html(function (i, val) { return Number(val) + 1 });
     });
-    // $('.counter_minus').click(function() {
-    //     $('.count').html(function(i, val) { return val*1-1 });
-    // });
+
+    $('.counter_minus').click(function() {
+        $(this).siblings('.count').html(function(i, val) {  return  (val > 1) ? val-1 : val });
+    });
 
     // Item Remove
 
