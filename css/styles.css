@@ -264,12 +264,6 @@ body header .top_header .right .menu .close {
   right: 36px;
 }
 
-body header .top_header .right .menu .close svg {
-  border: 4px solid #c13458;
-  border-radius: 50%;
-  padding: 13px;
-}
-
 body header .top_header .right .show {
   top: 0;
 }
