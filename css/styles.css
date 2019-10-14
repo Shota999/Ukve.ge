@@ -2562,6 +2562,12 @@ body footer .bottom_container a {
   font-size: 10px;
   border-left: 4px solid #c13458;
   padding-left: 8px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body footer .bottom_container a:hover {
+  opacity: 0.64;
 }
 
 body .colors {

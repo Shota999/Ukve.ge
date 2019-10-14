@@ -2062,7 +2062,6 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
 
-
         .logo_social {
             display: flex;
             justify-content: space-between;
@@ -2117,6 +2116,11 @@ body {
                 font-size: 10px;
                 border-left: 4px solid #c13458;
                 padding-left: 8px;
+                transition: .2s ease-in-out;
+
+                &:hover{
+                    opacity: 0.64;
+                }
             }
         }
     }
