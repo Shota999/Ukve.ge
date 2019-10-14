@@ -532,6 +532,9 @@ body {
                                 transition: all .2s ease-in-out;
 
                                 form {
+                                    display: flex;
+                                    flex-direction: column;
+
                                     .top {
                                         display: flex;
                                         align-items: center;
@@ -605,6 +608,8 @@ body {
                                         cursor: pointer;
                                         transition: .2s ease-in-out;
                                         margin-top: 8px;
+                                        width: 83px;
+                                        margin: 0 auto;
 
                                         &:hover {
                                             color: rgba(255, 255, 255, 0.64);
@@ -1026,8 +1031,6 @@ body {
                     margin-top: 55px;
                     margin-right: 10%;
 
-                    .slider_button_next {}
-
                     .slider_button_prev {
                         margin-right: 32px;
                     }
@@ -1163,7 +1166,7 @@ body {
                                             align-items: center;
 
                                             .info {
-                                                height: 100px;
+                                                height: 108px;
                                                 overflow-x: hidden;
                                                 overflow-y: auto;
                                                 margin: 8px;

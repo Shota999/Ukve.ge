@@ -666,6 +666,16 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   transition: all .2s ease-in-out;
 }
 
+body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -759,6 +769,8 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
   margin-top: 8px;
+  width: 83px;
+  margin: 0 auto;
 }
 
 body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .registration:hover {
@@ -1421,7 +1433,7 @@ body .special .slider_content .swiper-slide .inner-slider .swiper-wrapper .swipe
 }
 
 body .special .slider_content .swiper-slide .inner-slider .swiper-wrapper .swiper-slide .image_container .info_container .info .info_body .info {
-  height: 100px;
+  height: 108px;
   overflow-x: hidden;
   overflow-y: auto;
   margin: 8px;
