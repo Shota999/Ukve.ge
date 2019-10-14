@@ -162,11 +162,15 @@ body {
                                             border: 2px solid #c13458;
                                             transition: .2s ease-in-out;
 
+                                            // svg rect {
+                                            //     fill: #ffffff;
+                                            // }
+
                                             &:hover {
                                                 background-color: #ffffff;
                                             }
 
-                                            &:hover svg path {
+                                            &:hover svg path, &:hover svg rect {
                                                 fill: #c13458;
                                             }
                                         }
@@ -188,6 +192,14 @@ body {
                         top: 40px;
                         right: 36px;
 
+<<<<<<< HEAD
+                        svg {
+                            border: 4px solid #c13458;
+                            border-radius: 50%;
+                            padding: 13px;
+                        }
+=======
+>>>>>>> b85a3f9b964a0f2a97455f3157c1f02a786ea537
                     }
 
                 }
@@ -266,7 +278,7 @@ body {
                         &::before {
                             transition: .2s ease-in-out;
                             position: absolute;
-                            top: -2px;
+                            top: -1.5px;
                             left: 0;
                             content: "";
                             width: 100%;
@@ -1217,26 +1229,27 @@ body {
                         .price {
                             display: flex;
                             justify-content: center;
+                            align-items: flex-end;
 
                             .sale {
                                 color: #676767;
                                 font-family: "myriad_geo_bold";
-
-                                del {
-                                    font-size: 16px;
-                                }
-
-                                span {
-                                    border-radius: 20px;
-                                }
+                                font-size: 16px;
+                                line-height: 16px;
+                            }
+                            .slash{
+                                color: #676767;
+                                font-family: "myriad_geo_bold";
+                                margin: 0 7px;
+                                font-size: 24px;
+                                line-height: 20px;
                             }
 
                             span {
-                                display: block;
                                 color: #bf3357;
                                 font-family: "poppins_black";
                                 font-size: 24px;
-                                margin-left: 7px;
+                                line-height: 12px;
 
                                 small {
                                     font-family: "bpg_gel";
@@ -1606,10 +1619,30 @@ body {
                                 height: 152px;
                                 overflow-x: hidden;
                                 overflow-y: auto;
-                                margin: 8px;
+                                margin: 8px 4px 8px 8px;
+                                padding-right: 4px;
 
                                 p {
                                     padding: 0;
+
+                                }
+
+                                /* width */
+                                &::-webkit-scrollbar {
+                                    width: 3px;
+                                }
+
+                                /* Track */
+                                &::-webkit-scrollbar-track {
+                                    background: transparent;
+                                    border-radius: 0px 0px 20px 0px;
+                                }
+                                &::-webkit-scrollbar-thumb {
+                                    background: transparent;
+                                    border-radius: 10px;
+                                }
+                                &:hover::-webkit-scrollbar-thumb{
+                                    background: white;
                                 }
                             }
                         }
@@ -1742,7 +1775,10 @@ body {
                         z-index: 1;
 
                         &.bounce {
-                            animation: bounce .3s;
+                            animation-name: bounce;
+                            animation-duration: .3s;
+                            animation-iteration-count: 2;
+                            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
                         }
 
                         p {
@@ -1862,7 +1898,10 @@ body {
                         border-color: #c74768;
 
                         p {
-                            opacity: 0.64;
+                            opacity: 1;
+                            &:hover{
+                                opacity: 1; 
+                            }
                         }
                     }
 
@@ -2259,11 +2298,11 @@ body {
     }
 
     40% {
-        transform: translate(2px)
+        transform: translate(3px)
     }
 
     80% {
-        transform: translate(-2px)
+        transform: translate(-3px)
     }
 
     100% {
