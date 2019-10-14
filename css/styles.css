@@ -769,7 +769,8 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
 }
 
 body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .registration:hover {
-  color: rgba(255, 255, 255, 0.64);
+  background-color: #ffffff;
+  color: #c13458;
 }
 
 body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .or {
