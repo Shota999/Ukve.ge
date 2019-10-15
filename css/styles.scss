@@ -54,6 +54,18 @@ body {
                     font-size: 14px;
                     margin-left: 16px;
                 }
+                .zone_button{
+                    color: #C13458;
+                    font-size: 12px;
+                    font-family: "myriad_geo_bold";
+                    text-decoration: underline;
+                    margin-left: 40px;
+                    transition: .2s ease-in-out;
+
+                    &:hover{
+                        opacity: 0.64;
+                    }
+                }
             }
 
             .right {
@@ -2258,6 +2270,20 @@ body {
             color: #676767;
             font-family: "myriad_geo_bold";
             font-size: 14px;
+        }
+    }
+
+    .hide_map{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.72);
+
+        .map{
+            margin: 10%;
         }
     }
 
