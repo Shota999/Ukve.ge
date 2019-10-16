@@ -54,7 +54,8 @@ body {
                     font-size: 14px;
                     margin-left: 16px;
                 }
-                .zone_button{
+
+                .zone_button {
                     color: #C13458;
                     font-size: 12px;
                     font-family: "myriad_geo_bold";
@@ -62,7 +63,7 @@ body {
                     margin-left: 40px;
                     transition: .2s ease-in-out;
 
-                    &:hover{
+                    &:hover {
                         opacity: 0.64;
                     }
                 }
@@ -182,7 +183,8 @@ body {
                                                 background-color: #ffffff;
                                             }
 
-                                            &:hover svg path, &:hover svg rect {
+                                            &:hover svg path,
+                                            &:hover svg rect {
                                                 fill: #c13458;
                                             }
                                         }
@@ -528,7 +530,8 @@ body {
                                         border-color: rgba(255, 255, 255, 0.08);
                                         margin-right: 26px;
                                     }
-                                    &:hover{
+
+                                    &:hover {
                                         color: rgba(255, 255, 255, 0.64);
                                     }
                                 }
@@ -687,7 +690,8 @@ body {
                                             border-color: rgba(255, 255, 255, 0.08);
                                             margin-right: 26px;
                                         }
-                                        &:hover{
+
+                                        &:hover {
                                             color: rgba(255, 255, 255, 0.64);
                                         }
                                     }
@@ -904,7 +908,8 @@ body {
                                         }
                                     }
                                 }
-                                &:last-child{
+
+                                &:last-child {
                                     border-bottom: none;
                                 }
                             }
@@ -955,41 +960,6 @@ body {
         }
     }
 
-    .fixedheader {
-        position: fixed;
-        transition: all .5s ease-in-out;
-
-        .top_header {
-            padding: 16px 10%;
-            border-bottom: 1px solid #f0f0f0;
-            box-shadow: none;
-        }
-
-        .bottom_header {
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-
-            h1 {
-                a {
-                    width: 52px;
-                    height: 48px;
-
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
-
-            nav {
-                ul {
-                    li {
-                        a {
-                            padding: 18px 0;
-                        }
-                    }
-                }
-            }
-        }
-    }
 
     .special {
         padding: 72px 0 72px 10%;
@@ -1123,6 +1093,7 @@ body {
                                 }
                             }
                         }
+
                         .inner_button {
                             width: 26px;
                             height: 34px;
@@ -1636,11 +1607,13 @@ body {
                                     background: transparent;
                                     border-radius: 0px 0px 20px 0px;
                                 }
+
                                 &::-webkit-scrollbar-thumb {
                                     background: transparent;
                                     border-radius: 10px;
                                 }
-                                &:hover::-webkit-scrollbar-thumb{
+
+                                &:hover::-webkit-scrollbar-thumb {
                                     background: white;
                                 }
                             }
@@ -1868,7 +1841,7 @@ body {
                                     align-items: center;
                                     justify-content: center;
                                     position: absolute;
-                                    top: 7px;
+                                    top: 6px;
                                     left: 0;
                                 }
 
@@ -1881,7 +1854,7 @@ body {
                                     border: 0;
                                     background-color: #6d6e71;
                                     position: absolute;
-                                    top: 4px;
+                                    top: 10px;
                                     left: 4px;
                                 }
 
@@ -1898,8 +1871,9 @@ body {
 
                         p {
                             opacity: 1;
-                            &:hover{
-                                opacity: 1; 
+
+                            &:hover {
+                                opacity: 1;
                             }
                         }
                     }
@@ -2126,7 +2100,7 @@ body {
                 padding-left: 8px;
                 transition: .2s ease-in-out;
 
-                &:hover{
+                &:hover {
                     opacity: 0.64;
                 }
             }
@@ -2218,62 +2192,72 @@ body {
         position: initial;
     }
 
-    .password_content {
-        margin: 32px 10% 40px 10%;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
-        border-radius: 6px;
-        background-color: #ffffff;
-        padding: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    .main_content {
+        padding-top: 312px;
+        margin: 0 10%;
 
-        h2 {
-            color: #676767;
-            font-family: "myriad_geo_mtavruli_bold";
-            font-size: 24px;
-        }
-
-        .link {
+        .content {
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            margin: 0;
+            border-radius: 6px;
+            background-color: #ffffff;
             display: flex;
             align-items: center;
+            justify-content: space-between;
+
+            h2 {
+                color: #676767;
+                font-family: "myriad_geo_mtavruli_bold";
+                font-size: 24px;
+            }
+
+            .link {
+                display: flex;
+                align-items: center;
+
+                p {
+                    color: #676767;
+                    font-family: "myriad_geo_bold";
+                    font-size: 14px;
+                }
+
+                svg {
+                    margin: 0 18px 0 16px;
+                }
+
+                span {
+                    opacity: 0.5;
+                    color: #676767;
+                    font-family: "myriad_geo_bold";
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .container {
+            margin: 40px 0;
 
             p {
+                font-size: 16px;
+                font-family: "myriad_geo_medium";
                 color: #676767;
-                font-family: "myriad_geo_bold";
-                font-size: 14px;
             }
 
-            svg {
-                margin: 0 18px 0 16px;
-            }
-
-            span {
-                opacity: 0.5;
-                color: #676767;
-                font-family: "myriad_geo_bold";
-                font-size: 14px;
+            .image_container {
+                width: 100%;
+                height: 476px;
+                overflow: hidden;
+                background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)), url(../images/background_images/company.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin: 15px 0 25px 0;
             }
         }
     }
 
-    .password_container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        max-width: 305px;
-        margin: 0 auto;
-        text-align: center;
 
-        h3 {
-            color: #676767;
-            font-family: "myriad_geo_bold";
-            font-size: 14px;
-        }
-    }
-
-    .hide_map{
+    .hide_map {
         position: absolute;
         top: 0;
         left: 0;
@@ -2281,10 +2265,54 @@ body {
         height: 100%;
         z-index: 99;
         background-color: rgba(0, 0, 0, 0.72);
+        opacity: 0;
+        visibility: hidden;
+        transition: .2s ease-in-out;
 
-        .map{
+        .map {
             margin: 10%;
         }
+    }
+
+    .fixedheader {
+        position: fixed;
+        transition: all .5s ease-in-out;
+
+        .top_header {
+            padding: 16px 10%;
+            border-bottom: 1px solid #f0f0f0;
+            box-shadow: none;
+        }
+
+        .bottom_header {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+
+            h1 {
+                a {
+                    width: 52px;
+                    height: 48px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            nav {
+                ul {
+                    li {
+                        a {
+                            padding: 18px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .show_map {
+        opacity: 1;
+        visibility: visible;
     }
 
     /* width */

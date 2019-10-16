@@ -255,7 +255,8 @@ body header .top_header .right .menu nav ul .nav_footer ul li a:hover {
   background-color: #ffffff;
 }
 
-body header .top_header .right .menu nav ul .nav_footer ul li a:hover svg path, body header .top_header .right .menu nav ul .nav_footer ul li a:hover svg rect {
+body header .top_header .right .menu nav ul .nav_footer ul li a:hover svg path,
+body header .top_header .right .menu nav ul .nav_footer ul li a:hover svg rect {
   fill: #c13458;
 }
 
@@ -1163,37 +1164,6 @@ body header .bottom_header .profile_cart .cart .cart_body .buy button {
   border: none;
   outline: none;
   cursor: pointer;
-}
-
-body .fixedheader {
-  position: fixed;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
-
-body .fixedheader .top_header {
-  padding: 16px 10%;
-  border-bottom: 1px solid #f0f0f0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-body .fixedheader .bottom_header {
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-}
-
-body .fixedheader .bottom_header h1 a {
-  width: 52px;
-  height: 48px;
-}
-
-body .fixedheader .bottom_header h1 a img {
-  width: 100%;
-}
-
-body .fixedheader .bottom_header nav ul li a {
-  padding: 18px 0;
 }
 
 body .special {
@@ -2270,7 +2240,7 @@ body .content .container .bottom_container .actions .hidden_more .more .radio la
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  top: 7px;
+  top: 6px;
   left: 0;
 }
 
@@ -2283,7 +2253,7 @@ body .content .container .bottom_container .actions .hidden_more .more .radio la
   border: 0;
   background-color: #6d6e71;
   position: absolute;
-  top: 4px;
+  top: 10px;
   left: 4px;
 }
 
@@ -2678,13 +2648,18 @@ body .not_fixed {
   position: initial;
 }
 
-body .password_content {
-  margin: 32px 10% 40px 10%;
+body .main_content {
+  padding-top: 312px;
+  margin: 0 10%;
+}
+
+body .main_content .content {
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
           box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  margin: 0;
   border-radius: 6px;
   background-color: #ffffff;
-  padding: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2696,13 +2671,13 @@ body .password_content {
           justify-content: space-between;
 }
 
-body .password_content h2 {
+body .main_content .content h2 {
   color: #676767;
   font-family: "myriad_geo_mtavruli_bold";
   font-size: 24px;
 }
 
-body .password_content .link {
+body .main_content .content .link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2711,46 +2686,42 @@ body .password_content .link {
           align-items: center;
 }
 
-body .password_content .link p {
+body .main_content .content .link p {
   color: #676767;
   font-family: "myriad_geo_bold";
   font-size: 14px;
 }
 
-body .password_content .link svg {
+body .main_content .content .link svg {
   margin: 0 18px 0 16px;
 }
 
-body .password_content .link span {
+body .main_content .content .link span {
   opacity: 0.5;
   color: #676767;
   font-family: "myriad_geo_bold";
   font-size: 14px;
 }
 
-body .password_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  max-width: 305px;
-  margin: 0 auto;
-  text-align: center;
+body .main_content .container {
+  margin: 40px 0;
 }
 
-body .password_container h3 {
+body .main_content .container p {
+  font-size: 16px;
+  font-family: "myriad_geo_medium";
   color: #676767;
-  font-family: "myriad_geo_bold";
-  font-size: 14px;
+}
+
+body .main_content .container .image_container {
+  width: 100%;
+  height: 476px;
+  overflow: hidden;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.32)), to(rgba(0, 0, 0, 0.32))), url(../images/background_images/company.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)), url(../images/background_images/company.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 15px 0 25px 0;
 }
 
 body .hide_map {
@@ -2761,10 +2732,50 @@ body .hide_map {
   height: 100%;
   z-index: 99;
   background-color: rgba(0, 0, 0, 0.72);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 body .hide_map .map {
   margin: 10%;
+}
+
+body .fixedheader {
+  position: fixed;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+body .fixedheader .top_header {
+  padding: 16px 10%;
+  border-bottom: 1px solid #f0f0f0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body .fixedheader .bottom_header {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+body .fixedheader .bottom_header h1 a {
+  width: 52px;
+  height: 48px;
+}
+
+body .fixedheader .bottom_header h1 a img {
+  width: 100%;
+}
+
+body .fixedheader .bottom_header nav ul li a {
+  padding: 18px 0;
+}
+
+body .show_map {
+  opacity: 1;
+  visibility: visible;
 }
 
 body ::-webkit-scrollbar {
