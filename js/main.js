@@ -131,6 +131,12 @@ $(document).ready(function () {
             changeText();
         }
 
+        if ($('.category').hasClass('border') && n.target.closest(".category") == null) {
+            $('.category').removeClass('border');
+        }
+        if ($('.hide_category').hasClass('show_category') && n.target.closest(".category") == null) {
+            $('.hide_category').removeClass('show_category');
+        }
     });
 
     $('.choose').click(function () {
@@ -188,6 +194,14 @@ $(document).ready(function () {
     $('.close').click(function() {
         $(this).closest(".item").fadeOut();
         // setTimeout(function(){ $(".item").remove(); }, 3000);
+    });
+
+
+    // Blog Js
+
+    $('.category').click(function () {
+        $(".hide_category").toggleClass('show_category');
+        $(this).toggleClass('border');
     });
 
 });

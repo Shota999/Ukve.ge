@@ -2644,10 +2644,6 @@ body .messenger_button svg {
   padding: 11px;
 }
 
-body .not_fixed {
-  position: initial;
-}
-
 body .main_content {
   padding-top: 312px;
   margin: 0 10%;
@@ -2722,6 +2718,126 @@ body .main_content .container .image_container {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 15px 0 25px 0;
+}
+
+body .main_content .container .category {
+  width: 192px;
+  height: 65px;
+  background-color: #C13458;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body .main_content .container .category p {
+  margin-right: 16px;
+  color: #ffffff;
+  font-family: "myriad_geo_bold";
+  font-size: 16px;
+}
+
+body .main_content .container .category svg path {
+  fill: #ffffff;
+}
+
+body .main_content .container .category .hide_category {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  background-color: #ffffff;
+}
+
+body .main_content .container .category .hide_category .inner_category {
+  padding: 16px;
+  height: 195px;
+  overflow-y: auto;
+}
+
+body .main_content .container .category .hide_category .inner_category .radio_category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #6d6e71;
+  font-family: "myriad_geo_bold";
+  font-size: 12px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+body .main_content .container .category .hide_category .inner_category .radio_category input[type="radio"] {
+  display: none;
+}
+
+body .main_content .container .category .hide_category .inner_category .radio_category label {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 45px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 22px;
+  padding-bottom: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .main_content .container .category .hide_category .inner_category .radio_category label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  border: 3px solid #e4e4e4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+body .main_content .container .category .show_category {
+  opacity: 1;
+  visibility: visible;
+  top: 65px;
+}
+
+body .main_content .container .border {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 body .hide_map {
