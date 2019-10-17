@@ -127,7 +127,7 @@ $(document).ready(function () {
             $('.info_body').removeClass('show');
         }
 
-        if ($('.more').hasClass('show') && n.target.closest(".actions") == null) {
+        if ($('.hidden_more').hasClass('show') && n.target.closest(".actions") == null) {
             changeText();
         }
 
@@ -152,7 +152,7 @@ $(document).ready(function () {
         if (str) {
             $('.sauce.active p').text(str.length > 12 ? str.slice(0, 12) + "..." : str);
         }
-        $('.more.show').removeClass('show');
+        $('.hidden_more.show').removeClass('show');
         $('.sauce.active').removeClass('active');
     }
 

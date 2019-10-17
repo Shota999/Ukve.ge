@@ -2745,10 +2745,16 @@ body .main_content .container .category p {
   color: #ffffff;
   font-family: "myriad_geo_bold";
   font-size: 16px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 body .main_content .container .category svg path {
   fill: #ffffff;
+}
+
+body .main_content .container .category:hover p {
+  opacity: 0.64;
 }
 
 body .main_content .container .category .hide_category {
@@ -2838,6 +2844,141 @@ body .main_content .container .border {
   border-top-right-radius: 6px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+body .main_content .container .blog_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin-top: 14px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .main_content .container .blog_container .blog {
+  width: 31%;
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: 42px;
+}
+
+body .main_content .container .blog_container .blog .blog_image {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+body .main_content .container .blog_container .blog .blog_image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 235px;
+  width: 100%;
+}
+
+body .main_content .container .blog_container .blog .view {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 8px;
+}
+
+body .main_content .container .blog_container .blog .view span {
+  display: block;
+  color: #a8a8a8;
+  font-family: "myriad_geo_bold";
+  font-size: 12px;
+}
+
+body .main_content .container .blog_container .blog h3 {
+  color: #676767;
+  font-family: "myriad_geo_mtavruli_bold";
+  font-size: 16px;
+  margin-top: 8px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body .main_content .container .blog_container .blog h3:hover {
+  opacity: 0.64;
+}
+
+body .main_content .container .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+}
+
+body .main_content .container .pagination ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main_content .container .pagination ul li {
+  margin-right: 16px;
+}
+
+body .main_content .container .pagination ul li .active {
+  color: #676767;
+}
+
+body .main_content .container .pagination ul li a {
+  color: #c1c1c1;
+  font-family: "myriad_geo_bold";
+  font-size: 16px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main_content .container .pagination ul .prev {
+  border-radius: 17px;
+  background-color: #c13458;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body .main_content .container .pagination ul .prev a {
+  padding: 14px 20px;
+}
+
+body .main_content .container .pagination ul .prev:hover {
+  opacity: 0.64;
+}
+
+body .main_content .container .pagination ul .next {
+  border-radius: 17px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  background-color: #c13458;
+}
+
+body .main_content .container .pagination ul .next a {
+  padding: 14px 20px;
+}
+
+body .main_content .container .pagination ul .next:hover {
+  opacity: 0.64;
 }
 
 body .hide_map {

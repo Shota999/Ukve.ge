@@ -11,6 +11,9 @@
   .content .container {
     width: 28%;
   }
+  .main_content .container .blog_container .blog {
+    width: 31%;
+  }
 }
 
 @media (max-width: 1440px) {
@@ -29,6 +32,9 @@
   body .content .container {
     width: 31%;
   }
+  body .main_content .container .blog_container .blog {
+    width: 31%;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -43,6 +49,9 @@
   }
   .content .container {
     width: 28%;
+  }
+  .main_content .container .blog_container .blog {
+    width: 31%;
   }
 }
 
