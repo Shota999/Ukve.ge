@@ -1186,6 +1186,12 @@ body header .bottom_header .profile_cart .cart .cart_body .buy button {
   border: none;
   outline: none;
   cursor: pointer;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body header .bottom_header .profile_cart .cart .cart_body .buy button:hover {
+  color: rgba(255, 255, 255, 0.64);
 }
 
 body .special {

@@ -972,6 +972,11 @@ body {
                                 border: none;
                                 outline: none;
                                 cursor: pointer;
+                                transition: .2s ease-in-out;
+
+                                &:hover{
+                                    color: rgba(255, 255, 255, 0.64);
+                                }
                             }
                         }
                     }
