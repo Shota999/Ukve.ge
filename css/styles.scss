@@ -53,6 +53,11 @@ body {
                     font-family: 'myriad_geo_bold';
                     font-size: 14px;
                     margin-left: 16px;
+                    transition: .2s ease-in-out;
+
+                    &:hover{
+                        opacity: 0.64;
+                    }
                 }
 
                 .zone_button {
@@ -2227,7 +2232,7 @@ body {
                 display: flex;
                 align-items: center;
 
-                p {
+                a {
                     color: #676767;
                     font-family: "myriad_geo_bold";
                     font-size: 14px;
