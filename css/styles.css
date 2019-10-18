@@ -674,6 +674,7 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   padding: 16px;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  width: 160px;
 }
 
 body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form {
@@ -705,6 +706,21 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   font-family: "myriad_geo_bold";
   font-size: 13px;
   margin-left: 24px;
+}
+
+body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .top svg {
+  border: 1px solid #c13458;
+  border-radius: 50%;
+}
+
+body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .top svg:hover {
+  background: #c13458;
+  border-radius: 50%;
+  border: 1px solid #c13458;
+}
+
+body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .top svg:hover path {
+  fill: #ffffff;
 }
 
 body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input {

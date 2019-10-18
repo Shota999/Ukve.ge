@@ -543,6 +543,7 @@ body {
                                 right: -200px;
                                 padding: 16px;
                                 transition: all .2s ease-in-out;
+                                width: 160px;
 
                                 form {
                                     display: flex;
@@ -562,6 +563,20 @@ body {
                                             font-family: "myriad_geo_bold";
                                             font-size: 13px;
                                             margin-left: 24px;
+                                        }
+
+                                        svg{
+                                            border: 1px solid #c13458;
+                                            border-radius: 50%;
+
+                                            &:hover{
+                                                background: #c13458;
+                                                border-radius: 50%;
+                                                border: 1px solid #c13458;
+                                            }
+                                            &:hover path{
+                                                fill: #ffffff;
+                                            }
                                         }
                                     }
 
