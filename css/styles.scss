@@ -1731,20 +1731,28 @@ body {
                         display: flex;
                         align-items: baseline;
 
-                        del {
+                        .sale {
                             color: #d8d8d8;
                             font-family: "myriad_geo_bold";
-                            font-size: 17px;
-                            margin-right: 4px;
+                            font-size: 16px;
+                            line-height: 16px;
                         }
 
+                        .slash {
+                            color: #d8d8d8;
+                            font-family: "myriad_geo_bold";
+                            margin: 0 2px;
+                            font-size: 21px;
+                            line-height: 20px;
+                        }
                         span {
                             display: block;
                             color: #ffffff;
                             font-family: "bpg_gel";
-                            font-size: 24px;
+                            font-size: 21px;
                             font-weight: 700;
                         }
+                        
                     }
                 }
 
@@ -2004,15 +2012,10 @@ body {
         display: none;
 
         &:before {
-            border-top: 9px solid #72b55b;
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            content: "";
-            left: 47%;
-            bottom: -7px;
+            content: url(../images/icons/add_green.svg);
+            right: 50%;
+            bottom: -12px;
             position: absolute;
-            width: 0;
-            height: 0;
         }
 
         p {
@@ -2037,15 +2040,11 @@ body {
         display: none;
 
         &:before {
-            border-top: 9px solid #c13458;
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            content: "";
-            left: 47%;
-            bottom: -7px;
+            content: url(../images/icons/info_arrow.svg);
+            right: 50%;
+            bottom: -12px;
             position: absolute;
-            width: 0;
-            height: 0;
+            transform: rotate(180deg);
         }
 
         p {
@@ -2410,6 +2409,10 @@ body {
                         // .radio_category input:checked~label {
                         //     color: #72b55b;
                         // }
+
+                        &::-webkit-scrollbar-track{
+                            background: transparent;
+                        }
                     }
                 }
 
@@ -2445,10 +2448,11 @@ body {
                         width: 100%;
                         border-radius: 20px;
                         overflow: hidden;
+                        height: 235px;
 
                         img {
                             object-fit: cover;
-                            height: 235px;
+                            
                             width: 100%;
                         }
                     }
@@ -2468,14 +2472,16 @@ body {
                     }
 
                     h3 {
-                        color: #676767;
-                        font-family: "myriad_geo_mtavruli_bold";
-                        font-size: 16px;
-                        margin-top: 8px;
-                        transition: .2s ease-in-out;
-
-                        &:hover {
-                            opacity: 0.64;
+                        a{
+                            color: #676767;
+                            font-family: "myriad_geo_mtavruli_bold";
+                            font-size: 16px;
+                            margin-top: 8px;
+                            transition: .2s ease-in-out;
+    
+                            &:hover {
+                                opacity: 0.64;
+                            }
                         }
                     }
                 }
@@ -2539,6 +2545,10 @@ body {
             // Inner Blog Page
 
             .text_container{
+                color: #a8a8a8;
+                font-family: "myriad_geo_medium";
+                font-size: 16px;
+
                 h3{
                     color: #676767;
                     font-family: "myriad_geo_bold";

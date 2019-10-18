@@ -2097,18 +2097,26 @@ body .content .container .bottom_container .title_price .price {
           align-items: baseline;
 }
 
-body .content .container .bottom_container .title_price .price del {
+body .content .container .bottom_container .title_price .price .sale {
   color: #d8d8d8;
   font-family: "myriad_geo_bold";
-  font-size: 17px;
-  margin-right: 4px;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+body .content .container .bottom_container .title_price .price .slash {
+  color: #d8d8d8;
+  font-family: "myriad_geo_bold";
+  margin: 0 2px;
+  font-size: 21px;
+  line-height: 20px;
 }
 
 body .content .container .bottom_container .title_price .price span {
   display: block;
   color: #ffffff;
   font-family: "bpg_gel";
-  font-size: 24px;
+  font-size: 21px;
   font-weight: 700;
 }
 
@@ -2427,15 +2435,10 @@ body .successfully_add {
 }
 
 body .successfully_add:before {
-  border-top: 9px solid #72b55b;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  content: "";
-  left: 47%;
-  bottom: -7px;
+  content: url(../images/icons/add_green.svg);
+  right: 50%;
+  bottom: -12px;
   position: absolute;
-  width: 0;
-  height: 0;
 }
 
 body .successfully_add p {
@@ -2464,15 +2467,12 @@ body .dont_add {
 }
 
 body .dont_add:before {
-  border-top: 9px solid #c13458;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  content: "";
-  left: 47%;
-  bottom: -7px;
+  content: url(../images/icons/info_arrow.svg);
+  right: 50%;
+  bottom: -12px;
   position: absolute;
-  width: 0;
-  height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 body .dont_add p {
@@ -2902,6 +2902,10 @@ body .main_content .container .category .hide_category .inner_category .radio_ca
   border-color: #72b55b;
 }
 
+body .main_content .container .category .hide_category .inner_category::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 body .main_content .container .category .show_category {
   opacity: 1;
   visibility: visible;
@@ -2940,12 +2944,12 @@ body .main_content .container .blog_container .blog .blog_image {
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
+  height: 235px;
 }
 
 body .main_content .container .blog_container .blog .blog_image img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 235px;
   width: 100%;
 }
 
@@ -2967,7 +2971,7 @@ body .main_content .container .blog_container .blog .view span {
   font-size: 12px;
 }
 
-body .main_content .container .blog_container .blog h3 {
+body .main_content .container .blog_container .blog h3 a {
   color: #676767;
   font-family: "myriad_geo_mtavruli_bold";
   font-size: 16px;
@@ -2976,7 +2980,7 @@ body .main_content .container .blog_container .blog h3 {
   transition: .2s ease-in-out;
 }
 
-body .main_content .container .blog_container .blog h3:hover {
+body .main_content .container .blog_container .blog h3 a:hover {
   opacity: 0.64;
 }
 
@@ -3048,6 +3052,12 @@ body .main_content .container .pagination ul .next a {
 
 body .main_content .container .pagination ul .next:hover {
   opacity: 0.64;
+}
+
+body .main_content .container .text_container {
+  color: #a8a8a8;
+  font-family: "myriad_geo_medium";
+  font-size: 16px;
 }
 
 body .main_content .container .text_container h3 {
