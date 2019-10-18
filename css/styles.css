@@ -2695,7 +2695,7 @@ body .main_content .content h2 {
   font-size: 24px;
 }
 
-body .main_content .content .link {
+body .main_content .content .breadcrambs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2704,17 +2704,32 @@ body .main_content .content .link {
           align-items: center;
 }
 
-body .main_content .content .link a {
+body .main_content .content .breadcrambs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main_content .content .breadcrambs ul li a {
   color: #676767;
   font-family: "myriad_geo_bold";
   font-size: 14px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
-body .main_content .content .link svg {
+body .main_content .content .breadcrambs ul li a:hover {
+  opacity: 0.64;
+}
+
+body .main_content .content .breadcrambs ul li svg {
   margin: 0 18px 0 16px;
 }
 
-body .main_content .content .link span {
+body .main_content .content .breadcrambs ul li span {
   opacity: 0.5;
   color: #676767;
   font-family: "myriad_geo_bold";
@@ -3033,6 +3048,24 @@ body .main_content .container .pagination ul .next a {
 
 body .main_content .container .pagination ul .next:hover {
   opacity: 0.64;
+}
+
+body .main_content .container .text_container h3 {
+  color: #676767;
+  font-family: "myriad_geo_bold";
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+
+body .main_content .container .text_container p {
+  color: #a8a8a8;
+  font-family: "myriad_geo_medium";
+  font-size: 16px;
+}
+
+body .main_content .container .text_container img {
+  margin: 24px 0;
+  width: 100%;
 }
 
 body .hide_map {
