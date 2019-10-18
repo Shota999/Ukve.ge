@@ -182,20 +182,27 @@ $(document).ready(function () {
     // Count
 
     $('.counter_plus').click(function () {
-        $(this).siblings(".count").html(function (i, val) { return Number(val) + 1 });
+        $(this).siblings(".count").html(function (i, val) {
+            return Number(val) + 1
+        });
     });
 
-    $('.counter_minus').click(function() {
-        $(this).siblings('.count').html(function(i, val) {  return  (val > 1) ? val-1 : val });
+    $('.counter_minus').click(function () {
+        $(this).siblings('.count').html(function (i, val) {
+            return (val > 1) ? val - 1 : val
+        });
     });
 
     // Item Remove
 
-    $('.close').click(function() {
-        $(this).closest(".item").fadeOut();
-        // setTimeout(function(){ $(".item").remove(); }, 3000);
-    });
 
+    $('.close').click(function () {
+        let item = $(this).closest(".item")
+        item.fadeOut();
+        setTimeout(function () {
+            item.remove();
+        }, 3000);
+    });
 
     // Blog Js
 

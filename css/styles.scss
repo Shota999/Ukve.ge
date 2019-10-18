@@ -2279,9 +2279,10 @@ body {
                     }
                 }
 
-                &:hover p{
+                &:hover p {
                     opacity: 0.64;
                 }
+
                 .hide_category {
                     position: absolute;
                     top: 0;
@@ -2307,35 +2308,77 @@ body {
                             transition: .2s ease-in-out;
                             cursor: pointer;
                             border-bottom: 1px solid #f4f4f4;
+                            position: relative;
+                            padding-bottom: 18px;
+                            margin-top: 15px;
 
-                            input[type="radio"]{
+                            input[type="radio"] {
                                 display: none;
                             }
-                            label{
-                                position: relative;
-                                display: flex;
-                                padding-left: 45px;
-                                align-items: center;
-                                height: 22px;
-                                padding-bottom: 15px;
-                                justify-content: space-between;
 
-                                &::before{
-                                    content: "";
-                                    display: inline-block;
-                                    width: 16px;
-                                    height: 16px;
-                                    border-radius: 5px;
-                                    border: 3px solid #e4e4e4;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    position: absolute;
-                                    top: 2px;
-                                    left: 0;
-                                }
+                            label {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                margin-left: 24px;
+                                cursor: pointer;
+                                max-width: 85px;
+                            }
+
+                            &:first-child{
+                                margin-top: 0;
+                            }
+                            &:hover {
+                                color: rgba(109, 110, 113, 0.64);
                             }
                         }
+
+                        // Checkbox styles
+
+                        /* Hide the browser's default checkbox */
+                        .radio_category input {
+                            position: absolute;
+                            opacity: 0;
+                            cursor: pointer;
+                            height: 0;
+                            width: 0;
+                        }
+
+                        /* Create a custom checkbox */
+                        .checkmark {
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 5px;
+                            border: 3px solid #e4e4e4;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            transition: .2s ease-in-out;
+                            position: relative;
+
+                            &::before {
+                                position: absolute;
+                                top: -1px;
+                                left: 5px;
+                                content: url(../images/icons/cheked.svg);
+                            }
+                        }
+
+                        /* On mouse-over, add a grey background color */
+                        // .radio_category:hover input~.checkmark {
+                        //     background-color: #72b55b;
+                        //     border-color: #72b55b;
+                        // }
+
+                        /* When the checkbox is checked, add a blue background */
+                        .radio_category input:checked~.checkmark {
+                            background-color: #72b55b;
+                            border-color: #72b55b;
+                        }
+
+                        // .radio_category input:checked~label {
+                        //     color: #72b55b;
+                        // }
                     }
                 }
 
@@ -2345,6 +2388,7 @@ body {
                     top: 65px;
                 }
             }
+
             .border {
                 border-top-left-radius: 6px;
                 border-top-right-radius: 6px;
@@ -2352,73 +2396,77 @@ body {
                 border-bottom-right-radius: 0;
             }
 
-            .blog_container{
+            .blog_container {
                 display: flex;
                 flex-wrap: wrap;
                 width: 100%;
                 margin-top: 14px;
                 justify-content: space-between;
 
-                .blog{
+                .blog {
                     width: 31%;
                     overflow: hidden;
                     border-top-left-radius: 20px;
                     border-top-right-radius: 20px;
                     margin-top: 42px;
 
-                    .blog_image{
+                    .blog_image {
                         width: 100%;
                         border-radius: 20px;
                         overflow: hidden;
 
-                        img{
+                        img {
                             object-fit: cover;
                             height: 235px;
                             width: 100%;
                         }
                     }
-                    .view{
+
+                    .view {
                         width: 100%;
                         display: flex;
                         justify-content: space-between;
                         margin-top: 8px;
 
-                        span{
+                        span {
                             display: block;
                             color: #a8a8a8;
                             font-family: "myriad_geo_bold";
                             font-size: 12px;
                         }
                     }
-                    h3{
+
+                    h3 {
                         color: #676767;
                         font-family: "myriad_geo_mtavruli_bold";
                         font-size: 16px;
                         margin-top: 8px;
                         transition: .2s ease-in-out;
 
-                        &:hover{
+                        &:hover {
                             opacity: 0.64;
                         }
                     }
                 }
             }
-            .pagination{
+
+            .pagination {
                 display: flex;
                 justify-content: center;
                 margin-top: 50px;
 
-                ul{
+                ul {
                     display: flex;
                     align-items: center;
 
-                    li{
+                    li {
                         margin-right: 16px;
 
-                        .active{
+                        .active {
                             color: #676767;
                         }
-                        a{
+
+                        a {
                             color: #c1c1c1;
                             font-family: "myriad_geo_bold";
                             font-size: 16px;
@@ -2427,27 +2475,31 @@ body {
                             align-items: center;
                         }
                     }
-                    .prev{
+
+                    .prev {
                         border-radius: 17px;
                         background-color: #c13458;
                         transition: .2s ease-in-out;
 
-                        a{
+                        a {
                             padding: 14px 20px;
                         }
-                        &:hover{
+
+                        &:hover {
                             opacity: 0.64;
                         }
                     }
-                    .next{
+
+                    .next {
                         border-radius: 17px;
                         transition: .2s ease-in-out;
                         background-color: #c13458;
-                        
-                        a{
+
+                        a {
                             padding: 14px 20px;
                         }
-                        &:hover{
+
+                        &:hover {
                             opacity: 0.64;
                         }
                     }

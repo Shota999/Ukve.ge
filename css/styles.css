@@ -2774,6 +2774,10 @@ body .main_content .container .category .hide_category .inner_category {
   padding: 16px;
   height: 195px;
   overflow-y: auto;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
 }
 
 body .main_content .container .category .hide_category .inner_category .radio_category {
@@ -2790,6 +2794,9 @@ body .main_content .container .category .hide_category .inner_category .radio_ca
   transition: .2s ease-in-out;
   cursor: pointer;
   border-bottom: 1px solid #f4f4f4;
+  position: relative;
+  padding-bottom: 18px;
+  margin-top: 15px;
 }
 
 body .main_content .container .category .hide_category .inner_category .radio_category input[type="radio"] {
@@ -2797,24 +2804,37 @@ body .main_content .container .category .hide_category .inner_category .radio_ca
 }
 
 body .main_content .container .category .hide_category .inner_category .radio_category label {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 45px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 22px;
-  padding-bottom: 15px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-left: 24px;
+  cursor: pointer;
+  max-width: 85px;
 }
 
-body .main_content .container .category .hide_category .inner_category .radio_category label::before {
-  content: "";
-  display: inline-block;
+body .main_content .container .category .hide_category .inner_category .radio_category:first-child {
+  margin-top: 0;
+}
+
+body .main_content .container .category .hide_category .inner_category .radio_category:hover {
+  color: rgba(109, 110, 113, 0.64);
+}
+
+body .main_content .container .category .hide_category .inner_category .radio_category input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+body .main_content .container .category .hide_category .inner_category .checkmark {
   width: 16px;
   height: 16px;
   border-radius: 5px;
@@ -2828,9 +2848,21 @@ body .main_content .container .category .hide_category .inner_category .radio_ca
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  position: relative;
+}
+
+body .main_content .container .category .hide_category .inner_category .checkmark::before {
   position: absolute;
-  top: 2px;
-  left: 0;
+  top: -1px;
+  left: 5px;
+  content: url(../images/icons/cheked.svg);
+}
+
+body .main_content .container .category .hide_category .inner_category .radio_category input:checked ~ .checkmark {
+  background-color: #72b55b;
+  border-color: #72b55b;
 }
 
 body .main_content .container .category .show_category {
