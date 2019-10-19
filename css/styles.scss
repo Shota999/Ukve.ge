@@ -569,20 +569,6 @@ body {
                                             font-size: 13px;
                                             margin-left: 24px;
                                         }
-
-                                        svg{
-                                            border: 1px solid #c13458;
-                                            border-radius: 50%;
-
-                                            &:hover{
-                                                background: #c13458;
-                                                border-radius: 50%;
-                                                border: 1px solid #c13458;
-                                            }
-                                            &:hover path{
-                                                fill: #ffffff;
-                                            }
-                                        }
                                     }
 
                                     .input {

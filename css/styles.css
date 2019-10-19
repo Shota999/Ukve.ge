@@ -714,21 +714,6 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   margin-left: 24px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .top svg {
-  border: 1px solid #c13458;
-  border-radius: 50%;
-}
-
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .top svg:hover {
-  background: #c13458;
-  border-radius: 50%;
-  border: 1px solid #c13458;
-}
-
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .top svg:hover path {
-  fill: #ffffff;
-}
-
 body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input {
   border-radius: 6px;
   background-color: #ffffff;
