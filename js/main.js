@@ -219,16 +219,16 @@ $(document).ready(function () {
     
       let $this = $(this);
     
-      if ($this.next().hasClass('show')) {
-          $this.next().removeClass('show');
-          $this.next().slideUp(350);
+      if ($this.next().stop().hasClass('show')) {
+          $this.next().stop().removeClass('show');
+          $this.next().stop().slideUp(350);
           $this.find(".minus").hide();
           $this.find(".plus").show();
       } else {
-          $this.parent().parent().find('li .inner').removeClass('show');
-          $this.parent().parent().find('li .inner').slideUp(350);
-          $this.next().toggleClass('show');
-          $this.next().slideToggle(350);
+          $this.parent().stop().parent().find('li .inner').removeClass('show');
+          $this.parent().stop().parent().find('li .inner').slideUp(350);
+          $this.next().stop().toggleClass('show');
+          $this.next().stop().slideToggle(350);
           $this.find(".plus").hide();
           $this.find(".minus").show();
       }
