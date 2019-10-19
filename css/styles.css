@@ -9,7 +9,7 @@ a {
 }
 
 body {
-  background-color: #F2F2F2;
+  background-color: #FAFAFA;
   /* width */
   /* Track */
   /* Handle */
@@ -3067,6 +3067,56 @@ body .main_content .container .text_container p {
 body .main_content .container .text_container img {
   margin: 24px 0;
   width: 100%;
+}
+
+body .main_content .container .faq {
+  margin: 40px;
+}
+
+body .main_content .container .faq .question {
+  border-radius: 6px;
+  background-color: #f2f2f2;
+  cursor: pointer;
+  margin-top: 32px;
+}
+
+body .main_content .container .faq .question:first-child {
+  margin-top: 0;
+}
+
+body .main_content .container .faq .question .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: 40px;
+}
+
+body .main_content .container .faq .question .container h4 {
+  color: #676767;
+  font-family: "myriad_geo_bold";
+  font-size: 16px;
+}
+
+body .main_content .container .faq .question .container .minus {
+  display: none;
+}
+
+body .main_content .container .faq .question .hide_faq {
+  display: none;
+  padding: 0 40px 40px 40px;
+}
+
+body .main_content .container .faq .question .hide_faq p {
+  color: #959595;
+  font-family: "myriad_geo_medium";
+  font-size: 14px;
 }
 
 body .hide_map {

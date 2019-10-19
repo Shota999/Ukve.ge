@@ -211,4 +211,26 @@ $(document).ready(function () {
         $(this).toggleClass('border');
     });
 
+
+    // FAQ
+
+    $('.toggle').click(function(e) {
+        e.preventDefault();
+    
+      let $this = $(this);
+    
+      if ($this.next().hasClass('show')) {
+          $this.next().removeClass('show');
+          $this.next().slideUp(350);
+          $this.find(".minus").hide();
+          $this.find(".plus").show();
+      } else {
+          $this.parent().parent().find('li .inner').removeClass('show');
+          $this.parent().parent().find('li .inner').slideUp(350);
+          $this.next().toggleClass('show');
+          $this.next().slideToggle(350);
+          $this.find(".plus").hide();
+          $this.find(".minus").show();
+      }
+  });
 });
