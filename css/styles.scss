@@ -2574,10 +2574,11 @@ body {
                     cursor: pointer;
                     margin-top: 32px;
 
-                    &:first-child{
+                    &:first-child {
                         margin-top: 0;
                     }
-                    .container{
+
+                    .container {
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
@@ -2585,36 +2586,157 @@ body {
                         padding: 40px;
 
 
-                        h4{
+                        h4 {
                             color: #676767;
                             font-family: "myriad_geo_bold";
                             font-size: 16px;
                         }
-                        .minus{
+
+                        .minus {
                             display: none;
                         }
-                        // .hide{
-                        //     opacity: 0;
-                        //     visibility: hidden;
-                        //     display: none;
-                        // }
-                        // .show{
-                        //     opacity: 1;
-                        //     visibility: visible;
-                        //     display: block;
-                        // }
                     }
-                    .hide_faq{
+
+                    .hide_faq {
                         display: none;
                         padding: 0 40px 40px 40px;
 
-                        p{
+                        p {
                             color: #959595;
                             font-family: "myriad_geo_medium";
                             font-size: 14px;
                         }
                     }
                 }
+            }
+        }
+
+        // Profile
+
+        .profile {
+            display: flex;
+            justify-content: space-between;
+
+            .left {
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+                border-radius: 6px;
+                border: 1px solid #fafafa;
+                background-color: #ffffff;
+                padding: 16px 0 0 0;
+                // width: 260px;
+
+                .top {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #fafafa;
+                    padding: 0 24px;
+                    padding-bottom: 16px;
+
+                    .user {
+                        display: flex;
+                        align-items: center;
+
+                        .user_image {
+                            border-radius: 24px;
+                            background-color: #c13458;
+                            width: 45px;
+                            height: 45px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            svg {
+                                path {
+                                    fill: #ffffff;
+                                }
+                            }
+                        }
+
+                        h3 {
+                            color: #676767;
+                            font-family: "myriad_geo_bold";
+                            font-size: 14px;
+                            margin-left: 16px;
+                            margin-right: 36px;
+                        }
+                    }
+
+                    .score {
+                        display: flex;
+                        align-items: center;
+
+                        span {
+                            display: block;
+                            color: #c13458;
+                            font-family: "myriad_geo_bold";
+                            font-size: 10px;
+                            margin-right: 8px;
+                        }
+
+                        p {
+                            color: #72b55b;
+                            font-family: "myriad_geo_bold";
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                .inner_container {
+                    padding: 24px;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 1px solid #fafafa;
+                    cursor: pointer;
+
+                    p {
+                        margin-left: 16px;
+                        color: #676767;
+                        font-family: "myriad_geo_bold";
+                        font-size: 14px;
+                        transition: .2s ease-in-out;
+                    }
+                    &:hover p{
+                        color:#a8a8a8;
+                    }
+                    svg{
+                        width: 15px;
+                        height: 15px;
+
+                        path{
+                            fill: #c13458;
+                        }
+                    }
+                }
+                .active{
+                    border-right: 5px solid #c13458;
+                    border-radius: 3px 0 0 4px;
+
+                    p{
+                        color:#a8a8a8;
+                    }
+                }
+                .bottom{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 24px;
+                    cursor: pointer;
+
+                    .exit{
+                        text-decoration: underline;
+                        color: #c13458;
+                        font-family: "myriad_geo_bold";
+                        font-size: 14px;
+                        margin-left: 8px;
+                    }
+                }
+            }
+            .right{
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+                border-radius: 6px;
+                border: 1px solid #fafafa;
+                background-color: #ffffff;
             }
         }
     }
