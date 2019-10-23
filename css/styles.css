@@ -10,9 +10,6 @@ a {
 
 body {
   background-color: #FAFAFA;
-  /* width */
-  /* Track */
-  /* Handle */
 }
 
 body header {
@@ -916,7 +913,7 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
 }
 
 body header .bottom_header .profile_cart .profile .profile_dropdown .height {
-  height: 389px;
+  height: 376px;
 }
 
 body header .bottom_header .profile_cart .profile .show {
@@ -1537,11 +1534,11 @@ body .special .slider_content .swiper-slide .product .slide_content .price .sale
 }
 
 body .special .slider_content .swiper-slide .product .slide_content .price .slash {
-  color: #676767;
-  font-family: "myriad_geo_bold";
-  margin: 0 7px;
-  font-size: 24px;
-  line-height: 20px;
+  margin: 0 4px;
+}
+
+body .special .slider_content .swiper-slide .product .slide_content .price .slash svg path {
+  stroke: #676767;
 }
 
 body .special .slider_content .swiper-slide .product .slide_content .price span {
@@ -1808,7 +1805,7 @@ body .content .container .top_container .left .choose .hide_container {
 }
 
 body .content .container .top_container .left .choose .hide_container p {
-  color: #f4f4f4;
+  color: #ffffff;
   font-family: "myriad_geo_bold";
   font-size: 12px;
   padding: 8px;
@@ -1918,7 +1915,7 @@ body .content .container .top_container .left .choose_info .hide_container {
 }
 
 body .content .container .top_container .left .choose_info .hide_container p {
-  color: #f4f4f4;
+  color: #ffffff;
   font-family: "myriad_geo_bold";
   font-size: 12px;
   padding: 8px;
@@ -2012,8 +2009,8 @@ body .content .container .top_container .alert {
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 
 body .content .container .top_container .alert svg path {
@@ -2099,16 +2096,17 @@ body .content .container .bottom_container .title_price .price .slash {
   color: #d8d8d8;
   font-family: "myriad_geo_bold";
   margin: 0 2px;
-  font-size: 21px;
-  line-height: 20px;
 }
 
 body .content .container .bottom_container .title_price .price span {
   display: block;
   color: #ffffff;
+  font-family: "myriad_geo_bold";
+  font-size: 24px;
+}
+
+body .content .container .bottom_container .title_price .price span small {
   font-family: "bpg_gel";
-  font-size: 21px;
-  font-weight: 700;
 }
 
 body .content .container .bottom_container .actions {
@@ -2226,6 +2224,7 @@ body .content .container .bottom_container .actions .hidden_more .more .radio:fi
 
 body .content .container .bottom_container .actions .hidden_more .more .radio:last-child {
   margin-bottom: 0;
+  border-bottom: 0;
 }
 
 body .content .container .bottom_container .actions .hidden_more .more .radio input[type="radio"] {
@@ -2247,8 +2246,8 @@ body .content .container .bottom_container .actions .hidden_more .more .radio la
 body .content .container .bottom_container .actions .hidden_more .more .radio label::before {
   content: "";
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   border: 2px solid #c13458;
   display: -webkit-box;
@@ -2261,21 +2260,21 @@ body .content .container .bottom_container .actions .hidden_more .more .radio la
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  top: 6px;
+  top: 8px;
   left: 0;
 }
 
 body .content .container .bottom_container .actions .hidden_more .more .radio label::after {
   content: "";
   display: none;
-  width: 6px;
-  height: 6px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
   border: 0;
   background-color: #6d6e71;
   position: absolute;
-  top: 10px;
-  left: 4px;
+  top: 11px;
+  left: 3px;
 }
 
 body .content .container .bottom_container .actions .hidden_more .more .radio input[type="radio"]:checked + label::after {
@@ -2284,7 +2283,7 @@ body .content .container .bottom_container .actions .hidden_more .more .radio in
 
 body .content .container .bottom_container .actions .active {
   border-radius: 20px 20px 0 0;
-  border-color: #c74768;
+  border-color: transparent;
 }
 
 body .content .container .bottom_container .actions .active p {
@@ -2297,7 +2296,7 @@ body .content .container .bottom_container .actions .active p:hover {
 
 body .content .container .bottom_container .actions .show {
   opacity: 1;
-  top: 42px;
+  top: 40px;
   visibility: visible;
 }
 
@@ -2555,7 +2554,7 @@ body footer .bottom_container {
           align-items: center;
 }
 
-body footer .bottom_container a {
+body footer .bottom_container .rools {
   width: 95px;
   color: #676767;
   font-family: "myriad_geo_bold";
@@ -2566,7 +2565,7 @@ body footer .bottom_container a {
   transition: .2s ease-in-out;
 }
 
-body footer .bottom_container a:hover {
+body footer .bottom_container .rools:hover {
   opacity: 0.64;
 }
 
@@ -2610,7 +2609,7 @@ body .colors .color5 {
 body .drink_button {
   position: fixed;
   bottom: 300px;
-  left: 74px;
+  left: 43px;
 }
 
 body .drink_button a {
@@ -3346,16 +3345,20 @@ body .show_map {
   visibility: visible;
 }
 
-body ::-webkit-scrollbar {
+/* width */
+::-webkit-scrollbar {
   width: 3px;
+  border-radius: 20px;
 }
 
-body ::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 0px 0px 20px 0px;
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 20px;
 }
 
-body ::-webkit-scrollbar-thumb {
+/* Handle */
+::-webkit-scrollbar-thumb {
   background: #c13458;
   border-radius: 20px;
 }

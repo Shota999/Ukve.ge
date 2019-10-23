@@ -127,7 +127,7 @@ $(document).ready(function () {
             $('.info_body').removeClass('show');
         }
 
-        if ($('.hidden_more').hasClass('show') && n.target.closest(".actions") == null) {
+        if ($('.hidden_more').hasClass('show') && n.target.closest(".sauce") == null) {
             changeText();
         }
 
