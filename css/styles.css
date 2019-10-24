@@ -1531,6 +1531,18 @@ body .special .slider_content .swiper-slide .product .slide_content .price .sale
   font-family: "myriad_geo_bold";
   font-size: 16px;
   line-height: 16px;
+  position: relative;
+}
+
+body .special .slider_content .swiper-slide .product .slide_content .price .sale::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #676767;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  border-radius: 20px;
 }
 
 body .special .slider_content .swiper-slide .product .slide_content .price .slash {
@@ -2090,6 +2102,18 @@ body .content .container .bottom_container .title_price .price .sale {
   font-family: "myriad_geo_bold";
   font-size: 16px;
   line-height: 16px;
+  position: relative;
+}
+
+body .content .container .bottom_container .title_price .price .sale::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #d8d8d8;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  border-radius: 20px;
 }
 
 body .content .container .bottom_container .title_price .price .slash {
@@ -2309,7 +2333,8 @@ body .content .container .bottom_container .actions .add_cart {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 16px;
+  padding: 0 0 0 16px;
+  overflow: hidden;
 }
 
 body .content .container .bottom_container .actions .add_cart .point {
@@ -2342,13 +2367,25 @@ body .content .container .bottom_container .actions .add_cart .check_cart {
   display: flex;
   margin-left: 10px;
   border-left: 1px solid rgba(112, 112, 112, 0.15);
-  padding-left: 10px;
+  padding: 12px;
   cursor: pointer;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 body .content .container .bottom_container .actions .add_cart .check_cart svg {
   width: 16px;
   height: 16px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body .content .container .bottom_container .actions .add_cart .check_cart:hover {
+  background: #c13458;
+}
+
+body .content .container .bottom_container .actions .add_cart .check_cart:hover svg path {
+  fill: #fff;
 }
 
 body .content .drinks .bottom_container {

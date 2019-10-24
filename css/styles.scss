@@ -1250,13 +1250,25 @@ body {
                                 font-family: "myriad_geo_bold";
                                 font-size: 16px;
                                 line-height: 16px;
+                                position: relative;
+
+                                &::before{
+                                    content: "";
+                                    width: 100%;
+                                    height: 2px;
+                                    background-color: #676767;
+                                    position: absolute;
+                                    top: 45%;
+                                    left: 0;
+                                    border-radius: 20px;
+                                }
                             }
 
                             .slash {
                                 margin: 0 4px;
 
-                                svg{
-                                    path{
+                                svg {
+                                    path {
                                         stroke: #676767;
                                     }
                                 }
@@ -1728,6 +1740,18 @@ body {
                             font-family: "myriad_geo_bold";
                             font-size: 16px;
                             line-height: 16px;
+                            position: relative;
+
+                            &::before{
+                                content: "";
+                                width: 100%;
+                                height: 2px;
+                                background-color: #d8d8d8;
+                                position: absolute;
+                                top: 45%;
+                                left: 0;
+                                border-radius: 20px;
+                            }
                         }
 
                         .slash {
@@ -1742,7 +1766,7 @@ body {
                             font-family: "myriad_geo_bold";
                             font-size: 24px;
 
-                            small{
+                            small {
                                 font-family: "bpg_gel";
                             }
                         }
@@ -1911,7 +1935,8 @@ body {
                         background-color: #ffffff;
                         display: flex;
                         align-items: center;
-                        padding: 0 16px;
+                        padding: 0 0 0 16px;
+                        overflow: hidden;
 
                         .point {
                             display: flex;
@@ -1937,23 +1962,21 @@ body {
                             display: flex;
                             margin-left: 10px;
                             border-left: 1px solid rgba(112, 112, 112, 0.15);
-                            padding-left: 10px;
+                            padding: 12px;
                             cursor: pointer;
-                            
+                            transition: .2s ease-in-out;
 
                             svg {
                                 width: 16px;
                                 height: 16px;
-                                // border-radius: 22px;
-                                // padding: 5px;
-                                // transition: .2s ease-in-out;
+                                transition: .2s ease-in-out;
                             }
-                            // &:hover svg{
-                            //     background: #c13458;
-                            // }
-                            // &:hover svg path{
-                            //     fill: #fff;
-                            // }
+                            &:hover{
+                                background: #c13458;
+                            }
+                            &:hover svg path {
+                                fill: #fff;
+                            }
                         }
                     }
                 }
@@ -2131,9 +2154,11 @@ body {
             }
         }
     }
-    .index_footer{
+
+    .index_footer {
         margin-top: 0;
     }
+
     .colors {
         display: flex;
 
@@ -2713,34 +2738,38 @@ body {
                         font-size: 14px;
                         transition: .2s ease-in-out;
                     }
-                    &:hover p{
-                        color:#a8a8a8;
+
+                    &:hover p {
+                        color: #a8a8a8;
                     }
-                    svg{
+
+                    svg {
                         width: 15px;
                         height: 15px;
 
-                        path{
+                        path {
                             fill: #c13458;
                         }
                     }
                 }
-                .active{
+
+                .active {
                     border-right: 5px solid #c13458;
                     border-radius: 3px 0 0 4px;
 
-                    p{
-                        color:#a8a8a8;
+                    p {
+                        color: #a8a8a8;
                     }
                 }
-                .bottom{
+
+                .bottom {
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     padding: 24px;
                     cursor: pointer;
 
-                    .exit{
+                    .exit {
                         text-decoration: underline;
                         color: #c13458;
                         font-family: "myriad_geo_bold";
@@ -2749,7 +2778,8 @@ body {
                     }
                 }
             }
-            .right{
+
+            .right {
                 box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
                 border-radius: 6px;
                 border: 1px solid #fafafa;
@@ -2817,8 +2847,9 @@ body {
         visibility: visible;
     }
 
-    
+
 }
+
 /* width */
 ::-webkit-scrollbar {
     width: 3px;
@@ -2836,6 +2867,7 @@ body {
     background: #c13458;
     border-radius: 20px;
 }
+
 .hidden {
     overflow: hidden;
 }
