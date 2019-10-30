@@ -3430,6 +3430,14 @@ body .contact_container .show_more a:hover {
   opacity: 0.64;
 }
 
+body .contact_form {
+  margin: 120px 10%;
+}
+
+body .contact_form form {
+  margin: 0 80px;
+}
+
 body .hide_map {
   position: absolute;
   top: 0;

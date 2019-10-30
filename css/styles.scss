@@ -2871,7 +2871,13 @@ body {
             }
         }
     }
+    .contact_form{
+        margin: 120px 10%;
 
+        form{
+            margin: 0 80px;
+        }
+    }
     .hide_map {
         position: absolute;
         top: 0;
