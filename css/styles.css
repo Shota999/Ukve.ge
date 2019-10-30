@@ -1697,7 +1697,6 @@ body .content .container {
   margin-top: 24px;
   position: relative;
   margin-right: 16px;
-  overflow: hidden;
 }
 
 body .content .container:first-child {
@@ -2658,7 +2657,7 @@ body .colors .color5 {
 body .drink_button {
   position: fixed;
   bottom: 300px;
-  left: 43px;
+  left: 63px;
 }
 
 body .drink_button a {
