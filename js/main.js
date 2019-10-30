@@ -37,6 +37,9 @@ $(document).ready(function () {
         spaceBetween: 16,
         loop: true,
         grabCursor: true,
+        autoplay: {
+            delay: 3000,
+          },
         navigation: {
             nextEl: '.slider_button_next',
             prevEl: '.slider_button_prev',
@@ -176,6 +179,8 @@ $(document).ready(function () {
             setTimeout(function () {
                 $('.alert').removeClass('show');
             }, 2000)
+        }else{
+            $(".successfully_add").addClass('show');
         }
     });
 
