@@ -1697,6 +1697,7 @@ body .content .container {
   margin-top: 24px;
   position: relative;
   margin-right: 16px;
+  overflow: hidden;
 }
 
 body .content .container:first-child {
