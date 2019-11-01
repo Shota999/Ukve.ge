@@ -2877,7 +2877,7 @@ body {
     }
 
     .contact_form {
-        margin: 120px 10%;
+        margin: 120px 10% 10px 10%;
 
         form {
             margin: 0 80px;
@@ -2967,11 +2967,18 @@ body {
     }
     .map{
         width: 100%;
+        position: relative;
+        top: 110px;
+        z-index: -1;
+        height: 690px;
 
         img{
             width: 100%;
             object-fit: cover;
         }
+    }
+    .contact_footer{
+        margin-top: 0;
     }
     .hide_map {
         position: absolute;

@@ -3431,7 +3431,7 @@ body .contact_container .show_more a:hover {
 }
 
 body .contact_form {
-  margin: 120px 10%;
+  margin: 120px 10% 10px 10%;
 }
 
 body .contact_form form {
@@ -3571,12 +3571,20 @@ body .contact_form form button {
 
 body .map {
   width: 100%;
+  position: relative;
+  top: 110px;
+  z-index: -1;
+  height: 690px;
 }
 
 body .map img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+body .contact_footer {
+  margin-top: 0;
 }
 
 body .hide_map {
