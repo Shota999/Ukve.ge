@@ -3436,6 +3436,147 @@ body .contact_form {
 
 body .contact_form form {
   margin: 0 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .contact_form form .form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .contact_form form .form .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .contact_form form .form .input input {
+  width: 100%;
+  padding: 25px 48px;
+  border-radius: 6px;
+  border: 2px solid rgba(0, 0, 0, 0.03);
+  background-color: #ffffff;
+  outline: none;
+  margin-right: 16px;
+  font-family: "myriad_geo_bold";
+  font-size: 14px;
+  color: #c13458;
+}
+
+body .contact_form form .form .input input:last-child {
+  margin-right: 0;
+}
+
+body .contact_form form .form .input input::-webkit-input-placeholder {
+  color: #c6c6c6;
+  font-family: "myriad_geo_bold";
+  font-size: 14px;
+}
+
+body .contact_form form .form .input input:-ms-input-placeholder {
+  color: #c6c6c6;
+  font-family: "myriad_geo_bold";
+  font-size: 14px;
+}
+
+body .contact_form form .form .input input::-ms-input-placeholder {
+  color: #c6c6c6;
+  font-family: "myriad_geo_bold";
+  font-size: 14px;
+}
+
+body .contact_form form .form .input input::placeholder {
+  color: #c6c6c6;
+  font-family: "myriad_geo_bold";
+  font-size: 14px;
+}
+
+body .contact_form form .form .input input:focus {
+  border: 2px solid rgba(0, 0, 0, 0.03);
+  border-color: #c13458;
+  color: #c13458;
+}
+
+body .contact_form form .form .input input:focus::-webkit-input-placeholder {
+  color: #c13458;
+}
+
+body .contact_form form .form textarea {
+  width: 100%;
+  margin-top: 20px;
+  height: 121px;
+  border-radius: 6px;
+  border: 2px solid rgba(0, 0, 0, 0.03);
+  background-color: #ffffff;
+  overflow-y: auto;
+  resize: none;
+  outline: none;
+  padding: 25px 48px;
+  width: auto;
+}
+
+body .contact_form form .form textarea::-webkit-input-placeholder {
+  color: #c6c6c6;
+  font-family: "myriad_geo_bold";
+  font-size: 14px;
+}
+
+body .contact_form form .form textarea:-ms-input-placeholder {
+  color: #c6c6c6;
+  font-family: "myriad_geo_bold";
+  font-size: 14px;
+}
+
+body .contact_form form .form textarea::-ms-input-placeholder {
+  color: #c6c6c6;
+  font-family: "myriad_geo_bold";
+  font-size: 14px;
+}
+
+body .contact_form form .form textarea::placeholder {
+  color: #c6c6c6;
+  font-family: "myriad_geo_bold";
+  font-size: 14px;
+}
+
+body .contact_form form .form textarea:focus {
+  border: 2px solid rgba(0, 0, 0, 0.03);
+  border-color: #c13458;
+  color: #c13458;
+}
+
+body .contact_form form .form textarea:focus::-webkit-input-placeholder {
+  color: #c13458;
+}
+
+body .contact_form form button {
+  margin-left: 16px;
+  border-radius: 6px;
+  background-color: #c13458;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 24px;
+}
+
+body .map {
+  width: 100%;
+}
+
+body .map img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body .hide_map {
