@@ -3165,6 +3165,7 @@ body .main_content .container .faq .question .container .minus {
 body .main_content .container .faq .question .hide_faq {
   display: none;
   padding: 0 40px 40px 40px;
+  cursor: auto;
 }
 
 body .main_content .container .faq .question .hide_faq p {
@@ -3341,7 +3342,7 @@ body .main_content .profile .right {
 
 body .contact_container {
   background-color: rgba(193, 52, 88, 0.02);
-  padding: 40px 10%;
+  padding: 0 10% 40px 10%;
   margin-top: 80px;
 }
 
@@ -3349,18 +3350,14 @@ body .contact_container .blocks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 body .contact_container .blocks .block {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -3368,6 +3365,9 @@ body .contact_container .blocks .block {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
+  width: 32%;
+  margin-top: 40px;
 }
 
 body .contact_container .blocks .block p {
@@ -3567,11 +3567,17 @@ body .contact_form form button {
   border: none;
   cursor: pointer;
   padding: 0 24px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body .contact_form form button:hover {
+  opacity: 0.64;
 }
 
 body .map {
   position: relative;
-  top: 110px;
+  top: 45px;
   z-index: -1;
   height: 690px;
 }

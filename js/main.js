@@ -39,7 +39,7 @@ $(document).ready(function () {
         grabCursor: true,
         autoplay: {
             delay: 3000,
-          },
+        },
         navigation: {
             nextEl: '.slider_button_next',
             prevEl: '.slider_button_prev',
@@ -179,7 +179,7 @@ $(document).ready(function () {
             setTimeout(function () {
                 $('.alert').removeClass('show');
             }, 2000)
-        }else{
+        } else {
             $(".successfully_add").addClass('show');
         }
     });
@@ -219,23 +219,52 @@ $(document).ready(function () {
 
     // FAQ
 
-    $('.toggle').click(function(e) {
+    $('.toggle').click(function (e) {
         e.preventDefault();
-    
-      let $this = $(this);
-    
-      if ($this.next().stop().hasClass('show')) {
-          $this.next().stop().removeClass('show');
-          $this.next().stop().slideUp(350);
-          $this.find(".minus").hide();
-          $this.find(".plus").show();
-      } else {
-          $this.parent().stop().parent().find('li .inner').removeClass('show');
-          $this.parent().stop().parent().find('li .inner').slideUp(350);
-          $this.next().stop().toggleClass('show');
-          $this.next().stop().slideToggle(350);
-          $this.find(".plus").hide();
-          $this.find(".minus").show();
-      }
-  });
+
+        let $this = $(this);
+
+        if ($this.next().stop().hasClass('show')) {
+            $this.next().stop().removeClass('show');
+            $this.next().stop().slideUp(350);
+            $this.find(".minus").hide();
+            $this.find(".plus").show();
+        } else {
+            $this.parent().stop().parent().find('li .inner').removeClass('show');
+            $this.parent().stop().parent().find('li .inner').slideUp(350);
+            $this.next().stop().toggleClass('show');
+            $this.next().stop().slideToggle(350);
+            $this.find(".plus").hide();
+            $this.find(".minus").show();
+        }
+    });
+
+    //   Contact
+
+    $(".block").slice(0, 3).css('display', 'flex');
+    $(".show_more").on('click', function (e) {
+        e.preventDefault();
+        $(".block:hidden").slice(0, 3).css('display', 'flex');
+        if ($("div:hidden").length == 0) {
+            // $(".show_more").fadeIn('slow');
+            // $(".show_more").hide();
+            // $("#loadMore").text('Load only the first 4');
+        }
+        // $('html,body').animate({
+        //     scrollTop: $(this).offset().top
+        // }, 1500);
+    });
+
+    // $("#loadLess").on('click', function (e) {
+    //     e.preventDefault();
+    //     $('div:not(:lt(4))').fadeOut();
+    //     $("#loadMore").fadeIn('slow');
+    //     $("#loadLess").hide();
+
+    //     desiredHeight = $(window).height();
+
+    //     $('html,body').animate({
+    //         scrollTop: $(this).offset().top + desiredHeight
+    //     }, 1500);
+    // });
 });
