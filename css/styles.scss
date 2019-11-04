@@ -1254,12 +1254,12 @@ body {
 
                                 &::before {
                                     content: "";
-                                    width: 100%;
+                                    width: 130%;
                                     height: 2px;
                                     background-color: #676767;
                                     position: absolute;
                                     top: 45%;
-                                    left: 0;
+                                    left: -15%;
                                     border-radius: 20px;
                                 }
                             }
@@ -1433,15 +1433,45 @@ body {
                 }
 
                 .price {
-                    span {
-                        font-size: 24px;
+                        display: flex;
+                        align-items: baseline;
 
-                        small {
-                            font-family: "bpg_gel";
-                            display: inline-block;
+                        .sale {
+                            color: #d8d8d8;
+                            font-family: "myriad_geo_bold";
+                            font-size: 16px;
+                            line-height: 16px;
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                width: 130%;
+                                height: 2px;
+                                background-color: #d8d8d8;
+                                position: absolute;
+                                top: 45%;
+                                left: -15%;
+                                border-radius: 20px;
+                            }
+                        }
+
+                        .slash {
+                            color: #d8d8d8;
+                            font-family: "myriad_geo_bold";
+                            margin: 0 4px;
+                        }
+
+                        span {
+                            display: block;
+                            color: #ffffff;
+                            font-family: "myriad_geo_bold";
+                            font-size: 24px;
+
+                            small {
+                                font-family: "bpg_gel";
+                            }
                         }
                     }
-                }
 
                 .left {
                     display: flex;
@@ -1744,12 +1774,12 @@ body {
 
                             &::before {
                                 content: "";
-                                width: 100%;
+                                width: 130%;
                                 height: 2px;
                                 background-color: #d8d8d8;
                                 position: absolute;
-                                top: 45%;
-                                left: 0;
+                                top: 47%;
+                                left: -15%;
                                 border-radius: 20px;
                             }
                         }
@@ -1757,7 +1787,7 @@ body {
                         .slash {
                             color: #d8d8d8;
                             font-family: "myriad_geo_bold";
-                            margin: 0 2px;
+                            margin: 0 4px;
                         }
 
                         span {
@@ -1848,9 +1878,12 @@ body {
                                     bottom: 0;
                                     left: 0;
                                     width: 100%;
-                                    height: 1px;
+                                    height: 2px;
                                     background-color: #f4f4f4;
                                     border-radius: 20px;
+                                }
+                                &:last-child::after{
+                                    display: none;
                                 }
 
                                 input {
@@ -3049,22 +3082,39 @@ body {
 }
 
 /* width */
-::-webkit-scrollbar {
-    width: 3px;
-    border-radius: 20px;
-}
+// ::-webkit-scrollbar {
+//     width: 3px;
+//     border-radius: 20px;
+// }
 
 /* Track */
-::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 20px;
-}
+// ::-webkit-scrollbar-track {
+//     background: transparent;
+//     border-radius: 20px;
+// }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//     background: #c13458;
+//     border-radius: 20px;
+// }
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
     background: #c13458;
-    border-radius: 20px;
-}
+    border-radius: 10px;
+  }
 
 .hidden {
     overflow: hidden;
