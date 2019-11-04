@@ -1536,12 +1536,12 @@ body .special .slider_content .swiper-slide .product .slide_content .price .sale
 
 body .special .slider_content .swiper-slide .product .slide_content .price .sale::before {
   content: "";
-  width: 100%;
+  width: 130%;
   height: 2px;
   background-color: #676767;
   position: absolute;
   top: 45%;
-  left: 0;
+  left: -15%;
   border-radius: 20px;
 }
 
@@ -1736,13 +1736,49 @@ body .content .container .top_container .sale span {
   background-color: #c13458;
 }
 
+body .content .container .top_container .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+body .content .container .top_container .price .sale {
+  color: #d8d8d8;
+  font-family: "myriad_geo_bold";
+  font-size: 16px;
+  line-height: 16px;
+  position: relative;
+}
+
+body .content .container .top_container .price .sale::before {
+  content: "";
+  width: 130%;
+  height: 2px;
+  background-color: #d8d8d8;
+  position: absolute;
+  top: 45%;
+  left: -15%;
+  border-radius: 20px;
+}
+
+body .content .container .top_container .price .slash {
+  color: #d8d8d8;
+  font-family: "myriad_geo_bold";
+  margin: 0 4px;
+}
+
 body .content .container .top_container .price span {
+  display: block;
+  color: #ffffff;
+  font-family: "myriad_geo_bold";
   font-size: 24px;
 }
 
 body .content .container .top_container .price span small {
   font-family: "bpg_gel";
-  display: inline-block;
 }
 
 body .content .container .top_container .left {
@@ -2107,19 +2143,19 @@ body .content .container .bottom_container .title_price .price .sale {
 
 body .content .container .bottom_container .title_price .price .sale::before {
   content: "";
-  width: 100%;
+  width: 130%;
   height: 2px;
   background-color: #d8d8d8;
   position: absolute;
-  top: 45%;
-  left: 0;
+  top: 47%;
+  left: -15%;
   border-radius: 20px;
 }
 
 body .content .container .bottom_container .title_price .price .slash {
   color: #d8d8d8;
   font-family: "myriad_geo_bold";
-  margin: 0 2px;
+  margin: 0 4px;
 }
 
 body .content .container .bottom_container .title_price .price span {
@@ -2235,9 +2271,13 @@ body .content .container .bottom_container .actions .hidden_more .more .radio::a
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 1px;
+  height: 2px;
   background-color: #f4f4f4;
   border-radius: 20px;
+}
+
+body .content .container .bottom_container .actions .hidden_more .more .radio:last-child::after {
+  display: none;
 }
 
 body .content .container .bottom_container .actions .hidden_more .more .radio input {
@@ -3641,21 +3681,21 @@ body .show_map {
 }
 
 /* width */
+/* Track */
+/* width */
 ::-webkit-scrollbar {
-  width: 3px;
-  border-radius: 20px;
+  width: 4px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: transparent;
-  border-radius: 20px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #c13458;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .hidden {
