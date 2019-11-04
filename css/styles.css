@@ -3473,6 +3473,13 @@ body .contact_container .blocks .block .items .item a {
   font-size: 16px;
 }
 
+body .contact_container .blocks .block .items .item span {
+  display: block;
+  color: #a8a8a8;
+  font-family: "myriad_geo_bold";
+  font-size: 16px;
+}
+
 body .contact_container .show_more {
   margin-top: 70px;
   text-align: center;
