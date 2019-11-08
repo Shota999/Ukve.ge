@@ -1740,9 +1740,9 @@ body .content .container .top_container .price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .content .container .top_container .price .sale {
@@ -3059,7 +3059,7 @@ body .main_content .container .blog_container .blog .view {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 6px 0 8px 0;
+  margin: 8px 0 8px 0;
 }
 
 body .main_content .container .blog_container .blog .view span {
@@ -3567,6 +3567,28 @@ body .contact_form form .form .input input::placeholder {
   color: #c6c6c6;
   font-family: "myriad_geo_bold";
   font-size: 14px;
+}
+
+body .contact_form form .form .input .error {
+  border: 2px solid rgba(0, 0, 0, 0.03);
+  border-color: #c13458;
+  color: #c13458;
+}
+
+body .contact_form form .form .input .error::-webkit-input-placeholder {
+  color: #c13458;
+}
+
+body .contact_form form .form .input .error:-ms-input-placeholder {
+  color: #c13458;
+}
+
+body .contact_form form .form .input .error::-ms-input-placeholder {
+  color: #c13458;
+}
+
+body .contact_form form .form .input .error::placeholder {
+  color: #c13458;
 }
 
 body .contact_form form .form textarea {
