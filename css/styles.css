@@ -3302,6 +3302,9 @@ body .main_content .profile .left {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
 }
 
 body .main_content .profile .left .top {
@@ -3525,6 +3528,103 @@ body .main_content .profile .right form button {
   color: #ffffff;
   font-size: 16px;
   font-family: "myriad_geo_mtavruli_bold";
+  cursor: pointer;
+}
+
+body .main_content .profile .right .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 40px;
+}
+
+body .main_content .profile .right .cards .card {
+  margin-right: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main_content .profile .right .cards .card .mastercard {
+  background-color: #C13458;
+  border-radius: 20px;
+  height: 132px;
+  padding: 24px;
+}
+
+body .main_content .profile .right .cards .card .mastercard p {
+  margin-top: 50px;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "myriad_geo_bold";
+}
+
+body .main_content .profile .right .cards .card .mastercard p span {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "myriad_geo_bold";
+  letter-spacing: 8px;
+  margin-left: 24px;
+}
+
+body .main_content .profile .right .cards .card .mastercard p span:last-child {
+  margin-right: 0;
+}
+
+body .main_content .profile .right .cards .card .visa {
+  background-color: #72B55B;
+  border-radius: 20px;
+  height: 132px;
+  padding: 24px;
+}
+
+body .main_content .profile .right .cards .card .visa p {
+  margin-top: 50px;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "myriad_geo_bold";
+}
+
+body .main_content .profile .right .cards .card .visa p span {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "myriad_geo_bold";
+  letter-spacing: 8px;
+  margin-left: 24px;
+}
+
+body .main_content .profile .right .cards .card .visa p span:last-child {
+  margin-right: 0;
+}
+
+body .main_content .profile .right .cards .card .del {
+  border-radius: 24px;
+  background-color: #C7C7C7;
+  width: 41px;
+  height: 41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 16px;
   cursor: pointer;
 }
 

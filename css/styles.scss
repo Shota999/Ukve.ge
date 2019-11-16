@@ -2764,6 +2764,7 @@ body {
                 overflow: hidden;
                 margin-right: 108px;
                 height: max-content;
+                flex: none;
 
                 .top {
                     display: flex;
@@ -2935,6 +2936,95 @@ body {
                         font-size: 16px;
                         font-family: "myriad_geo_mtavruli_bold";
                         cursor: pointer;
+                    }
+                }
+
+                // Cards
+
+                .cards{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 40px;
+
+                    .card{
+                        margin-right: 25px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .mastercard{
+                            background-color: #C13458;
+                            border-radius: 20px;
+                            // flex: 1;
+                            height: 132px;
+                            padding: 24px;
+    
+                            p{
+                                margin-top: 50px;
+                                // display: flex;
+                                // justify-content: space-between;
+                                // align-items: center;
+                                color: #ffffff;
+                                font-size: 14px;
+                                font-family: "myriad_geo_bold";
+    
+                                span{
+                                    // display: block;
+                                    color: #ffffff;
+                                    font-size: 14px;
+                                    font-family: "myriad_geo_bold";
+                                    letter-spacing: 8px;
+                                    margin-left: 24px;
+    
+                                    &:last-child{
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                        }
+                        .visa{
+                            background-color: #72B55B;
+                            border-radius: 20px;
+                            // flex: 1;
+                            height: 132px;
+                            padding: 24px;
+    
+                            
+                            p{
+                                margin-top: 50px;
+                                // display: flex;
+                                // justify-content: space-between;
+                                // align-items: center;
+                                color: #ffffff;
+                                font-size: 14px;
+                                font-family: "myriad_geo_bold";
+    
+                                span{
+                                    // display: block;
+                                    color: #ffffff;
+                                    font-size: 14px;
+                                    font-family: "myriad_geo_bold";
+                                    letter-spacing: 8px;
+                                    margin-left: 24px;
+    
+                                    &:last-child{
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                        }
+                        .del{
+                            border-radius: 24px;
+                            background-color: #C7C7C7;
+                            width: 41px;
+                            height: 41px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-top: 16px;
+                            cursor: pointer;
+                        }
                     }
                 }
             }
