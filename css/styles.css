@@ -3529,6 +3529,13 @@ body .main_content .profile .right form button {
   font-size: 16px;
   font-family: "myriad_geo_mtavruli_bold";
   cursor: pointer;
+  outline: none;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body .main_content .profile .right form button:hover {
+  opacity: 0.7;
 }
 
 body .main_content .profile .right .cards {
@@ -3556,6 +3563,10 @@ body .main_content .profile .right .cards .card {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+body .main_content .profile .right .cards .card:last-child {
+  margin-right: 0;
 }
 
 body .main_content .profile .right .cards .card .mastercard {
@@ -3626,6 +3637,98 @@ body .main_content .profile .right .cards .card .del {
           justify-content: center;
   margin-top: 16px;
   cursor: pointer;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body .main_content .profile .right .cards .card .del:hover {
+  opacity: 0.7;
+}
+
+body .main_content .profile .right .orders {
+  padding: 0 40px;
+}
+
+body .main_content .profile .right .orders .order {
+  -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 20px 20px rgba(0, 0, 0, 0.16);
+}
+
+body .main_content .profile .right .orders .order .top_container {
+  border-radius: 6px 6px 0 0;
+  background-color: #72b55b;
+  padding: 12px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .main_content .profile .right .orders .order .top_container .title_date h5 {
+  color: #ffffff;
+  font-family: "myriad_geo_bold";
+  font-size: 16px;
+}
+
+body .main_content .profile .right .orders .order .top_container .title_date p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #e3e3e3;
+  font-family: "myriad_geo_medium";
+  font-size: 12px;
+}
+
+body .main_content .profile .right .orders .order .top_container .title_date p svg {
+  margin: 0 8px;
+}
+
+body .main_content .profile .right .orders .order .top_container .price_arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main_content .profile .right .orders .order .top_container .price_arrow span {
+  color: #ffffff;
+  font-family: "myriad_geo_bold";
+  font-size: 14px;
+}
+
+body .main_content .profile .right .orders .order .top_container .price_arrow span small {
+  font-family: "bpg_gel";
+  font-size: 10px;
+}
+
+body .main_content .profile .right .orders .order .top_container .price_arrow svg {
+  margin-left: 24px;
+}
+
+body .main_content .profile .right .orders .order .inner_content {
+  width: 100%;
+  height: 200px;
+  background-color: #ffffff;
+  height: 125px;
+  position: relative;
+}
+
+body .main_content .profile .right .orders .order .inner_content .background {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ffffff), color-stop(24%, rgba(255, 255, 255, 0.95)), to(rgba(255, 255, 255, 0.02)));
+  background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0.95) 24%, rgba(255, 255, 255, 0.02) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 body .contact_container {
@@ -3946,6 +4049,102 @@ body .fixedheader .bottom_header nav ul li a {
 }
 
 body .show_map {
+  opacity: 1;
+  visibility: visible;
+}
+
+body .card_del {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.72);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .card_del .answer {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  position: relative;
+  width: 196px;
+  height: 143px;
+  padding: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .card_del .answer .close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+body .card_del .answer .close svg {
+  width: 20px;
+  height: 20px;
+}
+
+body .card_del .answer h4 {
+  margin-top: 16px;
+  color: #676767;
+  font-size: 14px;
+  font-family: "myriad_geo_bold";
+  text-align: center;
+}
+
+body .card_del .answer .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+body .card_del .answer .buttons button {
+  background-color: #C13458;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 11px 22px;
+  font-size: 14px;
+  font-family: "myriad_geo_mtavruli_bold";
+  border: 2px solid #C13458;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body .card_del .answer .buttons button:hover {
+  color: #C13458;
+  background-color: #FFFFFF;
+}
+
+body .show_del {
   opacity: 1;
   visibility: visible;
 }

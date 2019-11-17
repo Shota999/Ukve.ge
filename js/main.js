@@ -250,21 +250,26 @@ $(document).ready(function () {
             // $(".show_more").hide();
             // $("#loadMore").text('Load only the first 4');
         }
-        // $('html,body').animate({
-        //     scrollTop: $(this).offset().top
-        // }, 1500);
     });
 
-    // $("#loadLess").on('click', function (e) {
-    //     e.preventDefault();
-    //     $('div:not(:lt(4))').fadeOut();
-    //     $("#loadMore").fadeIn('slow');
-    //     $("#loadLess").hide();
+    // Cards
 
-    //     desiredHeight = $(window).height();
+    $('.del').click(function () {
+        $(".card_del").addClass('show_del');
+        $('body').addClass('hidden');
+    });
+    $('.close').click(function () {
+        $(".card_del").removeClass('show_del');
+        $('body').removeClass('hidden');
+    });
+    $('.yes').click(function () {
+        $(".mastercard").remove();
+        $(".card_del").removeClass('show_del');
+        $('body').removeClass('hidden');
+    });
+    $('.now').click(function () {
+        $(".card_del").removeClass('show_del');
+        $('body').removeClass('hidden');
+    });
 
-    //     $('html,body').animate({
-    //         scrollTop: $(this).offset().top + desiredHeight
-    //     }, 1500);
-    // });
 });
