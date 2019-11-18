@@ -8,6 +8,121 @@ a {
   text-decoration: none;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.72);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal .modal-content {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  position: relative;
+  width: 196px;
+  height: 143px;
+  padding: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal .modal-content .close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.modal .modal-content .close svg {
+  width: 20px;
+  height: 20px;
+}
+
+.modal .modal-content h4 {
+  margin-top: 16px;
+  color: #676767;
+  font-size: 14px;
+  font-family: "myriad_geo_bold";
+  text-align: center;
+}
+
+.modal .modal-content .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.modal .modal-content .buttons button {
+  background-color: #C13458;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 11px 22px;
+  font-size: 14px;
+  font-family: "myriad_geo_mtavruli_bold";
+  border: 2px solid #C13458;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.modal .modal-content .buttons button:hover {
+  color: #C13458;
+  background-color: #FFFFFF;
+}
+
+.show_modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button-red {
+  background-color: #C13458;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 11px 22px;
+  font-size: 14px;
+  font-family: "myriad_geo_mtavruli_bold";
+  border: 2px solid #C13458;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.button-red:hover {
+  color: #C13458;
+  background-color: #FFFFFF;
+}
+
 body {
   background-color: #FAFAFA;
 }
@@ -4049,102 +4164,6 @@ body .fixedheader .bottom_header nav ul li a {
 }
 
 body .show_map {
-  opacity: 1;
-  visibility: visible;
-}
-
-body .card_del {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 99;
-  background-color: rgba(0, 0, 0, 0.72);
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-body .card_del .answer {
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  position: relative;
-  width: 196px;
-  height: 143px;
-  padding: 32px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-body .card_del .answer .close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  cursor: pointer;
-}
-
-body .card_del .answer .close svg {
-  width: 20px;
-  height: 20px;
-}
-
-body .card_del .answer h4 {
-  margin-top: 16px;
-  color: #676767;
-  font-size: 14px;
-  font-family: "myriad_geo_bold";
-  text-align: center;
-}
-
-body .card_del .answer .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-}
-
-body .card_del .answer .buttons button {
-  background-color: #C13458;
-  border-radius: 10px;
-  color: #ffffff;
-  padding: 11px 22px;
-  font-size: 14px;
-  font-family: "myriad_geo_mtavruli_bold";
-  border: 2px solid #C13458;
-  outline: none;
-  cursor: pointer;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
-}
-
-body .card_del .answer .buttons button:hover {
-  color: #C13458;
-  background-color: #FFFFFF;
-}
-
-body .show_del {
   opacity: 1;
   visibility: visible;
 }
