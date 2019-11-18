@@ -3219,18 +3219,75 @@ body {
                             background-color: #ffffff;
                             height: 125px;
                             position: relative;
-                            
+                            overflow-y: auto;
 
-                            .order_background{
-                                background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0.95) 24%, rgba(255, 255, 255, 0.02) 100%);
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                            }
+                            // &::after{
+                            //     background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0.95) 24%, rgba(255, 255, 255, 0.02) 100%);
+                            //     position: absolute;
+                            //     top: 0;
+                            //     left: 0;
+                            //     width: 100%;
+                            //     height: 100%;
+                            //     content: "";
+                            // }
                             .order_content{
                                 display: flex;
+                                padding: 16px 24px;
+                                border-bottom: 1px solid #fafafa;
+                                align-items: center;
+
+                                .image{
+                                    border-radius: 16px;
+                                    border: 2px solid #f4f4f4;
+                                    padding: 9px 10px;
+                                    width: 26px;
+                                    height: 16px;
+                                    overflow: hidden;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin-right: 16px;
+
+                                    img{
+                                        width: 100%;
+                                    }
+                                }
+                                h3{
+                                    color: #676767;
+                                    font-family: "myriad_geo_bold";
+                                    font-size: 12px;
+                                    flex: 1;
+                                }
+                                svg{
+                                    margin: 0 40px;
+                                }
+                                .quantity{
+                                    p{
+                                        color: #676767;
+                                        font-family: "myriad_geo_bold";
+                                        font-size: 12px;
+                                    }
+                                }
+                                .price{
+                                    span{
+                                        color: #676767;
+                                        font-family: "myriad_geo_bold";
+                                        font-size: 12px;
+
+                                        small{
+                                            color: #676767;
+                                            font-family: "bpg_gel";
+                                            font-size: 8px;
+                                        }
+                                    }
+                                }
+                            }
+                            .active{
+                                svg{
+                                    circle{
+                                        fill: #72B55B;
+                                    }
+                                }
                             }
                         }
                     }
