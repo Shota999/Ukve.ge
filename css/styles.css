@@ -3582,7 +3582,7 @@ body .main_content .profile .right h4 {
   color: #676767;
   font-family: "myriad_geo_mtavruli_bold";
   font-size: 24px;
-  margin-bottom: 65px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -3762,16 +3762,23 @@ body .main_content .profile .right .cards .card .del:hover {
 
 body .main_content .profile .right .orders {
   padding: 0 40px;
+  overflow-y: auto;
+  height: 591px;
 }
 
 body .main_content .profile .right .orders .order {
   -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.16);
           box-shadow: 0 20px 20px rgba(0, 0, 0, 0.16);
+  margin-bottom: 16px;
+}
+
+body .main_content .profile .right .orders .order:last-child {
+  margin-bottom: 0;
 }
 
 body .main_content .profile .right .orders .order .top_container {
-  border-radius: 6px 6px 0 0;
-  background-color: #72b55b;
+  border-radius: 6px;
+  background-color: #c13458;
   padding: 12px 24px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3782,6 +3789,7 @@ body .main_content .profile .right .orders .order .top_container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  cursor: pointer;
 }
 
 body .main_content .profile .right .orders .order .top_container .title_date h5 {
@@ -3828,15 +3836,38 @@ body .main_content .profile .right .orders .order .top_container .price_arrow sp
 
 body .main_content .profile .right .orders .order .top_container .price_arrow svg {
   margin-left: 24px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body .main_content .profile .right .orders .order .top_container .price_arrow .rotate_svg {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 body .main_content .profile .right .orders .order .inner_content {
   width: 100%;
-  height: 200px;
   background-color: #ffffff;
+  display: none;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body .main_content .profile .right .orders .order .inner_content .hidden_order {
+  overflow-y: auto;
   height: 125px;
   position: relative;
-  overflow-y: auto;
+}
+
+body .main_content .profile .right .orders .order .inner_content .hidden_order::after {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ffffff), color-stop(0, rgba(255, 255, 255, 0.95)), to(rgba(255, 255, 255, 0.02)));
+  background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0.95) 0, rgba(255, 255, 255, 0.02) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
 }
 
 body .main_content .profile .right .orders .order .inner_content .order_content {
@@ -3904,7 +3935,49 @@ body .main_content .profile .right .orders .order .inner_content .order_content 
   font-size: 8px;
 }
 
-body .main_content .profile .right .orders .order .inner_content .active svg circle {
+body .main_content .profile .right .orders .order .inner_content .more_order {
+  margin: 16px 0;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+body .main_content .profile .right .orders .order .inner_content .more_order p {
+  color: #676767;
+  font-family: "myriad_geo_bold";
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body .main_content .profile .right .orders .order .inner_content .more_order p:hover {
+  opacity: 0.64;
+}
+
+body .main_content .profile .right .orders .order .inner_content .order_map {
+  width: 100%;
+  height: 255px;
+  overflow: hidden;
+}
+
+body .main_content .profile .right .orders .order .inner_content .order_map img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .main_content .profile .right .orders .order .show_content {
+  display: block;
+}
+
+body .main_content .profile .right .orders .active .top_container {
+  background-color: #72b55b;
+}
+
+body .main_content .profile .right .orders .active .inner_content .order_content svg circle {
   fill: #72B55B;
 }
 

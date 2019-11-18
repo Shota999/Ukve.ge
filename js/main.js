@@ -281,4 +281,10 @@ $(document).ready(function () {
         colseModal();
     });
 
+    // Order
+
+    $('.top_container').click(function () {
+        $(".inner_content").toggleClass('show_content');
+        $(".price_arrow>svg").toggleClass("rotate_svg");
+    });
 });

@@ -44,8 +44,8 @@ a {
                 width: 20px;
                 height: 20px;
             }
-        } 
-        
+        }
+
         h4 {
             margin-top: 16px;
             color: #676767;
@@ -85,7 +85,7 @@ a {
     visibility: visible;
 }
 
-.button-red{
+.button-red {
     background-color: #C13458;
     border-radius: 10px;
     color: #ffffff;
@@ -3004,7 +3004,7 @@ body {
                     color: #676767;
                     font-family: "myriad_geo_mtavruli_bold";
                     font-size: 24px;
-                    margin-bottom: 65px;
+                    margin-bottom: 40px;
                     text-align: center;
                 }
 
@@ -3160,17 +3160,24 @@ body {
 
                 .orders {
                     padding: 0 40px;
+                    overflow-y: auto;
+                    height: 591px;
 
                     .order {
                         box-shadow: 0 20px 20px rgba(0, 0, 0, 0.16);
+                        margin-bottom: 16px;
 
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
                         .top_container {
-                            border-radius: 6px 6px 0 0;
-                            background-color: #72b55b;
+                            border-radius: 6px;
+                            background-color: #c13458;
                             padding: 12px 24px;
                             display: flex;
                             align-items: center;
                             justify-content: space-between;
+                            cursor: pointer;
 
                             .title_date {
                                 h5 {
@@ -3209,34 +3216,42 @@ body {
 
                                 svg {
                                     margin-left: 24px;
+                                    transition: .2s ease-in-out;
+                                }
+                                .rotate_svg{
+                                    transform: rotate(90deg);
                                 }
                             }
                         }
 
                         .inner_content {
                             width: 100%;
-                            height: 200px;
                             background-color: #ffffff;
-                            height: 125px;
-                            position: relative;
-                            overflow-y: auto;
+                            display: none;
+                            transition: .2s ease-in-out;
 
-                            // &::after{
-                            //     background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0.95) 24%, rgba(255, 255, 255, 0.02) 100%);
-                            //     position: absolute;
-                            //     top: 0;
-                            //     left: 0;
-                            //     width: 100%;
-                            //     height: 100%;
-                            //     content: "";
-                            // }
-                            .order_content{
+                            .hidden_order{
+                                overflow-y: auto;
+                                height: 125px;
+                                position: relative;
+
+                                &::after{
+                                    background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0.95) 0, rgba(255, 255, 255, 0.02) 100%);
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    content: "";
+                                }
+                            }
+                            .order_content {
                                 display: flex;
                                 padding: 16px 24px;
                                 border-bottom: 1px solid #fafafa;
                                 align-items: center;
 
-                                .image{
+                                .image {
                                     border-radius: 16px;
                                     border: 2px solid #f4f4f4;
                                     padding: 9px 10px;
@@ -3248,33 +3263,37 @@ body {
                                     justify-content: center;
                                     margin-right: 16px;
 
-                                    img{
+                                    img {
                                         width: 100%;
                                     }
                                 }
-                                h3{
+
+                                h3 {
                                     color: #676767;
                                     font-family: "myriad_geo_bold";
                                     font-size: 12px;
                                     flex: 1;
                                 }
-                                svg{
+
+                                svg {
                                     margin: 0 40px;
                                 }
-                                .quantity{
-                                    p{
+
+                                .quantity {
+                                    p {
                                         color: #676767;
                                         font-family: "myriad_geo_bold";
                                         font-size: 12px;
                                     }
                                 }
-                                .price{
-                                    span{
+
+                                .price {
+                                    span {
                                         color: #676767;
                                         font-family: "myriad_geo_bold";
                                         font-size: 12px;
 
-                                        small{
+                                        small {
                                             color: #676767;
                                             font-family: "bpg_gel";
                                             font-size: 8px;
@@ -3282,9 +3301,51 @@ body {
                                     }
                                 }
                             }
-                            .active{
-                                svg{
-                                    circle{
+                            .more_order{
+                                margin: 16px 0;
+                                display: inline-block;
+                                text-align: center;
+                                width: 100%;
+
+                                p{
+                                    color: #676767;
+                                    font-family: "myriad_geo_bold";
+                                    font-size: 12px;
+                                    text-decoration: underline;
+                                    cursor: pointer;
+                                    display: inline-block;
+                                    transition: .2s ease-in-out;
+
+                                    &:hover{
+                                        opacity: 0.64;
+                                    }
+                                }
+                            }
+                            .order_map{
+                                width: 100%;
+                                height: 255px;
+                                overflow: hidden;
+
+                                img{
+                                    width: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                        .show_content{
+                            display: block;
+                        }
+                    }
+
+                    .active {
+                        .top_container {
+                            background-color: #72b55b;
+                        }
+
+                        .inner_content {
+                            .order_content {
+                                svg {
+                                    circle {
                                         fill: #72B55B;
                                     }
                                 }
@@ -3615,4 +3676,3 @@ body {
         transform: translate(0)
     }
 }
-
