@@ -3838,12 +3838,20 @@ body .main_content .profile .right .orders .order .inner_content {
   position: relative;
 }
 
-body .main_content .profile .right .orders .order .inner_content .background {
+body .main_content .profile .right .orders .order .inner_content .order_background {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#ffffff), color-stop(24%, rgba(255, 255, 255, 0.95)), to(rgba(255, 255, 255, 0.02)));
   background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0.95) 24%, rgba(255, 255, 255, 0.02) 100%);
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body .main_content .profile .right .orders .order .inner_content .order_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 body .contact_container {
