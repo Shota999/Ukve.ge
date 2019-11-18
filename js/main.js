@@ -252,24 +252,33 @@ $(document).ready(function () {
         }
     });
 
-    // Cards
-
-    $('.del').click(function () {
-        $(".card_del").addClass('show_del');
+    // modals 
+    function openModal(target){
+        $("#"+target).addClass('show_modal');
         $('body').addClass('hidden');
+    }
+    function colseModal(){
+        $(".modal").removeClass('show_modal');
+        $('body').removeClass('hidden');
+    }
+
+    $('.modal-button').click(function () {
+        button = $(this)
+        var target = button.data("target");
+        openModal(target);
     });
+
     $('.close').click(function () {
-        $(".card_del").removeClass('show_del');
-        $('body').removeClass('hidden');
+        colseModal();
     });
+
+
     $('.yes').click(function () {
-        $(".mastercard").remove();
-        $(".card_del").removeClass('show_del');
-        $('body').removeClass('hidden');
+        button.parent(".card").remove();
+        colseModal();
     });
     $('.now').click(function () {
-        $(".card_del").removeClass('show_del');
-        $('body').removeClass('hidden');
+        colseModal();
     });
 
 });

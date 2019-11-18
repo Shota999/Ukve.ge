@@ -8,6 +8,103 @@ a {
     text-decoration: none;
 }
 
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.72);
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .modal-content {
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        position: relative;
+        width: 196px;
+        height: 143px;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .close {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            cursor: pointer;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        } 
+        
+        h4 {
+            margin-top: 16px;
+            color: #676767;
+            font-size: 14px;
+            font-family: "myriad_geo_bold";
+            text-align: center;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            button {
+                background-color: #C13458;
+                border-radius: 10px;
+                color: #ffffff;
+                padding: 11px 22px;
+                font-size: 14px;
+                font-family: "myriad_geo_mtavruli_bold";
+                border: 2px solid #C13458;
+                outline: none;
+                cursor: pointer;
+                transition: .2s ease-in-out;
+
+                &:hover {
+                    color: #C13458;
+                    background-color: #FFFFFF;
+                }
+            }
+        }
+    }
+}
+
+.show_modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.button-red{
+    background-color: #C13458;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 11px 22px;
+    font-size: 14px;
+    font-family: "myriad_geo_mtavruli_bold";
+    border: 2px solid #C13458;
+    outline: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+
+    &:hover {
+        color: #C13458;
+        background-color: #FFFFFF;
+    }
+}
+
+
+
 body {
     background-color: #FAFAFA;
 
@@ -3398,83 +3495,6 @@ body {
         opacity: 1;
         visibility: visible;
     }
-
-    .card_del {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        z-index: 99;
-        background-color: rgba(0, 0, 0, 0.72);
-        opacity: 0;
-        visibility: hidden;
-        transition: .2s ease-in-out;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .answer {
-            background-color: #FFFFFF;
-            border-radius: 10px;
-            position: relative;
-            width: 196px;
-            height: 143px;
-            padding: 32px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            .close {
-                position: absolute;
-                top: 8px;
-                right: 8px;
-                cursor: pointer;
-
-                svg {
-                    width: 20px;
-                    height: 20px;
-                }
-            }
-
-            h4 {
-                margin-top: 16px;
-                color: #676767;
-                font-size: 14px;
-                font-family: "myriad_geo_bold";
-                text-align: center;
-            }
-
-            .buttons {
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-
-                button {
-                    background-color: #C13458;
-                    border-radius: 10px;
-                    color: #ffffff;
-                    padding: 11px 22px;
-                    font-size: 14px;
-                    font-family: "myriad_geo_mtavruli_bold";
-                    border: 2px solid #C13458;
-                    outline: none;
-                    cursor: pointer;
-                    transition: .2s ease-in-out;
-
-                    &:hover {
-                        color: #C13458;
-                        background-color: #FFFFFF;
-                    }
-                }
-            }
-        }
-    }
-
-    .show_del {
-        opacity: 1;
-        visibility: visible;
-    }
 }
 
 /* width */
@@ -3533,3 +3553,4 @@ body {
         transform: translate(0)
     }
 }
+
