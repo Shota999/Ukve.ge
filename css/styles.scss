@@ -1350,12 +1350,12 @@ body {
 
                                 &::before {
                                     content: "";
-                                    width: 130%;
+                                    width: 100%;
                                     height: 2px;
                                     background-color: #676767;
                                     position: absolute;
-                                    top: 45%;
-                                    left: -15%;
+                                    top: 47%;
+                                    left: 0;
                                     border-radius: 20px;
                                 }
                             }
@@ -1553,12 +1553,12 @@ body {
 
                         &::before {
                             content: "";
-                            width: 130%;
+                            width: 100%;
                             height: 2px;
                             background-color: #d8d8d8;
                             position: absolute;
-                            top: 45%;
-                            left: -15%;
+                            top: 47%;
+                            left: 0;
                             border-radius: 20px;
                         }
                     }
@@ -1910,12 +1910,12 @@ body {
 
                             &::before {
                                 content: "";
-                                width: 130%;
+                                width: 100%;
                                 height: 2px;
                                 background-color: #d8d8d8;
                                 position: absolute;
                                 top: 47%;
-                                left: -15%;
+                                left: 0;
                                 border-radius: 20px;
                             }
                         }
@@ -2998,7 +2998,7 @@ body {
                 border: 1px solid #fafafa;
                 background-color: #ffffff;
                 flex: 1;
-                padding: 65px 0;
+                padding: 37px 0;
 
                 h4 {
                     color: #676767;
@@ -3167,9 +3167,10 @@ body {
                         box-shadow: 0 20px 20px rgba(0, 0, 0, 0.16);
                         margin-bottom: 16px;
 
-                        &:last-child{
+                        &:last-child {
                             margin-bottom: 0;
                         }
+
                         .top_container {
                             border-radius: 6px;
                             background-color: #c13458;
@@ -3218,7 +3219,8 @@ body {
                                     margin-left: 24px;
                                     transition: .2s ease-in-out;
                                 }
-                                .rotate_svg{
+
+                                .rotate_svg {
                                     transform: rotate(90deg);
                                 }
                             }
@@ -3230,12 +3232,12 @@ body {
                             display: none;
                             transition: .2s ease-in-out;
 
-                            .hidden_order{
+                            .hidden_order {
                                 overflow-y: auto;
                                 height: 125px;
                                 position: relative;
 
-                                &::after{
+                                &::after {
                                     background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0.95) 0, rgba(255, 255, 255, 0.02) 100%);
                                     position: absolute;
                                     top: 0;
@@ -3244,7 +3246,24 @@ body {
                                     height: 100%;
                                     content: "";
                                 }
+
+                                /* width */
+                                ::-webkit-scrollbar {
+                                    width: 4px;
+                                }
+
+                                /* Track */
+                                ::-webkit-scrollbar-track {
+                                    background: transparent;
+                                }
+
+                                /* Handle */
+                                ::-webkit-scrollbar-thumb {
+                                    background: #72b55b;
+                                    border-radius: 10px;
+                                }
                             }
+
                             .order_content {
                                 display: flex;
                                 padding: 16px 24px;
@@ -3301,13 +3320,14 @@ body {
                                     }
                                 }
                             }
-                            .more_order{
+
+                            .more_order {
                                 margin: 16px 0;
                                 display: inline-block;
                                 text-align: center;
                                 width: 100%;
 
-                                p{
+                                p {
                                     color: #676767;
                                     font-family: "myriad_geo_bold";
                                     font-size: 12px;
@@ -3316,23 +3336,25 @@ body {
                                     display: inline-block;
                                     transition: .2s ease-in-out;
 
-                                    &:hover{
+                                    &:hover {
                                         opacity: 0.64;
                                     }
                                 }
                             }
-                            .order_map{
+
+                            .order_map {
                                 width: 100%;
                                 height: 255px;
                                 overflow: hidden;
 
-                                img{
+                                img {
                                     width: 100%;
                                     object-fit: cover;
                                 }
                             }
                         }
-                        .show_content{
+
+                        .show_content {
                             display: block;
                         }
                     }
@@ -3350,6 +3372,363 @@ body {
                                     }
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Basket
+
+        .basket {
+            margin: 37px 0;
+
+            .steps {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 170px;
+
+                .step {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    p {
+                        color: #676767;
+                        font-family: "myriad_geo_mtavruli_bold";
+                        font-size: 16px;
+                    }
+
+                    .number {
+                        width: 34px;
+                        height: 34px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 3px solid #ffffff;
+                        background-color: #f4f4f4;
+                        border-radius: 50%;
+
+                        span {
+                            color: #c13458;
+                            font-family: "myriad_geo_mtavruli_bold";
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                .active {
+                    .number {
+                        box-shadow: 0 10px 10px rgba(239, 239, 239, 0.4);
+                    }
+                }
+            }
+
+            .basket_content {
+                display: flex;
+                margin-top: 40px;
+
+                .left {
+                    flex: 1;
+
+                    table {
+                        border-radius: 10px;
+                        width: 100%;
+                        border-spacing: initial;
+
+                        thead {
+                            tr {
+                                background-color: #f4f4f4;
+
+                                th {
+                                    color: #676767;
+                                    font-family: "myriad_geo_mtavruli_bold";
+                                    font-size: 16px;
+                                    padding: 40px 0;
+                                }
+                            }
+                        }
+
+                        tbody {
+                            tr {
+                                td {
+                                    border: 2px solid #f8f8f8;
+
+                                    .remove {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        cursor: pointer;
+                                        padding: 0 16px;
+
+                                        svg {
+                                            width: 24px;
+                                            height: 24px;
+
+                                            path {
+                                                fill: #A8A8A8;
+                                            }
+                                        }
+                                    }
+
+                                    .main {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        padding: 16px;
+
+                                        .image {
+                                            border-radius: 16px;
+                                            border: 2px solid #f4f4f4;
+                                            padding: 9px 10px;
+                                            width: 51px;
+                                            height: 34px;
+                                            overflow: hidden;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            margin-right: 16px;
+
+                                            img {
+                                                width: 100%;
+                                            }
+                                        }
+
+                                        h3 {
+                                            color: #676767;
+                                            font-family: "myriad_geo_bold";
+                                            font-size: 14px;
+                                        }
+                                    }
+
+                                    .quantity {
+                                        width: 68px;
+                                        height: 36px;
+                                        padding: 0px 24px;
+                                        background-color: #ffffff;
+                                        border-radius: 20px;
+                                        display: flex;
+                                        align-items: center;
+                                        margin: 0px 48px;
+                                        justify-content: space-between;
+
+                                        svg {
+                                            width: 6px;
+                                            height: 4px;
+                                            cursor: pointer;
+                                            padding: 16px 0;
+
+                                            path {
+                                                fill: #676767;
+                                            }
+                                        }
+
+                                        span {
+                                            color: #676767;
+                                            font-family: "myriad_geo_bold";
+                                            font-size: 16px;
+                                        }
+                                    }
+
+                                    .comment {
+                                        height: 88px;
+                                        width: 181px;
+
+                                        form {
+                                            width: 100%;
+                                            height: 100%;
+                                            overflow: hidden;
+
+                                            textarea {
+                                                width: 165px;
+                                                height: 88px;
+                                                resize: none;
+                                                background-color: #ffffff;
+                                                border: none;
+                                                outline: none;
+                                                padding: 8px;
+                                                color: #c6c6c6;
+                                                font-family: "myriad_geo_bold";
+                                                font-size: 10px;
+
+                                                &::placeholder {
+                                                    color: #c6c6c6;
+                                                    font-family: "myriad_geo_bold";
+                                                    font-size: 10px;
+                                                }
+
+                                                &:focus {
+                                                    color: #c6c6c6;
+                                                    font-family: "myriad_geo_bold";
+                                                    font-size: 10px;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .price {
+                                        display: flex;
+                                        align-items: baseline;
+                                        padding: 0 16px;
+
+                                        .sale {
+                                            color: #676767;
+                                            font-family: "myriad_geo_bold";
+                                            font-size: 16px;
+                                            line-height: 16px;
+                                            position: relative;
+                                            display: inline-table;
+
+                                            &::before {
+                                                content: "";
+                                                width: 100%;
+                                                height: 2px;
+                                                background-color: #676767;
+                                                position: absolute;
+                                                top: 47%;
+                                                left: 0;
+                                                border-radius: 20px;
+                                            }
+                                        }
+
+                                        .slash {
+                                            svg {
+                                                height: 16px;
+                                            }
+                                        }
+
+                                        span {
+                                            color: #bf3357;
+                                            font-family: "poppins_bold";
+                                            font-size: 20px;
+
+                                            small {
+                                                color: #bf3357;
+                                                font-family: "bpg_gel";
+                                                font-size: 10px;
+                                                font-weight: 400;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .remove_all {
+                        border-radius: 10px;
+                        background-color: #a8a8a8;
+                        border: none;
+                        outline: none;
+                        cursor: pointer;
+                        color: #ffffff;
+                        font-family: "myriad_geo_bold";
+                        font-size: 14px;
+                        padding: 16px 24px;
+                        margin-top: 40px;
+                    }
+                }
+
+                .right {
+                    margin-left: 16px;
+                    padding: 8px;
+                    background: #ffffff;
+                    height: max-content;
+                    width: 260px;
+
+                    .top {
+                        border-radius: 1px;
+                        border-bottom: 1px solid #f8f8f8;
+                        padding: 16px 0 24px 0;
+
+                        h4 {
+                            color: #676767;
+                            font-family: "myriad_geo_mtavruli_bold";
+                            font-size: 16px;
+                            text-align: center;
+                        }
+                    }
+
+                    .block {
+                        margin-top: 24px;
+
+                        .money_point {
+                            width: 100%;
+                            padding: 0 16px;
+
+                            .money {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                p {
+                                    color: #676767;
+                                    font-family: "myriad_geo_bold";
+                                    font-size: 14px;
+                                }
+
+                                span {
+                                    color: #c13458;
+                                    font-family: "myriad_geo_bold";
+                                    font-size: 14px;
+
+                                    small {
+                                        font-family: "bpg_gel";
+                                        font-size: 10px;
+                                    }
+                                }
+                            }
+
+                            .points {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                p {
+                                    color: #676767;
+                                    font-family: "myriad_geo_bold";
+                                    font-size: 14px;
+                                }
+
+                                span {
+                                    color: #c13458;
+                                    font-family: "myriad_geo_bold";
+                                    font-size: 14px;
+
+                                    small {
+                                        font-family: "bpg_gel";
+                                        font-size: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .buttons {
+                        display: flex;
+                        justify-content: space-between;
+                        margin: 8px;
+                        margin-top: 26px;
+                        align-items: center;
+
+                        .buy {
+                            border-radius: 10px;
+                            background-color: #c13458;
+                            border: none;
+                            outline: none;
+                            cursor: pointer;
+                            padding: 16px;
+                            color: #ffffff;
+                            font-family: "myriad_geo_mtavruli_bold";
+                            font-size: 16px;
+                        }
+
+                        a {
+                            color: #c13458;
+                            font-family: "myriad_geo_bold";
+                            font-size: 12px;
+                            text-decoration: underline;
                         }
                     }
                 }
