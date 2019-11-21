@@ -3231,21 +3231,21 @@ body {
                             background-color: #ffffff;
                             display: none;
                             transition: .2s ease-in-out;
+                            position: relative;
+
+                            // .bg {
+                            //     background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0.95) 0, rgba(255, 255, 255, 0.02) 100%);
+                            //     position: absolute;
+                            //     top: 0;
+                            //     left: 0;
+                            //     width: 100%;
+                            //     height: 125px;
+                            //     content: "";
+                            // }
 
                             .hidden_order {
                                 overflow-y: auto;
                                 height: 125px;
-                                position: relative;
-
-                                &::after {
-                                    background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0.95) 0, rgba(255, 255, 255, 0.02) 100%);
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    width: 100%;
-                                    height: 100%;
-                                    content: "";
-                                }
 
                                 /* width */
                                 ::-webkit-scrollbar {
@@ -3262,6 +3262,10 @@ body {
                                     background: #72b55b;
                                     border-radius: 10px;
                                 }
+
+                                .opacity:after {
+                                    display: block;
+                                }
                             }
 
                             .order_content {
@@ -3269,6 +3273,18 @@ body {
                                 padding: 16px 24px;
                                 border-bottom: 1px solid #fafafa;
                                 align-items: center;
+                                position: relative;
+
+                                &:after{
+                                    background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0.95) 0, rgba(255, 255, 255, 0.02) 100%);
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 70px;
+                                    display: none;
+                                    content: "";
+                                }
 
                                 .image {
                                     border-radius: 16px;

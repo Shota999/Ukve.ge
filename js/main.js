@@ -272,12 +272,10 @@ $(document).ready(function () {
         colseModal();
     });
 
-
     $('.deleteCard').click(function () {
         colseModal();
         return false;
     });
-
 
     $('.wantDrink').click(function () {
         button.parent(".card").remove();
@@ -293,5 +291,25 @@ $(document).ready(function () {
         $(".inner_content").toggleClass('show_content');
         $(".price_arrow>svg").toggleClass("rotate_svg");
     });
+
+    $(".hidden_order").scroll(function(e) {
+        let scroll = $(this).scrollTop();
+        let count = $(this).children().length;
+        let i = Math.ceil(scroll/70);
+        removeOpClass(i);
+        addOpClass(i+1, count);
+    });
+
+    function addOpClass(i, j) {
+        for (let k = i; k <= j; k++) {
+            $(".order_content:eq( "+ k +" )").addClass('opacity');
+        }
+    }
+
+    function removeOpClass(i) {
+        for (let k = 0; k <= i; k++) {
+            $(".order_content:eq( "+ k +" )").removeClass('opacity');
+        }
+    }
     
 });
