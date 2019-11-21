@@ -99,6 +99,25 @@ a {
   background-color: #FFFFFF;
 }
 
+.modal .modal-content .buttons a {
+  background-color: #C13458;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 11px 22px;
+  font-size: 14px;
+  font-family: "myriad_geo_mtavruli_bold";
+  border: 2px solid #C13458;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.modal .modal-content .buttons a:hover {
+  color: #C13458;
+  background-color: #FFFFFF;
+}
+
 .show_modal {
   opacity: 1;
   visibility: visible;

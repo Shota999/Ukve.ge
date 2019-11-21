@@ -273,7 +273,13 @@ $(document).ready(function () {
     });
 
 
-    $('.yes').click(function () {
+    $('.deleteCard').click(function () {
+        colseModal();
+        return false;
+    });
+
+
+    $('.wantDrink').click(function () {
         button.parent(".card").remove();
         colseModal();
     });
@@ -287,4 +293,5 @@ $(document).ready(function () {
         $(".inner_content").toggleClass('show_content');
         $(".price_arrow>svg").toggleClass("rotate_svg");
     });
+    
 });

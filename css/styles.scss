@@ -76,6 +76,23 @@ a {
                     background-color: #FFFFFF;
                 }
             }
+            a{
+                background-color: #C13458;
+                border-radius: 10px;
+                color: #ffffff;
+                padding: 11px 22px;
+                font-size: 14px;
+                font-family: "myriad_geo_mtavruli_bold";
+                border: 2px solid #C13458;
+                outline: none;
+                cursor: pointer;
+                transition: .2s ease-in-out;
+
+                &:hover {
+                    color: #C13458;
+                    background-color: #FFFFFF;
+                }
+            }
         }
     }
 }
