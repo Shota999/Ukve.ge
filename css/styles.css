@@ -4373,7 +4373,8 @@ body .main_content .basket .basket_content .left table tbody tr td .fasting {
   width: auto;
   left: -76px;
   padding: 0 8px;
-  
+}
+
 body .main_content .basket .basket_content .left table tbody tr.sale td:first-child {
   position: relative;
 }
