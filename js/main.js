@@ -316,5 +316,10 @@ $(document).ready(function () {
             $(".order_content:eq( "+ k +" )").removeClass('opacity');
         }
     }
-    
+    // I get
+
+    $('.i_get>.radio_category').click(function () {
+        $(this).toggleClass("active");
+    });
+
 });
