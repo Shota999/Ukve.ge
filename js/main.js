@@ -251,6 +251,11 @@ $(document).ready(function () {
             // $("#loadMore").text('Load only the first 4');
         }
     });
+    $('.modal').click(function (e) {
+        if(e.target.closest(".modal-content") == null){
+            colseModal()
+        }
+    });
 
     // modals 
     function openModal(target){

@@ -4373,6 +4373,38 @@ body .main_content .basket .basket_content .left table tbody tr td .fasting {
   width: auto;
   left: -76px;
   padding: 0 8px;
+  
+body .main_content .basket .basket_content .left table tbody tr.sale td:first-child {
+  position: relative;
+}
+
+body .main_content .basket .basket_content .left table tbody tr.sale td:first-child:after {
+  content: "Sale";
+  width: 38px;
+  height: 26px;
+  background-color: #c13458;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 31px;
+  left: -38px;
+  border-radius: 13px 0 0 13px;
+  font-family: MyriadGEO;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
 }
 
 body .main_content .basket .basket_content .left .remove_all {
