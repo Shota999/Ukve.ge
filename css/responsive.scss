@@ -161,6 +161,40 @@ $phone-width-s: 425px;
 @media (max-width: #{$tablet-width}) {}
 
 @media (max-width: #{$phone-width}) {
+    body{
+        header{
+            .top_header{
+                .left{
+                    .zone_button{
+                        display: none;
+                    }
+                }
+                .right{
+                    a{
+                        display: none;
+                    }
+                    .menu{
+                        .close{
+                            svg{
+                                width: 32px;
+                                height: 32px;
+                            }
+                        }
+                        nav{
+                            ul{
+                                li{
+                                    a{
+                                        font-size: 24px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .swiper-slide {
         width: 50vw;
 

@@ -68,6 +68,19 @@
 }
 
 @media (max-width: 610px) {
+  body header .top_header .left .zone_button {
+    display: none;
+  }
+  body header .top_header .right a {
+    display: none;
+  }
+  body header .top_header .right .menu .close svg {
+    width: 32px;
+    height: 32px;
+  }
+  body header .top_header .right .menu nav ul li a {
+    font-size: 24px;
+  }
   .swiper-slide {
     width: 50vw;
   }

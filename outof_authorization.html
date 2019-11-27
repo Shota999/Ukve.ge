@@ -494,255 +494,34 @@
                 </ul>
             </div>
         </div>
-        <div class="container basket">
-            <div class="steps">
-                <div class="step step2">
-                    <p>კალათა</p>
-                    <div class="number">
-                        <span>1</span>
-                    </div>
+        <div class="container out_off">
+            <h3>იმისთვის რომ შეიძინოთ გთხოვთ გაიაროთ <a href="#">ავტორიზაცია</a>, ან <a href="#">რეგისტრაცია</a></h3>
+            <form action="action.php">
+                <div class="input">
+                    <input type="text" placeholder="ელ.ფოსტა" name="email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
+                        <g>
+                            <g>
+                                <path fill="#c13458"
+                                    d="M1.625 11.379a3.246 3.246 0 0 1 3.25-3.243h3.25a3.246 3.246 0 0 1 3.25 3.243zM6.5 1.65a2.435 2.435 0 0 1 2.438 2.432A2.435 2.435 0 0 1 6.5 6.514a2.435 2.435 0 0 1-2.437-2.432A2.435 2.435 0 0 1 6.5 1.65zm2.81-.524a4.069 4.069 0 0 0-5.62 0 4.047 4.047 0 0 0-.243 5.602A4.873 4.873 0 0 0 0 11.378C0 12.275.728 13 1.625 13h9.75c.898 0 1.625-.726 1.625-1.621a4.873 4.873 0 0 0-3.447-4.65 4.047 4.047 0 0 0-.243-5.603z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
                 </div>
-                <div class="step active">
-                    <p>დამატებითი ინფორმაცია</p>
-                    <div class="number">
-                        <span>2</span>
-                    </div>
+                <div class="input">
+                    <input type="password" placeholder="პაროლი" name="password">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="10" viewBox="0 0 8 10">
+                        <g>
+                            <g>
+                                <path fill="#d5d5d5"
+                                    d="M2.335 2.975C2.392 2.08 3.12 1.382 4 1.382c.879 0 1.606.697 1.663 1.593v.97H2.335zm4.276 5.606H1.386V5.364H6.61zM7.306 10A.702.702 0 0 0 8 9.29V4.654a.702.702 0 0 0-.694-.71h-.251v-.97C6.977 1.308 5.633 0 4.002 0S1.027 1.309.95 2.973v.972H.695a.702.702 0 0 0-.695.71V9.29c0 .39.309.708.691.71z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
                 </div>
-                <div class="step">
-                    <p>გადახდის მეთოდები</p>
-                    <div class="number">
-                        <span>3</span>
-                    </div>
-                </div>
-            </div>
-            <div class="information_content">
-                <div class="left">
-                    <div class="informations">
-                        <div class="top">
-                            <h4>დამატებითი ინფორმაცია</h4>
-                        </div>
-                        <form class="info_block" action="action.php">
-                            <div class="form">
-                                <div class="i_get">
-                                    <label class="radio_category">
-                                        <input type="checkbox" name="radio" id="kveba" value="1">
-                                        <span class="checkmark"></span>
-                                        <label for="kveba">მე წავიღებ</label>
-                                    </label>
-                                </div>
-                                <div class="fill">
-                                    <p>აირჩიეთ უბანი</p>
-                                    <select>
-                                        <option value="0">უბანი</option>
-                                        <option value="1">Audi</option>
-                                        <option value="2">BMW</option>
-                                        <option value="3">Citroen</option>
-                                        <option value="4">Ford</option>
-                                        <option value="5">Honda</option>
-                                        <option value="6">Jaguar</option>
-                                        <option value="7">Land Rover</option>
-                                        <option value="8">Mercedes</option>
-                                        <option value="9">Mini</option>
-                                        <option value="10">Nissan</option>
-                                        <option value="11">Toyota</option>
-                                        <option value="12">Volvo</option>
-                                    </select>
-                                </div>
-                                <div class="fill">
-                                    <div class="street">
-                                        <div class="choose_street">
-                                            <p>აირჩიეთ ქუჩა</p>
-                                            <select>
-                                                <option value="0">ქუჩა</option>
-                                                <option value="1">Audi</option>
-                                                <option value="2">BMW</option>
-                                                <option value="3">Citroen</option>
-                                                <option value="4">Ford</option>
-                                                <option value="5">Honda</option>
-                                                <option value="6">Jaguar</option>
-                                                <option value="7">Land Rover</option>
-                                                <option value="8">Mercedes</option>
-                                                <option value="9">Mini</option>
-                                                <option value="10">Nissan</option>
-                                                <option value="11">Toyota</option>
-                                                <option value="12">Volvo</option>
-                                            </select>
-                                        </div>
-                                        <div class="street_number">
-                                            <p>ქუჩის ნომერი</p>
-                                            <input type="text" placeholder="მაგ: #44">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="fill">
-                                    <div class="information">
-                                        <div class="street_number tel">
-                                            <div class="tel_input">
-                                                <p>ტელეფონი</p>
-                                                <input type="text" placeholder="555 177 228">
-                                            </div>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 16 16">
-                                                <g>
-                                                    <g>
-                                                        <path fill="#a8a8a8"
-                                                            d="M12.986 13.36c0 .648-.528 1.141-1.159 1.141H2.66c-.648 0-1.16-.51-1.16-1.14V4.163c0-.63.529-1.14 1.16-1.14h4.686l1.483-1.482h-6.17C1.194 1.542 0 2.717 0 4.164v9.196A2.647 2.647 0 0 0 2.659 16h9.185a2.647 2.647 0 0 0 2.659-2.64V7.178L13.02 8.66v4.7z" />
-                                                    </g>
-                                                    <g>
-                                                        <path fill="#a8a8a8"
-                                                            d="M13.74 3.74l-1.466-1.466.825-.824 1.48 1.48zM7.97 9.523l-1.572.092.092-1.572.442-.443 1.48 1.48zm3.358-6.303l1.48 1.48L9.375 8.12l-1.48-1.48zm4.38-1.054L13.847.321A1.079 1.079 0 0 0 13.1 0c-.29 0-.55.107-.748.305L5.482 7.174c-.183.183-.29.427-.305.687l-.122 1.968c-.015.306.091.611.305.825.199.198.473.305.748.305h.061l1.984-.122c.26-.015.504-.122.687-.305l6.853-6.854c.199-.198.306-.473.306-.747a1 1 0 0 0-.29-.764z" />
-                                                    </g>
-                                                </g>
-                                            </svg>
-                                        </div>
-                                        <div class="more_information">
-                                            <p>დამატებითი ინფორმაცია</p>
-                                            <input type="text" placeholder="კორპუსი, ბინა, სართული...">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button>გაგრძელება</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="right_content">
-                        <div class="top">
-                            <h4>პროდუქცია</h4>
-                        </div>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class="red">
-                                        <div class="remove">
-                                            <svg class="close_button" xmlns="http://www.w3.org/2000/svg" width="53"
-                                                height="53" viewBox="0 0 53 53">
-                                                <g id="noun_Close_2389681" transform="translate(-1 -1)">
-                                                    <path id="Path_90" data-name="Path 90"
-                                                        d="M26.7,8.706a2.414,2.414,0,0,0-3.4,0L17.74,14.258,12.212,8.706a2.424,2.424,0,1,0-3.428,3.428l5.552,5.528L8.784,23.19a2.414,2.414,0,1,0,3.4,3.4l5.552-5.528,5.528,5.528a2.414,2.414,0,0,0,3.4-3.4l-5.528-5.528,5.528-5.528A2.414,2.414,0,0,0,26.7,8.706Z"
-                                                        transform="translate(9.76 9.838)" fill="#c13458"></path>
-                                                    <path id="Path_91" data-name="Path 91"
-                                                        d="M27.5,1A26.5,26.5,0,1,0,54,27.5,26.5,26.5,0,0,0,27.5,1Zm0,48.182A21.682,21.682,0,1,1,49.182,27.5,21.682,21.682,0,0,1,27.5,49.182Z"
-                                                        fill="#c13458"></path>
-                                                </g>
-                                            </svg>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="main">
-                                            <div class="image">
-                                                <img src="images/food.png" alt="food">
-                                            </div>
-                                            <h3>ატრია საქონლის ხორცით და სუში კალიფორნია ვასაბის სოუსით და ზეთით</h3>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="price">
-                                            <span>20<small>b</small></span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="orange">
-                                        <div class="remove">
-                                            <svg class="close_button" xmlns="http://www.w3.org/2000/svg" width="53"
-                                                height="53" viewBox="0 0 53 53">
-                                                <g id="noun_Close_2389681" transform="translate(-1 -1)">
-                                                    <path id="Path_90" data-name="Path 90"
-                                                        d="M26.7,8.706a2.414,2.414,0,0,0-3.4,0L17.74,14.258,12.212,8.706a2.424,2.424,0,1,0-3.428,3.428l5.552,5.528L8.784,23.19a2.414,2.414,0,1,0,3.4,3.4l5.552-5.528,5.528,5.528a2.414,2.414,0,0,0,3.4-3.4l-5.528-5.528,5.528-5.528A2.414,2.414,0,0,0,26.7,8.706Z"
-                                                        transform="translate(9.76 9.838)" fill="#c13458"></path>
-                                                    <path id="Path_91" data-name="Path 91"
-                                                        d="M27.5,1A26.5,26.5,0,1,0,54,27.5,26.5,26.5,0,0,0,27.5,1Zm0,48.182A21.682,21.682,0,1,1,49.182,27.5,21.682,21.682,0,0,1,27.5,49.182Z"
-                                                        fill="#c13458"></path>
-                                                </g>
-                                            </svg>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="main">
-                                            <div class="image">
-                                                <img src="images/food.png" alt="food">
-                                            </div>
-                                            <h3>ატრია საქონლის ხორცით და სუში კალიფორნია ვასაბის სოუსით და ზეთით</h3>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="price">
-                                            <span>20<small>b</small></span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="remove">
-                                            <svg class="close_button" xmlns="http://www.w3.org/2000/svg" width="53"
-                                                height="53" viewBox="0 0 53 53">
-                                                <g id="noun_Close_2389681" transform="translate(-1 -1)">
-                                                    <path id="Path_90" data-name="Path 90"
-                                                        d="M26.7,8.706a2.414,2.414,0,0,0-3.4,0L17.74,14.258,12.212,8.706a2.424,2.424,0,1,0-3.428,3.428l5.552,5.528L8.784,23.19a2.414,2.414,0,1,0,3.4,3.4l5.552-5.528,5.528,5.528a2.414,2.414,0,0,0,3.4-3.4l-5.528-5.528,5.528-5.528A2.414,2.414,0,0,0,26.7,8.706Z"
-                                                        transform="translate(9.76 9.838)" fill="#c13458"></path>
-                                                    <path id="Path_91" data-name="Path 91"
-                                                        d="M27.5,1A26.5,26.5,0,1,0,54,27.5,26.5,26.5,0,0,0,27.5,1Zm0,48.182A21.682,21.682,0,1,1,49.182,27.5,21.682,21.682,0,0,1,27.5,49.182Z"
-                                                        fill="#c13458"></path>
-                                                </g>
-                                            </svg>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="main">
-                                            <div class="image">
-                                                <img src="images/food.png" alt="food">
-                                            </div>
-                                            <h3>ატრია საქონლის ხორცით და სუში კალიფორნია ვასაბის სოუსით და ზეთით</h3>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="price">
-                                            <span>20<small>b</small></span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="remove">
-                                            <svg class="close_button" xmlns="http://www.w3.org/2000/svg" width="53"
-                                                height="53" viewBox="0 0 53 53">
-                                                <g id="noun_Close_2389681" transform="translate(-1 -1)">
-                                                    <path id="Path_90" data-name="Path 90"
-                                                        d="M26.7,8.706a2.414,2.414,0,0,0-3.4,0L17.74,14.258,12.212,8.706a2.424,2.424,0,1,0-3.428,3.428l5.552,5.528L8.784,23.19a2.414,2.414,0,1,0,3.4,3.4l5.552-5.528,5.528,5.528a2.414,2.414,0,0,0,3.4-3.4l-5.528-5.528,5.528-5.528A2.414,2.414,0,0,0,26.7,8.706Z"
-                                                        transform="translate(9.76 9.838)" fill="#c13458"></path>
-                                                    <path id="Path_91" data-name="Path 91"
-                                                        d="M27.5,1A26.5,26.5,0,1,0,54,27.5,26.5,26.5,0,0,0,27.5,1Zm0,48.182A21.682,21.682,0,1,1,49.182,27.5,21.682,21.682,0,0,1,27.5,49.182Z"
-                                                        fill="#c13458"></path>
-                                                </g>
-                                            </svg>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="main">
-                                            <div class="image">
-                                                <img src="images/food.png" alt="food">
-                                            </div>
-                                            <h3>ატრია საქონლის ხორცით და სუში კალიფორნია ვასაბის სოუსით და ზეთით</h3>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="price">
-                                            <span>20<small>b</small></span>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="all_price">
-                        <p>თანხა: <span>166 <small>b</small></span></p>
-                        <p>მიტანის ღირებულება: <span>3 <small>b</small></span></p>
-                        <p>ჯამი: <span>166 <small>b</small></span></p>
-                    </div>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
     <footer>

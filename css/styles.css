@@ -5140,6 +5140,156 @@ body .main_content .basket .information_content .right .all_price p span small {
   font-size: 10px;
 }
 
+body .main_content .out_off {
+  width: 504px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+body .main_content .out_off h3 {
+  color: #676767;
+  font-family: "myriad_geo_bold";
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+body .main_content .out_off h3 a {
+  color: #c13458;
+}
+
+body .main_content .out_off form {
+  width: 321px;
+  margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main_content .out_off form input {
+  width: 253px;
+  border-radius: 6px;
+  border: 2px solid #a8a8a8;
+  padding: 24px 32px;
+  color: #c3c3c3;
+  font-family: "myriad_geo_bold";
+  font-size: 14px;
+  outline: none;
+  margin-top: 24px;
+}
+
+body .main_content .out_off form input:first-child {
+  margin-top: 0;
+}
+
+body .main_content .out_off form input::-webkit-input-placeholder {
+  color: #c3c3c3;
+  font-family: "myriad_geo_bold";
+  font-size: 14px;
+}
+
+body .main_content .out_off form input:-ms-input-placeholder {
+  color: #c3c3c3;
+  font-family: "myriad_geo_bold";
+  font-size: 14px;
+}
+
+body .main_content .out_off form input::-ms-input-placeholder {
+  color: #c3c3c3;
+  font-family: "myriad_geo_bold";
+  font-size: 14px;
+}
+
+body .main_content .out_off form input::placeholder {
+  color: #c3c3c3;
+  font-family: "myriad_geo_bold";
+  font-size: 14px;
+}
+
+body .main_content .out_off form button {
+  border-radius: 6px;
+  background-color: #c13458;
+  padding: 16px 24px;
+  color: #ffffff;
+  font-family: "myriad_geo_mtavruli_bold";
+  font-size: 14px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 24px;
+}
+
+body .main_content .out_off form .or {
+  color: #cccccc;
+  font-family: "myriad_geo_bold";
+  font-size: 10px;
+  position: relative;
+  text-align: center;
+  width: 57px;
+  margin: 24px 0;
+}
+
+body .main_content .out_off form .or:before {
+  content: "";
+  border-radius: 1px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 19px;
+  height: 1px;
+}
+
+body .main_content .out_off form .or:after {
+  content: "";
+  border-radius: 1px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 19px;
+  height: 1px;
+}
+
+body .main_content .out_off form .facebook_registration {
+  border-radius: 6px;
+  background-color: #3b5c9f;
+  padding: 8px 22px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  font-family: "myriad_geo_bold";
+  font-size: 10px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body .main_content .out_off form .facebook_registration svg {
+  width: 7px;
+  height: 14px;
+  padding-right: 16px;
+  border-right: 1px solid;
+  border-color: rgba(255, 255, 255, 0.08);
+  margin-right: 22px;
+}
+
 body .contact_container {
   background-color: rgba(193, 52, 88, 0.02);
   padding: 0 10% 40px 10%;

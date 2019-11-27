@@ -325,6 +325,7 @@ $(document).ready(function () {
 
     $('.i_get>.radio_category').click(function () {
         $(this).toggleClass("active");
+        
     });
 
 });
