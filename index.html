@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/leaflet.css" />
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
 
@@ -29,7 +30,7 @@
                     </svg>
                 </div>
                 <a href="tel:0322420442"><small>032</small> 2420442</a>
-                <a href="#" class="zone_button">ჩვენი დაფარვის ზონა</a>
+                <a href="#" class="zone_button modal-button" data-target="zone_modal">ჩვენი დაფარვის ზონა</a>
 
             </div>
             <div class="right">
@@ -6558,9 +6559,17 @@
     <!-- Map -->
 
 
-    <div class="hide_map">
-        <div class="map">
-
+    <div class="modal" id="zone_modal">
+        <div class="modal-content">
+            <div class="close">
+                <svg class="close_button" xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 53 53">
+                    <g id="noun_Close_2389681" transform="translate(-1 -1)">
+                        <path id="Path_90" data-name="Path 90" d="M26.7,8.706a2.414,2.414,0,0,0-3.4,0L17.74,14.258,12.212,8.706a2.424,2.424,0,1,0-3.428,3.428l5.552,5.528L8.784,23.19a2.414,2.414,0,1,0,3.4,3.4l5.552-5.528,5.528,5.528a2.414,2.414,0,0,0,3.4-3.4l-5.528-5.528,5.528-5.528A2.414,2.414,0,0,0,26.7,8.706Z" transform="translate(9.76 9.838)" fill="#c13458"></path>
+                        <path id="Path_91" data-name="Path 91" d="M27.5,1A26.5,26.5,0,1,0,54,27.5,26.5,26.5,0,0,0,27.5,1Zm0,48.182A21.682,21.682,0,1,1,49.182,27.5,21.682,21.682,0,0,1,27.5,49.182Z" fill="#c13458"></path>
+                    </g>
+                </svg>
+            </div>
+            <div id="map"></div>
         </div>
     </div>
 
@@ -6597,6 +6606,21 @@
             </g>
         </svg>
     </div> -->
+    <script src="js/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([41.716667, 44.783333], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([41.716667, 44.783333]).addTo(map)
+            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+            // .openPopup();
+        L.marker([41.693962, 44.809960]).addTo(map)
+            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.1')
+            // .openPopup();
+    </script>
     <script src="js/swiper.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>

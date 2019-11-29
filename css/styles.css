@@ -118,6 +118,37 @@ a {
   background-color: #FFFFFF;
 }
 
+.modal#zone_modal .modal-content {
+  padding: 0;
+  width: 70vw;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.modal#zone_modal .modal-content .close {
+  width: 68px;
+  height: 68px;
+  background: white;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 99;
+}
+
+.modal#zone_modal .modal-content #map {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
 .show_modal {
   opacity: 1;
   visibility: visible;
