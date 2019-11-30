@@ -5641,17 +5641,17 @@ body .contact_form form button:hover svg path {
 }
 
 body .map {
-  position: relative;
-  top: 110px;
-  z-index: -1;
-  height: 690px;
-  overflow: hidden;
+  margin-bottom: -120px;
+  margin-top: 120px;
 }
 
-body .map img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+body .map #map {
+  height: 689px;
+  z-index: -1;
+}
+
+body .map #map .leaflet-pane .leaflet-marker-pane img {
+  width: auto !important;
 }
 
 body .contact_footer {
