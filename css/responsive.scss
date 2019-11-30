@@ -7,7 +7,7 @@ $phone-width: 610px;
 $phone-width-s: 450px;
 
 @media (max-width: #{$desktop-xl}) {
-    .body {
+    body {
         .special {
             .slider_content {
                 .swiper-slide {
