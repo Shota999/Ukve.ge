@@ -15,13 +15,6 @@ $(document).ready(function () {
         $('body').removeClass('hidden');
     });
 
-    // Map
-
-    $('.zone_button').click(function () {
-        $(".hide_map").addClass('show_map');
-        $('body').addClass('hidden');
-    });
-
     $(window).scroll(function () {
         if ($(this).scrollTop() > 60) {
             $('header').addClass('fixedheader');

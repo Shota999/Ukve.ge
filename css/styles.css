@@ -55,6 +55,7 @@ a {
   top: 8px;
   right: 8px;
   cursor: pointer;
+  border-radius: 0 0 0 10px;
 }
 
 .modal .modal-content .close svg {
@@ -116,6 +117,41 @@ a {
 .modal .modal-content .buttons a:hover {
   color: #C13458;
   background-color: #FFFFFF;
+}
+
+.modal .modal-content .leaflet-container .leaflet-pane .leaflet-marker-pane img {
+  width: auto !important;
+}
+
+.modal#zone_modal .modal-content {
+  padding: 0;
+  width: 70vw;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.modal#zone_modal .modal-content .close {
+  width: 68px;
+  height: 68px;
+  background: white;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 99;
+}
+
+.modal#zone_modal .modal-content #map {
+  height: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .show_modal {
@@ -431,23 +467,40 @@ body header .bottom_header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-body header .bottom_header h1 {
+body header .bottom_header .header_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .bottom_header .header_content h1 {
   max-width: 104px;
   max-height: 96px;
 }
 
-body header .bottom_header h1 a {
+body header .bottom_header .header_content h1 a {
   display: block;
 }
 
-body header .bottom_header h1 a img {
+body header .bottom_header .header_content h1 a img {
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-body header .bottom_header nav ul {
+body header .bottom_header .header_content nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,11 +509,11 @@ body header .bottom_header nav ul {
           align-items: center;
 }
 
-body header .bottom_header nav ul li {
+body header .bottom_header .header_content nav ul li {
   margin-right: 60px;
 }
 
-body header .bottom_header nav ul li a {
+body header .bottom_header .header_content nav ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,28 +533,28 @@ body header .bottom_header nav ul li a {
   position: relative;
 }
 
-body header .bottom_header nav ul li a svg {
+body header .bottom_header .header_content nav ul li a svg {
   margin-bottom: 16px;
 }
 
-body header .bottom_header nav ul li a:hover {
+body header .bottom_header .header_content nav ul li a:hover {
   color: #a8a8a8;
 }
 
-body header .bottom_header nav ul li a:hover::before {
+body header .bottom_header .header_content nav ul li a:hover::before {
   opacity: 1;
 }
 
-body header .bottom_header nav ul li:last-child {
+body header .bottom_header .header_content nav ul li:last-child {
   margin-right: 0;
 }
 
-body header .bottom_header nav ul .active {
+body header .bottom_header .header_content nav ul .active {
   position: relative;
   width: 100%;
 }
 
-body header .bottom_header nav ul .active::before {
+body header .bottom_header .header_content nav ul .active::before {
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
   position: absolute;
@@ -514,11 +567,11 @@ body header .bottom_header nav ul .active::before {
   border-radius: 20px;
 }
 
-body header .bottom_header nav ul .active:hover {
+body header .bottom_header .header_content nav ul .active:hover {
   color: #6d6e71;
 }
 
-body header .bottom_header .profile_cart {
+body header .bottom_header .header_content .profile_cart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -527,11 +580,11 @@ body header .bottom_header .profile_cart {
           align-items: center;
 }
 
-body header .bottom_header .profile_cart .profile {
+body header .bottom_header .header_content .profile_cart .profile {
   position: relative;
 }
 
-body header .bottom_header .profile_cart .profile section {
+body header .bottom_header .header_content .profile_cart .profile section {
   cursor: pointer;
   border-radius: 25px;
   padding: 16px;
@@ -544,7 +597,7 @@ body header .bottom_header .profile_cart .profile section {
   background-color: #f0f0f0;
 }
 
-body header .bottom_header .profile_cart .profile span {
+body header .bottom_header .header_content .profile_cart .profile span {
   color: #6d6e71;
   font-family: "myriad_geo_bold";
   font-size: 13px;
@@ -554,11 +607,11 @@ body header .bottom_header .profile_cart .profile span {
   transition: .2s ease-in-out;
 }
 
-body header .bottom_header .profile_cart .profile:hover span {
+body header .bottom_header .header_content .profile_cart .profile:hover span {
   color: #a8a8a8;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown {
   width: 192px;
   position: absolute;
   top: 62px;
@@ -571,35 +624,35 @@ body header .bottom_header .profile_cart .profile .profile_dropdown {
   visibility: hidden;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown:before {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown:before {
   content: url(../images/icons/arrow_white.svg);
   left: 47%;
   top: -10px;
   position: absolute;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside {
   position: relative;
   border-radius: 5px;
   height: auto;
   overflow: hidden;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization {
   padding: 16px;
   position: relative;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form h4 {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form h4 {
   color: #6d6e71;
   font-family: "myriad_geo_bold";
   font-size: 13px;
   margin-bottom: 7px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input {
   border-radius: 6px;
   background-color: #ffffff;
   overflow: hidden;
@@ -612,7 +665,7 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   margin-bottom: 8px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input input {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input input {
   width: 100%;
   border: none;
   outline: none;
@@ -623,53 +676,53 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   font-weight: 500;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input input::-webkit-input-placeholder {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input input::-webkit-input-placeholder {
   color: #959595;
   font-size: 10px;
   font-weight: 500;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input input:-ms-input-placeholder {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input input:-ms-input-placeholder {
   color: #959595;
   font-size: 10px;
   font-weight: 500;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input input::-ms-input-placeholder {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input input::-ms-input-placeholder {
   color: #959595;
   font-size: 10px;
   font-weight: 500;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input input::placeholder {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input input::placeholder {
   color: #959595;
   font-size: 10px;
   font-weight: 500;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input input:focus {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input input:focus {
   color: #959595;
   font-size: 10px;
   font-weight: 500;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input svg {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input svg {
   width: 10px;
   height: 10px;
   padding: 5px 8px;
   border-left: 1px solid #fafafa;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input svg path {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input svg path {
   fill: #d5d5d5;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .forgot_password {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .forgot_password {
   width: 100%;
   text-align: right;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .forgot_password a {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .forgot_password a {
   color: #6d6e71;
   font-family: "myriad_geo_medium";
   font-size: 9px;
@@ -678,11 +731,11 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   transition: .2s ease-in-out;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .forgot_password a:hover {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .forgot_password a:hover {
   opacity: 0.64;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .buttons {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -695,7 +748,7 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   margin-top: 8px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .buttons .sign_in {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .buttons .sign_in {
   border-radius: 6px;
   background-color: #c13458;
   padding: 8px 16px;
@@ -709,12 +762,12 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   transition: .2s ease-in-out;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .buttons .sign_in:hover {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .buttons .sign_in:hover {
   color: #c13458;
   background-color: #ffffff;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .buttons .registration {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .buttons .registration {
   color: #c13458;
   font-family: "myriad_geo_bold";
   font-size: 10px;
@@ -727,11 +780,11 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   padding: 8px 16px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .buttons .registration:hover {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .buttons .registration:hover {
   opacity: 0.64;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .or {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .or {
   color: #cccccc;
   font-family: "myriad_geo_bold";
   font-size: 10px;
@@ -743,7 +796,7 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   margin-bottom: 16px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .or:before {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .or:before {
   content: "";
   height: 1px;
   border-radius: 1px;
@@ -755,7 +808,7 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   height: 1px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .or:after {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .or:after {
   content: "";
   height: 1px;
   border-radius: 1px;
@@ -767,7 +820,7 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   height: 1px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .facebook_registration {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .facebook_registration {
   border-radius: 6px;
   background-color: #3b5c9f;
   padding: 8px 16px;
@@ -791,7 +844,7 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   transition: .2s ease-in-out;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .facebook_registration svg {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .facebook_registration svg {
   width: 7px;
   height: 14px;
   padding-right: 16px;
@@ -800,11 +853,11 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   margin-right: 26px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .facebook_registration:hover {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .facebook_registration:hover {
   color: rgba(255, 255, 255, 0.64);
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side {
   position: absolute;
   top: 0;
   right: -200px;
@@ -814,7 +867,7 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   width: 160px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -824,7 +877,7 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
           flex-direction: column;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .top {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -834,18 +887,18 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   margin-bottom: 8px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .top .back {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .top .back {
   cursor: pointer;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .top h4 {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .top h4 {
   color: #6d6e71;
   font-family: "myriad_geo_bold";
   font-size: 13px;
   margin-left: 24px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input {
   border-radius: 6px;
   background-color: #ffffff;
   overflow: hidden;
@@ -858,7 +911,7 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   margin-bottom: 8px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input input {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input input {
   width: 100%;
   border: none;
   outline: none;
@@ -869,42 +922,42 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   font-weight: 500;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input input::-webkit-input-placeholder {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input input::-webkit-input-placeholder {
   color: #959595;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input input:-ms-input-placeholder {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input input:-ms-input-placeholder {
   color: #959595;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input input::-ms-input-placeholder {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input input::-ms-input-placeholder {
   color: #959595;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input input::placeholder {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input input::placeholder {
   color: #959595;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input input:focus {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input input:focus {
   color: #959595;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input svg {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input svg {
   width: 10px;
   height: 10px;
   padding: 5px 8px;
   border-left: 1px solid #fafafa;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input svg path {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .input svg path {
   fill: #d5d5d5;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .required {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .required {
   border: 1px solid red;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .registration {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .registration {
   padding: 8px;
   border-radius: 6px;
   background-color: #c13458;
@@ -921,12 +974,12 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   margin: 0 auto;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .registration:hover {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .registration:hover {
   background-color: #ffffff;
   color: #c13458;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .or {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .or {
   color: #cccccc;
   font-family: "myriad_geo_bold";
   font-size: 10px;
@@ -938,7 +991,7 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   margin-bottom: 16px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .or:before {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .or:before {
   content: "";
   height: 1px;
   border-radius: 1px;
@@ -950,7 +1003,7 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   height: 1px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .or:after {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .or:after {
   content: "";
   height: 1px;
   border-radius: 1px;
@@ -962,7 +1015,7 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   height: 1px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .facebook_registration {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .facebook_registration {
   border-radius: 6px;
   background-color: #3b5c9f;
   padding: 8px 16px;
@@ -986,7 +1039,7 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   transition: .2s ease-in-out;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .facebook_registration svg {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .facebook_registration svg {
   width: 7px;
   height: 14px;
   padding-right: 16px;
@@ -995,11 +1048,11 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   margin-right: 26px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .facebook_registration:hover {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .facebook_registration:hover {
   color: rgba(255, 255, 255, 0.64);
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .successfully {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .successfully {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1008,11 +1061,11 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   text-align: center;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .successfully svg {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .successfully svg {
   margin-top: 16px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .successfully p {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .successfully p {
   color: #6d6e71;
   font-family: "myriad_geo_bold";
   font-size: 12px;
@@ -1020,7 +1073,7 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   margin-top: 8px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .successfully button {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .successfully button {
   border-radius: 15px;
   background-color: #72b55b;
   border: none;
@@ -1032,13 +1085,13 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   margin-top: 24px;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .show {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .show {
   right: 0;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .hide {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .hide {
   right: -200px;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
@@ -1046,21 +1099,21 @@ body header .bottom_header .profile_cart .profile .profile_dropdown .user_profil
   visibility: hidden;
 }
 
-body header .bottom_header .profile_cart .profile .profile_dropdown .height {
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .height {
   height: 376px;
 }
 
-body header .bottom_header .profile_cart .profile .show {
+body header .bottom_header .header_content .profile_cart .profile .show {
   opacity: 1;
   visibility: visible;
 }
 
-body header .bottom_header .profile_cart .cart {
+body header .bottom_header .header_content .profile_cart .cart {
   margin-left: 40px;
   position: relative;
 }
 
-body header .bottom_header .profile_cart .cart .cart_button {
+body header .bottom_header .header_content .profile_cart .cart .cart_button {
   padding: 16px;
   cursor: pointer;
   -webkit-transition: .2s ease-in-out;
@@ -1079,23 +1132,23 @@ body header .bottom_header .profile_cart .cart .cart_button {
   background-color: #F0F0F0;
 }
 
-body header .bottom_header .profile_cart .cart .cart_button .onhover {
+body header .bottom_header .header_content .profile_cart .cart .cart_button .onhover {
   display: none;
 }
 
-body header .bottom_header .profile_cart .cart .cart_button:hover {
+body header .bottom_header .header_content .profile_cart .cart .cart_button:hover {
   background: #c13458;
 }
 
-body header .bottom_header .profile_cart .cart .cart_button:hover svg {
+body header .bottom_header .header_content .profile_cart .cart .cart_button:hover svg {
   display: none;
 }
 
-body header .bottom_header .profile_cart .cart .cart_button:hover .onhover {
+body header .bottom_header .header_content .profile_cart .cart .cart_button:hover .onhover {
   display: block;
 }
 
-body header .bottom_header .profile_cart .cart .cart_button span {
+body header .bottom_header .header_content .profile_cart .cart .cart_button span {
   border-radius: 23px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1118,7 +1171,7 @@ body header .bottom_header .profile_cart .cart .cart_button span {
   background: #F0F0F0;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body {
+body header .bottom_header .header_content .profile_cart .cart .cart_body {
   width: 218px;
   position: absolute;
   top: 62px;
@@ -1132,25 +1185,25 @@ body header .bottom_header .profile_cart .cart .cart_body {
   padding: 16px;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body.show {
+body header .bottom_header .header_content .profile_cart .cart .cart_body.show {
   opacity: 1;
   visibility: visible;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body:before {
+body header .bottom_header .header_content .profile_cart .cart .cart_body:before {
   content: url(../images/icons/arrow_white.svg);
   right: 7%;
   top: -10px;
   position: absolute;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body h4 {
+body header .bottom_header .header_content .profile_cart .cart .cart_body h4 {
   color: #6d6e71;
   font-family: "myriad_geo_bold";
   font-size: 13px;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body .cart_items {
+body header .bottom_header .header_content .profile_cart .cart .cart_body .cart_items {
   overflow-y: auto;
   max-height: 183px;
   width: 100%;
@@ -1158,7 +1211,7 @@ body header .bottom_header .profile_cart .cart .cart_body .cart_items {
   padding-right: 16px;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body .cart_items .item {
+body header .bottom_header .header_content .profile_cart .cart .cart_body .cart_items .item {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1175,11 +1228,11 @@ body header .bottom_header .profile_cart .cart .cart_body .cart_items .item {
           align-items: flex-start;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body .cart_items .item:first-child {
+body header .bottom_header .header_content .profile_cart .cart .cart_body .cart_items .item:first-child {
   margin-top: 0;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body .cart_items .item .item_content {
+body header .bottom_header .header_content .profile_cart .cart .cart_body .cart_items .item .item_content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1192,14 +1245,14 @@ body header .bottom_header .profile_cart .cart .cart_body .cart_items .item .ite
   height: 100%;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body .cart_items .item .item_content svg {
+body header .bottom_header .header_content .profile_cart .cart .cart_body .cart_items .item .item_content svg {
   cursor: pointer;
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body .cart_items .item .item_content .cart_image {
+body header .bottom_header .header_content .profile_cart .cart .cart_body .cart_items .item .item_content .cart_image {
   width: 39px;
   height: 30px;
   -webkit-box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
@@ -1213,14 +1266,14 @@ body header .bottom_header .profile_cart .cart .cart_body .cart_items .item .ite
           flex: none;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body .cart_items .item .item_content .cart_image img {
+body header .bottom_header .header_content .profile_cart .cart .cart_body .cart_items .item .item_content .cart_image img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 39px;
   height: 30px;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body .cart_items .item .item_content h5 {
+body header .bottom_header .header_content .profile_cart .cart .cart_body .cart_items .item .item_content h5 {
   color: #909090;
   font-family: "myriad_geo_mtavruli_bold";
   font-size: 10px;
@@ -1229,7 +1282,7 @@ body header .bottom_header .profile_cart .cart .cart_body .cart_items .item .ite
   transition: .2s ease-in-out;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body .cart_items .item .price {
+body header .bottom_header .header_content .profile_cart .cart .cart_body .cart_items .item .price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1239,22 +1292,22 @@ body header .bottom_header .profile_cart .cart .cart_body .cart_items .item .pri
   width: 100%;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body .cart_items .item .price span {
+body header .bottom_header .header_content .profile_cart .cart .cart_body .cart_items .item .price span {
   display: block;
   color: #c13458;
   font-family: "myriad_geo_mtavruli_bold";
   font-size: 12px;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body .cart_items .item .price span small {
+body header .bottom_header .header_content .profile_cart .cart .cart_body .cart_items .item .price span small {
   font-family: "bpg_gel";
 }
 
-body header .bottom_header .profile_cart .cart .cart_body .cart_items .item:last-child {
+body header .bottom_header .header_content .profile_cart .cart .cart_body .cart_items .item:last-child {
   border-bottom: none;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body .all_price {
+body header .bottom_header .header_content .profile_cart .cart .cart_body .all_price {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1264,7 +1317,7 @@ body header .bottom_header .profile_cart .cart .cart_body .all_price {
           justify-content: flex-end;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body .all_price p {
+body header .bottom_header .header_content .profile_cart .cart .cart_body .all_price p {
   color: #6d6e71;
   font-family: "myriad_geo_mtavruli_bold";
   font-size: 10px;
@@ -1274,7 +1327,7 @@ body header .bottom_header .profile_cart .cart .cart_body .all_price p {
   display: flex;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body .all_price p span {
+body header .bottom_header .header_content .profile_cart .cart .cart_body .all_price p span {
   display: block;
   color: #c13458;
   font-family: "myriad_geo_mtavruli_bold";
@@ -1282,7 +1335,7 @@ body header .bottom_header .profile_cart .cart .cart_body .all_price p span {
   margin-left: 8px;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body .buy {
+body header .bottom_header .header_content .profile_cart .cart .cart_body .buy {
   margin-top: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1292,7 +1345,7 @@ body header .bottom_header .profile_cart .cart .cart_body .buy {
           justify-content: center;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body .buy button {
+body header .bottom_header .header_content .profile_cart .cart .cart_body .buy button {
   border-radius: 6px;
   background-color: #c13458;
   color: #ffffff;
@@ -1306,8 +1359,12 @@ body header .bottom_header .profile_cart .cart .cart_body .buy button {
   transition: .2s ease-in-out;
 }
 
-body header .bottom_header .profile_cart .cart .cart_body .buy button:hover {
+body header .bottom_header .header_content .profile_cart .cart .cart_body .buy button:hover {
   color: rgba(255, 255, 255, 0.64);
+}
+
+body header .bottom_header .responsive_nav {
+  display: none;
 }
 
 body .special {
@@ -1538,7 +1595,19 @@ body .special .slider_content .swiper-slide .product .info_container .sale {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 6px 0 0;
+  border-radius: 6px 0;
+  position: relative;
+}
+
+body .special .slider_content .swiper-slide .product .info_container .sale:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  right: -4px;
+  top: 12px;
+  border-radius: 50%;
+  background: #ffffff;
 }
 
 body .special .slider_content .swiper-slide .product .info_container .sale span {
@@ -5594,16 +5663,26 @@ body .fixedheader .bottom_header {
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
-body .fixedheader .bottom_header h1 a {
+body .fixedheader .bottom_header .header_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+body .fixedheader .bottom_header .header_content h1 a {
   width: 52px;
   height: 48px;
 }
 
-body .fixedheader .bottom_header h1 a img {
+body .fixedheader .bottom_header .header_content h1 a img {
   width: 100%;
 }
 
-body .fixedheader .bottom_header nav ul li a {
+body .fixedheader .bottom_header .header_content nav ul li a {
   padding: 18px 0;
 }
 
