@@ -5640,17 +5640,14 @@ body .contact_form form button:hover svg path {
   fill: #c13458;
 }
 
-body .map {
+body #map {
+  height: 689px;
+  z-index: -1;
   margin-bottom: -120px;
   margin-top: 120px;
 }
 
-body .map #map {
-  height: 689px;
-  z-index: -1;
-}
-
-body .map #map .leaflet-pane .leaflet-marker-pane img {
+body #map .leaflet-pane .leaflet-marker-pane img {
   width: auto !important;
 }
 

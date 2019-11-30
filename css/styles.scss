@@ -4728,14 +4728,12 @@ body {
         }
 
     }
-
-    .map {
-        margin-bottom: -120px;
-        margin-top: 120px;
         
         #map{
             height: 689px;
             z-index: -1;
+            margin-bottom: -120px;
+            margin-top: 120px;
 
                 .leaflet-pane{
                     .leaflet-marker-pane{
@@ -4745,7 +4743,6 @@ body {
                     }
                 }
         }
-    }
 
     .contact_footer {
         margin-top: 0;
