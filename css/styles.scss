@@ -130,6 +130,30 @@ a {
             }
         }
     }
+    &#zone_modal{
+        .modal-content {
+            padding: 0;
+            width: 70vw;
+            height: 70vh; 
+            overflow: hidden;
+            .close {
+                width: 68px;
+                height: 68px;
+                background: white;
+                top: 0;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 99;
+            }
+            #map{
+                height: 100%;
+                position: relative;
+                z-index: 1;
+            }
+        }
+    }
 }
 
 .show_modal {
