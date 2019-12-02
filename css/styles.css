@@ -4475,39 +4475,6 @@ body .main_content .basket .basket_content .left table tbody tr td .fasting {
   padding: 0 8px;
 }
 
-body .main_content .basket .basket_content .left table tbody tr.sale td:first-child {
-  position: relative;
-}
-
-body .main_content .basket .basket_content .left table tbody tr.sale td:first-child:after {
-  content: "Sale";
-  width: 38px;
-  height: 26px;
-  background-color: #c13458;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  top: 31px;
-  left: -38px;
-  border-radius: 13px 0 0 13px;
-  font-family: MyriadGEO;
-  font-size: 12px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.17;
-  letter-spacing: normal;
-  text-align: left;
-  color: #ffffff;
-}
-
 body .main_content .basket .basket_content .left .remove_all {
   border-radius: 10px;
   background-color: #a8a8a8;
@@ -4635,6 +4602,7 @@ body .main_content .basket .basket_content .right .buttons .buy {
   color: #ffffff;
   font-family: "myriad_geo_mtavruli_bold";
   font-size: 16px;
+  text-decoration: none;
 }
 
 body .main_content .basket .basket_content .right .buttons a {
@@ -4692,7 +4660,7 @@ body .main_content .basket .information_content .left .informations .info_block 
   /* When the checkbox is checked, add a blue background */
 }
 
-body .main_content .basket .information_content .left .informations .info_block .form .i_get input[type="radio"] {
+body .main_content .basket .information_content .left .informations .info_block .form .i_get input[type="checkbox"] {
   display: none;
 }
 
@@ -4755,16 +4723,20 @@ body .main_content .basket .information_content .left .informations .info_block 
   content: "";
 }
 
-body .main_content .basket .information_content .left .informations .info_block .form .i_get .radio_category input:checked ~ .checkmark {
+body .main_content .basket .information_content .left .informations .info_block .form .i_get input:checked ~ .radio_category {
+  background-color: #72b55b;
+}
+
+body .main_content .basket .information_content .left .informations .info_block .form .i_get input:checked ~ .radio_category .checkmark {
   background-color: #ffffff;
   border-color: #ffffff;
 }
 
-body .main_content .basket .information_content .left .informations .info_block .form .i_get .radio_category input:checked ~ .checkmark::before {
+body .main_content .basket .information_content .left .informations .info_block .form .i_get input:checked ~ .radio_category .checkmark::before {
   content: url(../images/icons/cheked_basket.svg);
 }
 
-body .main_content .basket .information_content .left .informations .info_block .form .i_get .radio_category input:checked ~ label {
+body .main_content .basket .information_content .left .informations .info_block .form .i_get input:checked ~ .radio_category label {
   color: #ffffff;
 }
 

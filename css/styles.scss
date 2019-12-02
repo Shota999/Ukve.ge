@@ -3776,36 +3776,6 @@ body {
                                         padding: 0 8px;
                                     }
                                 }
-
-                                &.sale {
-                                    td:first-child {
-                                        position: relative;
-
-                                        &:after {
-                                            content: "Sale";
-                                            width: 38px;
-                                            height: 26px;
-                                            background-color: #c13458;
-                                            display: flex;
-                                            justify-content: center;
-                                            align-items: center;
-                                            position: absolute;
-                                            top: 31px;
-                                            left: -38px;
-                                            border-radius: 13px 0 0 13px;
-                                            font-family: MyriadGEO;
-                                            font-size: 12px;
-                                            font-weight: bold;
-                                            font-stretch: normal;
-                                            font-style: normal;
-                                            line-height: 1.17;
-                                            letter-spacing: normal;
-                                            text-align: left;
-                                            color: #ffffff;
-                                        }
-                                    }
-
-                                }
                             }
                         }
                     }
@@ -3916,6 +3886,7 @@ body {
                             color: #ffffff;
                             font-family: "myriad_geo_mtavruli_bold";
                             font-size: 16px;
+                            text-decoration: none;
                         }
 
                         a {
@@ -3965,7 +3936,7 @@ body {
                                     display: inline-block;
                                     margin-bottom: 24px;
 
-                                    input[type="radio"] {
+                                    input[type="checkbox"] {
                                         display: none;
                                     }
 
@@ -4023,8 +3994,11 @@ body {
                                     }
 
                                     /* When the checkbox is checked, add a blue background */
+                                    input:checked~.radio_category{
+                                        background-color: #72b55b;
+                                    }
 
-                                    .radio_category input:checked~.checkmark {
+                                    input:checked~.radio_category .checkmark {
                                         background-color: #ffffff;
                                         border-color: #ffffff;
 
@@ -4033,7 +4007,7 @@ body {
                                         }
                                     }
 
-                                    .radio_category input:checked~label {
+                                    input:checked~.radio_category label {
                                         color: #ffffff;
                                     }
 
