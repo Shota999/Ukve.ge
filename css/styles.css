@@ -653,6 +653,7 @@ body header .bottom_header .header_content .profile_cart .profile .profile_dropd
   background-color: #f0f0f0;
   opacity: 0;
   visibility: hidden;
+  z-index: 5;
 }
 
 body header .bottom_header .header_content .profile_cart .profile .profile_dropdown:before {
@@ -1399,7 +1400,7 @@ body header .bottom_header .responsive_nav {
 }
 
 body .special {
-  padding: 72px 0 72px 10%;
+  padding: 356px 0 72px 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1407,7 +1408,6 @@ body .special {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 356px;
 }
 
 body .special .top_container {
@@ -1959,7 +1959,7 @@ body .content .container .top_container .sale {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 11px 0;
+  border-radius: 11px 0 0;
   position: relative;
 }
 
@@ -2843,7 +2843,7 @@ body .dont_add p {
 }
 
 body footer {
-  padding: 1px 140px;
+  padding: 1px 10%;
   padding-bottom: 10px;
   background-image: url("../images/background_images/footer_background.png");
   background-size: cover;
@@ -2976,7 +2976,7 @@ body .colors .color5 {
 
 body .drink_button {
   position: fixed;
-  bottom: 300px;
+  bottom: 30vh;
   left: 63px;
 }
 

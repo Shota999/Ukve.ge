@@ -200,6 +200,7 @@ $phone-width-s: 450px;
         }
 
         .special {
+            padding: 356px 0 72px 6%;
             .slider_content {
                 .swiper-slide {
                     width: 23vw;
@@ -227,9 +228,8 @@ $phone-width-s: 450px;
         }
 
         .content {
-            .container {
-                width: 28%;
-            }
+            margin: 56px 6%;
+
         }
 
         .main_content {
@@ -240,6 +240,22 @@ $phone-width-s: 450px;
                     }
                 }
             }
+        }
+
+        .drink_button {
+            left: 15px;
+        }
+
+        .scroll_top{
+            padding: 0 15px;
+        }
+
+        .background{
+            padding: 44px 6%;
+        }
+
+        footer {
+            padding: 1px 6%;
         }
     }
 }
@@ -271,6 +287,17 @@ $phone-width-s: 450px;
                 }
             }
         }
+        .content {
+            .container{
+                width: 44%;
+                .bottom_container{
+                    .title_price{
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+        
     }
 }
 
@@ -278,7 +305,7 @@ $phone-width-s: 450px;
     body {
         header {
             .top_header {
-                padding: 16px 6%;
+                padding: 16px 8%;
 
                 .left {
                     .zone_button {
@@ -313,7 +340,7 @@ $phone-width-s: 450px;
             }
 
             .bottom_header {
-                padding: 16px 6%;
+                padding: 16px 8%;
 
                 .header_content {
                     h1 {
@@ -372,6 +399,7 @@ $phone-width-s: 450px;
                                     padding: 24px 0 8px 0;
                                     transition: .2s ease-in-out;
                                     position: relative;
+                                    z-index: 1;
 
                                     svg {
                                         margin-bottom: 16px;
@@ -395,7 +423,7 @@ $phone-width-s: 450px;
             }
 
             .bottom_header {
-                padding: 16px 6%;
+                padding: 16px 8%;
 
                 .header_content {
                     h1 {
@@ -421,7 +449,7 @@ $phone-width-s: 450px;
         }
 
         .content {
-            margin: 32px 6%;
+            margin: 32px 8%;
             flex-wrap: wrap;
 
             .container {
@@ -487,7 +515,7 @@ $phone-width-s: 450px;
         header {
 
             .top_header {
-                padding: 16px 6%;
+                padding: 16px 8%;
 
                 .left {
                     .zone_button {
@@ -522,7 +550,7 @@ $phone-width-s: 450px;
             }
 
             .bottom_header {
-                padding: 16px 6%;
+                padding: 16px 8%;
 
                 .header_content {
                     h1 {
@@ -549,6 +577,9 @@ $phone-width-s: 450px;
                                 span {
                                     display: none;
                                 }
+                            }
+                            .profile_dropdown{
+                                left: -65px;
                             }
                         }
                     }
@@ -578,11 +609,11 @@ $phone-width-s: 450px;
 
         .fixedheader {
             .top_header {
-                padding: 16px 6%;
+                padding: 16px 8%;
             }
 
             .bottom_header {
-                padding: 16px 6%;
+                padding: 16px 8%;
 
                 .header_content {
                     h1 {
@@ -653,13 +684,13 @@ $phone-width-s: 450px;
 
             .slider_content {
                 .swiper-slide {
-                    width: 50vw;
+                    width: 60vw;
 
                     .inner-slider {
                         .swiper-wrapper {
                             .swiper-slide {
                                 .image_container {
-                                    height: 33vw;
+                                    height: 41vw;
                                 }
                             }
 
@@ -842,13 +873,13 @@ $phone-width-s: 450px;
 
             .slider_content {
                 .swiper-slide {
-                    width: 50vw;
+                    width: 70vw;
 
                     .inner-slider {
                         .swiper-wrapper {
                             .swiper-slide {
                                 .image_container {
-                                    height: 33vw;
+                                    height: 43vw;
                                 }
                             }
 
