@@ -653,6 +653,7 @@ body header .bottom_header .header_content .profile_cart .profile .profile_dropd
   background-color: #f0f0f0;
   opacity: 0;
   visibility: hidden;
+  z-index: 5;
 }
 
 body header .bottom_header .header_content .profile_cart .profile .profile_dropdown:before {
@@ -1399,7 +1400,7 @@ body header .bottom_header .responsive_nav {
 }
 
 body .special {
-  padding: 72px 0 72px 10%;
+  padding: 356px 0 72px 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1407,7 +1408,6 @@ body .special {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 356px;
 }
 
 body .special .top_container {
@@ -1959,7 +1959,7 @@ body .content .container .top_container .sale {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 11px 0;
+  border-radius: 11px 0 0;
   position: relative;
 }
 
@@ -2843,7 +2843,7 @@ body .dont_add p {
 }
 
 body footer {
-  padding: 1px 140px;
+  padding: 1px 10%;
   padding-bottom: 10px;
   background-image: url("../images/background_images/footer_background.png");
   background-size: cover;
@@ -2976,7 +2976,7 @@ body .colors .color5 {
 
 body .drink_button {
   position: fixed;
-  bottom: 300px;
+  bottom: 30vh;
   left: 63px;
 }
 
@@ -4475,39 +4475,6 @@ body .main_content .basket .basket_content .left table tbody tr td .fasting {
   padding: 0 8px;
 }
 
-body .main_content .basket .basket_content .left table tbody tr.sale td:first-child {
-  position: relative;
-}
-
-body .main_content .basket .basket_content .left table tbody tr.sale td:first-child:after {
-  content: "Sale";
-  width: 38px;
-  height: 26px;
-  background-color: #c13458;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  top: 31px;
-  left: -38px;
-  border-radius: 13px 0 0 13px;
-  font-family: MyriadGEO;
-  font-size: 12px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.17;
-  letter-spacing: normal;
-  text-align: left;
-  color: #ffffff;
-}
-
 body .main_content .basket .basket_content .left .remove_all {
   border-radius: 10px;
   background-color: #a8a8a8;
@@ -4635,6 +4602,7 @@ body .main_content .basket .basket_content .right .buttons .buy {
   color: #ffffff;
   font-family: "myriad_geo_mtavruli_bold";
   font-size: 16px;
+  text-decoration: none;
 }
 
 body .main_content .basket .basket_content .right .buttons a {
@@ -4692,7 +4660,7 @@ body .main_content .basket .information_content .left .informations .info_block 
   /* When the checkbox is checked, add a blue background */
 }
 
-body .main_content .basket .information_content .left .informations .info_block .form .i_get input[type="radio"] {
+body .main_content .basket .information_content .left .informations .info_block .form .i_get input[type="checkbox"] {
   display: none;
 }
 
@@ -4755,16 +4723,20 @@ body .main_content .basket .information_content .left .informations .info_block 
   content: "";
 }
 
-body .main_content .basket .information_content .left .informations .info_block .form .i_get .radio_category input:checked ~ .checkmark {
+body .main_content .basket .information_content .left .informations .info_block .form .i_get input:checked ~ .radio_category {
+  background-color: #72b55b;
+}
+
+body .main_content .basket .information_content .left .informations .info_block .form .i_get input:checked ~ .radio_category .checkmark {
   background-color: #ffffff;
   border-color: #ffffff;
 }
 
-body .main_content .basket .information_content .left .informations .info_block .form .i_get .radio_category input:checked ~ .checkmark::before {
+body .main_content .basket .information_content .left .informations .info_block .form .i_get input:checked ~ .radio_category .checkmark::before {
   content: url(../images/icons/cheked_basket.svg);
 }
 
-body .main_content .basket .information_content .left .informations .info_block .form .i_get .radio_category input:checked ~ label {
+body .main_content .basket .information_content .left .informations .info_block .form .i_get input:checked ~ .radio_category label {
   color: #ffffff;
 }
 

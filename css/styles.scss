@@ -522,6 +522,7 @@ body {
                             background-color: #f0f0f0;
                             opacity: 0;
                             visibility: hidden;
+                            z-index: 5;
     
                             &:before {
                                 content: url(../images/icons/arrow_white.svg);
@@ -1155,10 +1156,9 @@ body {
 
 
     .special {
-        padding: 72px 0 72px 10%;
+        padding: 356px 0 72px 10%;
         display: flex;
         flex-direction: column;
-        padding-top: 356px;
 
         .top_container {
             display: flex;
@@ -1614,7 +1614,7 @@ body {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    border-radius: 11px 0;
+                    border-radius: 11px 0 0;
                     position: relative;
 
                     &::before {
@@ -2365,7 +2365,7 @@ body {
     }
 
     footer {
-        padding: 1px 140px;
+        padding: 1px 10%;
         padding-bottom: 10px;
         background-image: url('../images/background_images/footer_background.png');
         background-size: cover;
@@ -2470,7 +2470,7 @@ body {
 
     .drink_button {
         position: fixed;
-        bottom: 300px;
+        bottom: 30vh;
         left: 63px;
 
         a {
@@ -3776,36 +3776,6 @@ body {
                                         padding: 0 8px;
                                     }
                                 }
-
-                                &.sale {
-                                    td:first-child {
-                                        position: relative;
-
-                                        &:after {
-                                            content: "Sale";
-                                            width: 38px;
-                                            height: 26px;
-                                            background-color: #c13458;
-                                            display: flex;
-                                            justify-content: center;
-                                            align-items: center;
-                                            position: absolute;
-                                            top: 31px;
-                                            left: -38px;
-                                            border-radius: 13px 0 0 13px;
-                                            font-family: MyriadGEO;
-                                            font-size: 12px;
-                                            font-weight: bold;
-                                            font-stretch: normal;
-                                            font-style: normal;
-                                            line-height: 1.17;
-                                            letter-spacing: normal;
-                                            text-align: left;
-                                            color: #ffffff;
-                                        }
-                                    }
-
-                                }
                             }
                         }
                     }
@@ -3916,6 +3886,7 @@ body {
                             color: #ffffff;
                             font-family: "myriad_geo_mtavruli_bold";
                             font-size: 16px;
+                            text-decoration: none;
                         }
 
                         a {
@@ -3965,7 +3936,7 @@ body {
                                     display: inline-block;
                                     margin-bottom: 24px;
 
-                                    input[type="radio"] {
+                                    input[type="checkbox"] {
                                         display: none;
                                     }
 
@@ -4023,8 +3994,11 @@ body {
                                     }
 
                                     /* When the checkbox is checked, add a blue background */
+                                    input:checked~.radio_category{
+                                        background-color: #72b55b;
+                                    }
 
-                                    .radio_category input:checked~.checkmark {
+                                    input:checked~.radio_category .checkmark {
                                         background-color: #ffffff;
                                         border-color: #ffffff;
 
@@ -4033,7 +4007,7 @@ body {
                                         }
                                     }
 
-                                    .radio_category input:checked~label {
+                                    input:checked~.radio_category label {
                                         color: #ffffff;
                                     }
 

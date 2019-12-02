@@ -194,7 +194,7 @@ $(document).ready(function () {
     // Item Remove
 
 
-    $('.close').click(function () {
+    $('.cart_items .close').click(function () {
         let item = $(this).closest(".item")
         item.fadeOut();
         setTimeout(function () {
@@ -284,9 +284,19 @@ $(document).ready(function () {
         button.parent(".card").remove();
         colseModal();
     });
+
+    $('.deleteProducts').click(function () {
+        $('.products_table tbody').fadeOut();
+        setTimeout(function () {
+            $('.products_table tbody').remove();
+        }, 3000);
+        colseModal();
+    });
+
     $('.now').click(function () {
         colseModal();
     });
+    
 
     // Order
 
@@ -316,9 +326,19 @@ $(document).ready(function () {
     }
     // I get
 
-    $('.i_get>.radio_category').click(function () {
-        $(this).toggleClass("active");
+    // $('.i_get>.radio_category').click(function () {
+    //     $(this).toggleClass("active");
         
+    // });
+
+    // cart delete item  
+    
+    $('.products_table .remove').click(function () {
+        let item = $(this).closest("tr")
+        item.fadeOut();
+        setTimeout(function () {
+            item.remove();
+        }, 3000);
     });
 
 });
