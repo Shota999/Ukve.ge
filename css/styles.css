@@ -1626,7 +1626,7 @@ body .special .slider_content .swiper-slide .product .info_container .sale {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 6px 0;
+  border-radius: 6px 0 0;
   position: relative;
 }
 
@@ -4860,7 +4860,7 @@ body .main_content .basket .information_content .left .informations .info_block 
   border: none;
   outline: none;
   padding: 13px 20px;
-  color: #d8d8d8;
+  color: #c13458;
   font-family: "myriad_geo_bold";
   font-size: 14px;
   margin-top: 4px;
@@ -4892,9 +4892,18 @@ body .main_content .basket .information_content .left .informations .info_block 
   font-size: 14px;
 }
 
+body .main_content .basket .information_content .left .informations .info_block .form .information .tel .tel_input input:disabled {
+  color: #d8d8d8;
+}
+
 body .main_content .basket .information_content .left .informations .info_block .form .information .tel svg {
   margin-top: 25px;
   cursor: pointer;
+  display: none;
+}
+
+body .main_content .basket .information_content .left .informations .info_block .form .information .tel svg.active {
+  display: inline-block;
 }
 
 body .main_content .basket .information_content .left .informations .info_block .form .information .more_information {
@@ -5614,13 +5623,14 @@ body .contact_form form button:hover svg path {
 
 body #map {
   height: 689px;
-  z-index: -1;
-  margin-bottom: -120px;
   margin-top: 120px;
+  z-index: 8;
 }
 
-body #map .leaflet-pane .leaflet-marker-pane img {
-  width: auto !important;
+body #map ~ footer {
+  margin-top: -120px;
+  position: relative;
+  z-index: 9;
 }
 
 body .contact_footer {

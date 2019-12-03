@@ -403,6 +403,9 @@
   body .special .slider_content .main-slider-wrapper .swiper-slide-next {
     opacity: 0.6;
   }
+  body .main_content {
+    padding-top: 401px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -507,7 +510,7 @@
     opacity: 0.6;
   }
   body footer {
-    padding: 1px 20px 10px 20px;
+    padding: 32px 20px 10px 20px;
   }
   body footer .footer .logo_social {
     margin-top: 5px;
@@ -525,7 +528,7 @@
     height: 19px;
   }
   body footer .footer .social .icon a svg {
-    width: 5px;
+    width: 10px;
     height: 10px;
   }
   body footer .footer .bottom_container {

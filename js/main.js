@@ -341,4 +341,18 @@ $(document).ready(function () {
         }, 3000);
     });
 
+    $('table .remove').click(function () {
+        let item = $(this).closest("tr")
+        item.fadeOut();
+        setTimeout(function () {
+            item.remove();
+        }, 3000);
+    });
+
+    $(".tel svg").click(function () {
+        $(this).removeClass("active");
+        $(this).siblings("svg").addClass("active");
+        $('.tel_input input').prop('disabled', function(i, v) { return !v; });
+    });
+
 });
