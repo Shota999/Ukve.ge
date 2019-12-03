@@ -406,6 +406,9 @@
   body .main_content {
     padding-top: 401px;
   }
+  body .main_content .container .blog_container .blog {
+    width: 100%;
+  }
 }
 
 @media (max-width: 450px) {
@@ -617,6 +620,15 @@
     height: 63px;
   }
   body .main_content .container .category p {
+    font-size: 14px;
+  }
+  body .main_content .container .blog_container .blog {
+    width: 100%;
+  }
+  body .main_content .container .blog_container .blog .blog_image {
+    height: 173px;
+  }
+  body .main_content .container .blog_container .blog h3 {
     font-size: 14px;
   }
 }
