@@ -513,7 +513,6 @@ $phone-width-s: 450px;
 @media (max-width: #{$phone-width}) {
     body {
         header {
-
             .top_header {
                 padding: 16px 8%;
 
@@ -591,11 +590,9 @@ $phone-width-s: 450px;
                             justify-content: center;
 
                             li {
-                                margin-right: 70px;
+                                margin-right: 63px;
 
-                                &:nth-child(3) {
-                                    margin-right: 0;
-                                }
+                                
 
                                 &:last-child {
                                     margin-right: 0;
@@ -642,6 +639,10 @@ $phone-width-s: 450px;
                             justify-content: flex-start;
 
                             li {
+
+                                &:nth-child(3){
+                                    margin-right: 70px;
+                                }
                                 a {
                                     span {
                                         display: none;
@@ -837,6 +838,9 @@ $phone-width-s: 450px;
                     .nav{
                         ul{
                             li{
+                                &:nth-child(3){
+                                    margin-right: 0;
+                                }
                                 &:last-child{
                                     margin-left: 12px;
                                 }

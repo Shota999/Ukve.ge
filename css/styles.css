@@ -2329,7 +2329,7 @@ body .content .container .fasting {
   width: 90px;
   height: 20px;
   background-color: #F99D1C;
-  position: relative;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2340,6 +2340,7 @@ body .content .container .fasting {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 4px;
+  top: 40px;
 }
 
 body .content .container .fasting p {
@@ -3695,7 +3696,7 @@ body .main_content .profile .right {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 37px 0;
+  padding: 64px 0;
 }
 
 body .main_content .profile .right h4 {
@@ -3780,14 +3781,21 @@ body .main_content .profile .right .cards {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 237px;
+  overflow: hidden;
+}
+
+body .main_content .profile .right .cards:hover {
+  overflow-y: auto;
 }
 
 body .main_content .profile .right .cards .card {
-  margin-right: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5254,11 +5262,32 @@ body .main_content .out_off form {
           align-items: center;
 }
 
+body .main_content .out_off form .input {
+  position: relative;
+  margin-top: 24px;
+}
+
+body .main_content .out_off form .input svg {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  width: 15px;
+  height: 15px;
+}
+
+body .main_content .out_off form .input svg path {
+  fill: #D5D5D5;
+}
+
+body .main_content .out_off form .input:first-child {
+  margin-top: 0;
+}
+
 body .main_content .out_off form input {
   width: 253px;
   border-radius: 6px;
   border: 2px solid #a8a8a8;
-  padding: 24px 32px;
+  padding: 20px 32px;
   color: #c3c3c3;
   font-family: "myriad_geo_bold";
   font-size: 14px;
@@ -5294,17 +5323,75 @@ body .main_content .out_off form input::placeholder {
   font-size: 14px;
 }
 
-body .main_content .out_off form button {
+body .main_content .out_off form .buttons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 24px;
+}
+
+body .main_content .out_off form .buttons .sign_in {
   border-radius: 6px;
   background-color: #c13458;
-  padding: 16px 24px;
+  padding: 13px 32px;
   color: #ffffff;
   font-family: "myriad_geo_mtavruli_bold";
   font-size: 14px;
   outline: none;
   border: none;
   cursor: pointer;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  margin-top: 0;
+}
+
+body .main_content .out_off form .buttons .sign_in:hover {
+  color: #c13458;
+  background-color: #ffffff;
+}
+
+body .main_content .out_off form .buttons .registration {
+  color: #c13458;
+  font-size: 16px;
+  font-family: "myriad_geo_bold";
+  text-decoration: underline;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body .main_content .out_off form .buttons .registration:hover {
+  opacity: 0.64;
+}
+
+body .main_content .out_off form .sign_in {
+  border-radius: 6px;
+  background-color: #c13458;
+  padding: 13px 32px;
+  color: #ffffff;
+  font-family: "myriad_geo_mtavruli_bold";
+  font-size: 14px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
   margin-top: 24px;
+}
+
+body .main_content .out_off form .sign_in:hover {
+  color: #c13458;
+  background-color: #ffffff;
 }
 
 body .main_content .out_off form .or {
@@ -5631,6 +5718,10 @@ body #map ~ footer {
   margin-top: -120px;
   position: relative;
   z-index: 9;
+}
+
+body #map .leaflet-marker-pane img {
+  width: auto !important;
 }
 
 body .contact_footer {
