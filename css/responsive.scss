@@ -959,5 +959,78 @@ $phone-width-s: 450px;
             padding: 0 10px;
             display: flex;
         }
+        .main_content {
+            .content{
+                padding: 24px 16px;
+
+                h2{
+                    font-size: 14px;
+                }
+                .breadcrambs{
+                    ul{
+                        li{
+                            a{
+                                font-size: 10px;
+                            }
+                            svg{
+                                margin: 0 8px 0 4px;
+                            }
+                            span{
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            .container {
+                margin-top: 32px;
+
+                .blog_container {
+                    .blog {
+                        width: 31%;
+                    }
+                }
+                p{
+                    font-size: 14px;
+                }
+                .image_container{
+                    height: 123px;
+                }
+                .faq{
+                    margin: 0;
+
+                    .question{
+                        margin-top: 16px;
+
+                        .container{
+                            padding: 24px 16px;
+
+                            h4{
+                                font-size: 14px;
+                            }
+                            svg{
+                                width: 10px;
+                                height: 10px;
+                            }
+                        }
+                        .hide_faq{
+                            padding: 0 16px 24px 16px;
+
+                            p{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+                .category{
+                    width: 186px;
+                    height: 63px;
+
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
     }
 }

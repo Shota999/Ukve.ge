@@ -403,6 +403,9 @@
   body .special .slider_content .main-slider-wrapper .swiper-slide-next {
     opacity: 0.6;
   }
+  body .main_content {
+    padding-top: 401px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -507,7 +510,7 @@
     opacity: 0.6;
   }
   body footer {
-    padding: 1px 20px 10px 20px;
+    padding: 32px 20px 10px 20px;
   }
   body footer .footer .logo_social {
     margin-top: 5px;
@@ -525,7 +528,7 @@
     height: 19px;
   }
   body footer .footer .social .icon a svg {
-    width: 5px;
+    width: 10px;
     height: 10px;
   }
   body footer .footer .bottom_container {
@@ -556,6 +559,62 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  body .main_content .content {
+    padding: 24px 16px;
+  }
+  body .main_content .content h2 {
+    font-size: 14px;
+  }
+  body .main_content .content .breadcrambs ul li a {
+    font-size: 10px;
+  }
+  body .main_content .content .breadcrambs ul li svg {
+    margin: 0 8px 0 4px;
+  }
+  body .main_content .content .breadcrambs ul li span {
+    font-size: 10px;
+  }
+  body .main_content .container {
+    margin-top: 32px;
+  }
+  body .main_content .container .blog_container .blog {
+    width: 31%;
+  }
+  body .main_content .container p {
+    font-size: 14px;
+  }
+  body .main_content .container .image_container {
+    height: 123px;
+  }
+  body .main_content .container .faq {
+    margin: 0;
+  }
+  body .main_content .container .faq .question {
+    margin-top: 16px;
+  }
+  body .main_content .container .faq .question .container {
+    padding: 24px 16px;
+  }
+  body .main_content .container .faq .question .container h4 {
+    font-size: 14px;
+  }
+  body .main_content .container .faq .question .container svg {
+    width: 10px;
+    height: 10px;
+  }
+  body .main_content .container .faq .question .hide_faq {
+    padding: 0 16px 24px 16px;
+  }
+  body .main_content .container .faq .question .hide_faq p {
+    font-size: 12px;
+  }
+  body .main_content .container .category {
+    width: 186px;
+    height: 63px;
+  }
+  body .main_content .container .category p {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=responsive.css.map */
