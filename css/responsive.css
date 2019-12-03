@@ -631,5 +631,14 @@
   body .main_content .container .blog_container .blog h3 {
     font-size: 14px;
   }
+  body .contact_container {
+    margin-top: 32px;
+  }
+  body .contact_container .blocks .block {
+    width: 100%;
+  }
+  body .contact_container .blocks .block:first-child {
+    margin-top: 0;
+  }
 }
 /*# sourceMappingURL=responsive.css.map */
