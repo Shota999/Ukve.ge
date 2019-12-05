@@ -5207,6 +5207,17 @@ body .main_content .basket .information_content .right .right_content table tbod
   width: 2px;
 }
 
+body .main_content .basket .information_content .right .right_content table tbody tr .green:after {
+  border-radius: 0 6px 6px 0;
+  background-color: #72B55B;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 100%;
+  width: 2px;
+}
+
 body .main_content .basket .information_content .right .all_price {
   text-align: right;
   margin-top: 16px;
@@ -5514,6 +5525,53 @@ body .main_content .success a {
 body .main_content .success a:hover {
   color: #c13458;
   background-color: #ffffff;
+}
+
+body .main_content .success.success_basket {
+  max-width: 681px;
+  margin: 0 auto;
+}
+
+body .main_content .success.success_basket h3 {
+  font-size: 24px;
+}
+
+body .main_content .success.success_basket .up {
+  color: #72B55B;
+  font-size: 16px;
+  font-family: "myriad_geo_bold";
+}
+
+body .main_content .success.success_basket .up span {
+  color: #C13458;
+}
+
+body .main_content .success.success_basket .down {
+  color: #C13458;
+  font-size: 16px;
+  font-family: "myriad_geo_bold";
+  margin-top: 16px;
+}
+
+body .main_content .success.success_basket .down span {
+  color: #72B55B;
+}
+
+body .main_content .success.success_basket a {
+  margin-top: 40px;
+}
+
+body .main_content .success.success_basket .tel {
+  font-size: 14px;
+  color: #C13458;
+  font-family: "myriad_geo_bold";
+  background-color: transparent;
+  padding: 0;
+  margin-top: 32px;
+}
+
+body .main_content .success.success_basket .tel small {
+  font-size: 10px;
 }
 
 body .contact_container {

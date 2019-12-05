@@ -4400,6 +4400,18 @@ body {
                                             width: 2px;
                                         }
                                     }
+                                    .green {
+                                        &:after {
+                                            border-radius: 0 6px 6px 0;
+                                            background-color: #72B55B;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            content: "";
+                                            height: 100%;
+                                            width: 2px;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -4662,6 +4674,48 @@ body {
                 &:hover {
                     color: #c13458;
                     background-color: #ffffff;
+                }
+            }
+            &.success_basket{
+                max-width: 681px;
+                margin: 0 auto;
+
+                h3{
+                    font-size: 24px;
+                }
+                .up{
+                    color: #72B55B;
+                    font-size: 16px;
+                    font-family: "myriad_geo_bold";
+
+                    span{
+                        color: #C13458;
+                    }
+                }
+                .down{
+                    color: #C13458;
+                    font-size: 16px;
+                    font-family: "myriad_geo_bold";
+                    margin-top: 16px;
+
+                    span{
+                        color: #72B55B;
+                    }
+                }
+                a{
+                    margin-top: 40px;
+                }
+                .tel{
+                    font-size: 14px;
+                    color: #C13458;
+                    font-family: "myriad_geo_bold";
+                    background-color: transparent;
+                    padding: 0;
+                    margin-top: 32px;
+
+                    small{
+                        font-size: 10px;
+                    }
                 }
             }
         }
