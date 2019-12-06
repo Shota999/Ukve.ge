@@ -200,19 +200,15 @@ a {
     }
     
     .select-selected {
-        background-color: DodgerBlue;
+        background-color: #F8F8F8;
     }
     
     /*style the arrow inside the select element:*/
     .select-selected:after {
         position: absolute;
-        content: "";
-        top: 14px;
-        right: 10px;
-        width: 0;
-        height: 0;
-        border: 6px solid transparent;
-        border-color: #fff transparent transparent transparent;
+        content: url('../images/icons/arrow_down.svg');
+        top: 7px;
+        right: 20px;
     }
     
     /*point the arrow upwards when the select box is open (active):*/
@@ -225,22 +221,34 @@ a {
     .select-items div,.select-selected {
         color: #ffffff;
         padding: 8px 16px;
-        border: 1px solid transparent;
-        border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
         cursor: pointer;
         user-select: none;
     }
-    
+    .select-selected{
+        color: #A8A8A8;
+        font-size: 12px;
+        font-family: "myriad_geo_medium";
+    }
     /*style items (options):*/
     .select-items {
         position: absolute;
-        background-color: DodgerBlue;
+        background-color: #FFFFFF;
         top: 100%;
         left: 0;
         right: 0;
         z-index: 99;
+        overflow-y: auto;
+        height: 224px;
+
+        div{
+            padding: 14px 16px;
+            color: #A8A8A8;
+            font-family: "myriad_geo_bold";
+            font-size: 12px;
+            margin: 8px;
+            border-bottom: 1px solid #F8F8F8;
+        }
     }
-    
     /*hide the items when the select box is closed:*/
     .select-hide {
         display: none;
@@ -3991,7 +3999,6 @@ body {
                         background-color: #ffffff;
                         box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
                         border-radius: 10px;
-                        overflow: hidden;
 
                         .top {
                             padding: 16px 24px;

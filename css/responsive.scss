@@ -507,6 +507,28 @@ $phone-width-s: 450px;
                 }
             }
         }
+        .contact_form{
+            form{
+                margin: 0;
+
+                .form{
+                    .input{
+                        input{
+                            padding: 16px;
+                            margin-right: 8px;
+                            font-size: 10px;
+
+                            &::placeholder{
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+                button{
+                    margin-left: 0;
+                }
+            }
+        }
     }
 }
 

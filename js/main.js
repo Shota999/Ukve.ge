@@ -430,5 +430,4 @@ $(document).ready(function () {
     then close all select boxes:*/
     document.addEventListener("click", closeAllSelect);
 
-
 });

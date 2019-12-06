@@ -287,6 +287,29 @@
   body .special .slider_content .swiper-slide .inner-slider .swiper-wrapper .swiper-slide .image_container {
     height: 20vw;
   }
+  body .contact_form form {
+    margin: 0;
+  }
+  body .contact_form form .form .input input {
+    padding: 16px;
+    margin-right: 8px;
+    font-size: 10px;
+  }
+  body .contact_form form .form .input input::-webkit-input-placeholder {
+    font-size: 10px;
+  }
+  body .contact_form form .form .input input:-ms-input-placeholder {
+    font-size: 10px;
+  }
+  body .contact_form form .form .input input::-ms-input-placeholder {
+    font-size: 10px;
+  }
+  body .contact_form form .form .input input::placeholder {
+    font-size: 10px;
+  }
+  body .contact_form form button {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 610px) {
