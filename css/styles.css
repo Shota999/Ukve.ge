@@ -85,7 +85,7 @@ a {
   background-color: #C13458;
   border-radius: 10px;
   color: #ffffff;
-  padding: 11px 22px;
+  padding: 12px 22px 10px;
   font-size: 14px;
   font-family: "myriad_geo_mtavruli_bold";
   border: 2px solid #C13458;
@@ -104,7 +104,7 @@ a {
   background-color: #C13458;
   border-radius: 10px;
   color: #ffffff;
-  padding: 11px 22px;
+  padding: 12px 22px 10px;
   font-size: 14px;
   font-family: "myriad_geo_mtavruli_bold";
   border: 2px solid #C13458;
@@ -152,6 +152,7 @@ a {
   height: 100%;
   position: relative;
   z-index: 1;
+  margin-top: 0 !important;
 }
 
 .modal#zone_modal .modal-content {
@@ -194,7 +195,7 @@ a {
   background-color: #C13458;
   border-radius: 10px;
   color: #ffffff;
-  padding: 11px 22px;
+  padding: 12px 22px 10px;
   font-size: 14px;
   font-family: "myriad_geo_mtavruli_bold";
   border: 2px solid #C13458;
@@ -207,6 +208,71 @@ a {
 .button-red:hover {
   color: #C13458;
   background-color: #FFFFFF;
+}
+
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div, .select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -3806,10 +3872,7 @@ body .main_content .profile .right .cards .card {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-body .main_content .profile .right .cards .card:last-child {
-  margin-right: 0;
+  margin: 0 3% 30px;
 }
 
 body .main_content .profile .right .cards .card .mastercard {
@@ -4444,7 +4507,7 @@ body .main_content .basket .basket_content .left table tbody tr td .price span s
 
 body .main_content .basket .basket_content .left table tbody tr td .tag {
   position: absolute;
-  top: 48px;
+  top: 32px;
   left: -40px;
   border-radius: 13px 0 0 13px;
   background-color: #c13458;
@@ -4606,7 +4669,7 @@ body .main_content .basket .basket_content .right .buttons .buy {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 16px;
+  padding: 16px 16px 12px;
   color: #ffffff;
   font-family: "myriad_geo_mtavruli_bold";
   font-size: 16px;
@@ -4975,7 +5038,7 @@ body .main_content .basket .information_content .left .informations button {
   color: #ffffff;
   font-family: "myriad_geo_mtavruli_bold";
   font-size: 16px;
-  padding: 16px 0;
+  padding: 16px 0 14px;
   cursor: pointer;
   outline: none;
 }
@@ -5495,6 +5558,7 @@ body .main_content .success {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 40px;
 }
 
 body .main_content .success svg {
@@ -5529,7 +5593,7 @@ body .main_content .success a:hover {
 
 body .main_content .success.success_basket {
   max-width: 681px;
-  margin: 0 auto;
+  margin: 40px auto 0;
 }
 
 body .main_content .success.success_basket h3 {
