@@ -3504,6 +3504,9 @@ body {
                                         font-family: "myriad_geo_bold";
                                         font-size: 12px;
                                     }
+                                    .responsive_p{
+                                        display: none;
+                                    }
                                 }
 
                                 .price {
@@ -4573,6 +4576,7 @@ body {
                         font-size: 14px;
                         outline: none;
                         margin-top: 5px;
+                        background-color: transparent;
                         
     
                         &::placeholder {
@@ -4651,7 +4655,7 @@ body {
                     }
                 }
 
-                .or {
+                .or{
                     color: #cccccc;
                     font-family: "myriad_geo_bold";
                     font-size: 10px;

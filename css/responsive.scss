@@ -807,6 +807,58 @@ $phone-width-s: 450px;
 
                     .orders{
                         padding: 0 16px;
+
+                        .order{
+                            .top_container{
+                                padding: 8px;
+                            }
+                            .inner_content{
+                                .hidden_order{
+                                    .order_content{
+                                        padding: 16px;
+                                        justify-content: space-between;
+
+                                        .image{
+                                            display: none;
+                                        }
+                                        h3{
+                                            flex: none;
+                                            width: 200px;
+                                        }
+                                        svg{
+                                            display: none;
+                                        }
+                                        .quantity{
+                                            p{
+                                                display: none;
+                                            }
+                                            .responsive_p{
+                                                display: block;
+                                            }
+                                        }
+                                    }
+                                }
+                                .order_map{
+                                    height: 181px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .out_off{
+                width: auto;
+
+                h3{
+                    font-size: 14px;
+                }
+                form{
+                    width: auto;
+
+                    label{
+                        input{
+                            width: 212px;
+                        }
                     }
                 }
             }
@@ -1008,6 +1060,22 @@ $phone-width-s: 450px;
                 .right{
                     h4{
                         font-size: 14px;
+                    }
+                     // Orders
+
+                     .orders{
+                        .order{
+                            .inner_content{
+                                .hidden_order{
+                                    .order_content{
+                                        h3{
+                                            flex: none;
+                                            width: 100px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
