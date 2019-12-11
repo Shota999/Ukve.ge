@@ -526,6 +526,43 @@
   body .main_content .out_off form label input {
     width: 212px;
   }
+  body .main_content .basket .steps {
+    padding: 0;
+  }
+  body .main_content .basket .steps .step {
+    text-align: center;
+  }
+  body .main_content .basket .steps .step p {
+    font-size: 12px;
+    line-height: normal;
+  }
+  body .main_content .basket .basket_content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-top: 32px;
+  }
+  body .main_content .basket .basket_content .left {
+    overflow-x: auto;
+  }
+  body .main_content .basket .basket_content .left table tbody tr td .remove {
+    padding: 0 8px;
+  }
+  body .main_content .basket .basket_content .left table tbody tr td .remove svg {
+    width: 20px;
+    height: 20px;
+  }
+  body .main_content .basket .basket_content .left table tbody tr td .tag {
+    display: none;
+  }
+  body .main_content .basket .basket_content .right {
+    width: auto;
+    margin-left: 0;
+  }
+  body .main_content .success.success_basket h3 {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 450px) {
