@@ -297,7 +297,16 @@ $phone-width-s: 450px;
                 }
             }
         }
-        
+        .main_content{
+            .profile{
+                .right{
+                    form{
+                        width: auto;
+                        margin: 0 16px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -472,7 +481,13 @@ $phone-width-s: 450px;
                 }
             }
         }
-
+        .main_content{
+            .profile{
+                .left{
+                    margin-right: 20px;
+                }
+            }
+        }
         .special {
             padding-top: 192px;
 
@@ -731,11 +746,67 @@ $phone-width-s: 450px;
         }
         .main_content{
             padding-top: 401px;
+            margin: 0 6%;
 
             .container{
                 .blog_container{
                     .blog{
                         width: 100%;
+                    }
+                }
+            }
+            .profile{
+                flex-direction: column;
+
+                .left{
+                    margin-right: 0;
+                    margin: 0 10px;
+                }
+                .right{
+                    margin-top: 24px;
+                    padding: 24px 0;
+
+                    h4{
+                        font-size: 20px;
+                        margin-bottom: 24px;
+                        padding: 0 16px;
+                        text-align: left;
+                    }
+                    form{
+                        width: auto;
+                        margin: 0 16px;
+
+                        input{
+                            padding: 24px;
+                        }
+                        button{
+                            margin-top: 24px;
+                        }
+                    }
+
+                    // Cards
+
+                    .cards{
+                        .card{
+                            .mastercard,.visa{
+                                padding: 16px;
+                                width: 231px;
+
+                                p{
+                                    font-size: 16px;
+                                    
+                                    span{
+                                        letter-spacing: 6px;
+                                        margin-left: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // Orders
+
+                    .orders{
+                        padding: 0 16px;
                     }
                 }
             }
@@ -932,7 +1003,15 @@ $phone-width-s: 450px;
                 }
             }
         }
-
+        .main_content{
+            .profile{
+                .right{
+                    h4{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
         footer {
             padding: 32px 20px 10px 20px;
 
