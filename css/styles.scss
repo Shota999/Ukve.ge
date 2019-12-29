@@ -55,6 +55,7 @@ a {
             text-align: center;
         }
 
+       
         .buttons {
             display: flex;
             justify-content: space-between;
@@ -97,6 +98,7 @@ a {
             }
         }
 
+        
         .leaflet-container {
             .leaflet-pane {
                 .leaflet-marker-pane {
@@ -107,7 +109,17 @@ a {
             }
         }
     }
-
+    .get{
+        width: 272px;
+        
+        .radio{
+            label{
+                font-size: 12px;
+                font-family: "myriad_geo_bold";
+                color: #C13458;
+            }
+        }
+    }
     &#zone_modal {
         .modal-content {
             padding: 0;

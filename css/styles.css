@@ -123,6 +123,16 @@ a {
   width: auto !important;
 }
 
+.modal .get {
+  width: 272px;
+}
+
+.modal .get .radio label {
+  font-size: 12px;
+  font-family: "myriad_geo_bold";
+  color: #C13458;
+}
+
 .modal#zone_modal .modal-content {
   padding: 0;
   width: 70vw;
