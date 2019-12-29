@@ -2483,6 +2483,9 @@ body .content .container .bottom_container .title_price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 body .content .container .bottom_container .title_price h3 {

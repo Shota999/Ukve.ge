@@ -359,11 +359,6 @@
   body header .bottom_header .header_content .profile_cart .profile .profile_dropdown {
     left: -65px;
   }
-  body header .bottom_header .responsive_nav .nav ul {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
   body header .bottom_header .responsive_nav .nav ul li {
     margin-right: 63px;
   }
@@ -390,11 +385,6 @@
   }
   body .fixedheader .bottom_header .header_content .nav {
     display: none;
-  }
-  body .fixedheader .bottom_header .responsive_nav .nav ul {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
   }
   body .fixedheader .bottom_header .responsive_nav .nav ul li:nth-child(3) {
     margin-right: 70px;

@@ -624,8 +624,6 @@ $phone-width-s: 450px;
                 .responsive_nav {
                     .nav {
                         ul {
-                            justify-content: center;
-
                             li {
                                 margin-right: 63px;
 
@@ -673,8 +671,7 @@ $phone-width-s: 450px;
                 .responsive_nav {
                     .nav {
                         ul {
-                            justify-content: flex-start;
-
+                            
                             li {
 
                                 &:nth-child(3){
