@@ -36,7 +36,6 @@ a {
   border-radius: 10px;
   position: relative;
   width: 196px;
-  height: 143px;
   padding: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,6 +78,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  margin-top: 32px;
 }
 
 .modal .modal-content .buttons button {
@@ -127,10 +127,40 @@ a {
   width: 272px;
 }
 
-.modal .get .radio label {
+.modal .get .radio {
+  margin-top: 24px;
+}
+
+.modal .get .radio .street {
   font-size: 12px;
   font-family: "myriad_geo_bold";
   color: #C13458;
+  color: #A8A8A8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 12px;
+}
+
+.modal .get .radio .street:first-child {
+  margin-top: 0;
+}
+
+.modal .get .radio .street input {
+  margin-right: 16px;
+}
+
+.modal .get .radio .street input[type="radio"]:checked + label {
+  color: #C13458;
+}
+
+.modal .get .buttons {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .modal#zone_modal .modal-content {
@@ -5108,7 +5138,7 @@ body .main_content .basket .information_content .left .informations .pay_methods
 }
 
 body .main_content .basket .information_content .left .informations .pay_methods .pay .card p {
-  color: #ffffff;
+  color: #A8A8A8;
   font-family: "myriad_geo_bold";
   font-size: 14px;
 }
@@ -5138,12 +5168,119 @@ body .main_content .basket .information_content .left .informations .pay_methods
   background-color: #72b55b;
 }
 
+body .main_content .basket .information_content .left .informations .pay_methods .pay .active p {
+  color: #ffffff;
+}
+
 body .main_content .basket .information_content .left .step3 {
   height: 100%;
 }
 
-body .main_content .basket .information_content .left .step3 button {
-  margin-top: 100px;
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or {
+  width: 246px;
+  margin-top: 24px;
+}
+
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or p {
+  color: #A8A8A8;
+  font-size: 12px;
+  font-family: "miryad_geo_medium";
+  line-height: normal;
+}
+
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .choose_card {
+  background-color: #F8F8F8;
+  padding: 16px;
+  border-radius: 10px;
+  margin-top: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .choose_card p {
+  color: #A8A8A8;
+  font-size: 12px;
+  font-family: "myriad_geo_medium";
+  line-height: normal;
+}
+
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .choose_card .arrow {
+  width: 4px;
+  height: 6px;
+}
+
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .choose_card .arrow path {
+  fill: #A8A8A8;
+}
+
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .active {
+  border-radius: 10px 10px 0 0;
+  background-color: #C13458;
+}
+
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .active p {
+  color: #FFFFFF;
+}
+
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .active .arrow path {
+  fill: #FFFFFF;
+}
+
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  height: 117px;
+  background-color: #F8F8F8;
+  width: 100%;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  border-radius: 0 0 10px 10px;
+}
+
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards .card {
+  margin: 5px;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards .card .container {
+  margin: 0;
+  padding: 16px 11px;
+}
+
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards .card .container p {
+  color: #7D7D7D;
+  font-size: 14px;
+  font-family: "myriad_geo_bold";
+}
+
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards .card .container p span {
+  margin: 0 7px;
+  color: #DBDBDB;
+}
+
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards .card .container p svg {
+  margin-left: 8px;
+}
+
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .show {
+  top: 48px;
+  visibility: visible;
+  opacity: 1;
 }
 
 body .main_content .basket .information_content .right {

@@ -28,7 +28,6 @@ a {
         border-radius: 10px;
         position: relative;
         width: 196px;
-        height: 143px;
         padding: 32px;
         display: flex;
         flex-direction: column;
@@ -60,6 +59,7 @@ a {
             display: flex;
             justify-content: space-between;
             width: 100%;
+            margin-top: 32px;
 
             button {
                 background-color: #C13458;
@@ -113,11 +113,33 @@ a {
         width: 272px;
         
         .radio{
-            label{
+            margin-top: 24px;
+
+            .street{
                 font-size: 12px;
                 font-family: "myriad_geo_bold";
                 color: #C13458;
+                color: #A8A8A8;
+                display: flex;
+                align-items: center;
+                margin-top: 12px;
+
+                &:first-child{
+                    margin-top: 0;
+                }
+                input{
+                    margin-right: 16px;
+                }
+                input[type="radio"]:checked {
+
+                    + label {
+                        color: #C13458;
+                    }
+                }
             }
+        }
+        .buttons{
+            justify-content: center;
         }
     }
     &#zone_modal {
@@ -4308,7 +4330,7 @@ body {
                                     }
 
                                     p {
-                                        color: #ffffff;
+                                        color: #A8A8A8;
                                         font-family: "myriad_geo_bold";
                                         font-size: 14px;
                                     }
@@ -4340,6 +4362,10 @@ body {
 
                                 .active {
                                     background-color: #72b55b;
+
+                                    p{
+                                        color: #ffffff;
+                                    }
                                 }
                             }
                         }
@@ -4348,8 +4374,100 @@ body {
                     .step3 {
                         height: 100%;
 
-                        button {
-                            margin-top: 100px;
+                        .pay_methods{
+                            .choose_or{
+                                width: 246px;
+                                margin-top: 24px;
+
+                                p{
+                                    color: #A8A8A8;
+                                    font-size: 12px;
+                                    font-family: "miryad_geo_medium";
+                                    line-height: normal;
+                                }
+                                .choose_card{
+                                    background-color: #F8F8F8;
+                                    padding: 16px;
+                                    border-radius: 10px;
+                                    margin-top: 6px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    cursor: pointer;
+                                    position: relative;
+                                    transition: .2s ease-in-out;
+
+                                    p{
+                                        color: #A8A8A8;
+                                        font-size: 12px;
+                                        font-family: "myriad_geo_medium";
+                                        line-height: normal;
+                                    }
+                                    .arrow{
+                                        width: 4px;
+                                        height: 6px;
+
+                                        path{
+                                            fill: #A8A8A8;
+                                        }
+                                    }
+                                }
+                                .active{
+                                    border-radius: 10px 10px 0 0;
+                                    background-color: #C13458;
+
+                                    p{
+                                        color: #FFFFFF;
+                                    }
+                                    .arrow{
+                                        path{
+                                            fill: #FFFFFF;
+                                        }
+                                    }
+                                }
+                                .hidden_cards{
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    overflow-y: auto;
+                                    height: 117px;
+                                    background-color: #F8F8F8;
+                                    width: 100%;
+                                    transition: .2s ease-in-out;
+                                    border-radius: 0 0 10px 10px;
+                                    
+                                    .card{
+                                        margin: 5px;
+                                        border-bottom: 1px solid #F0F0F0;
+
+                                        .container{
+                                            margin: 0;
+                                            padding: 16px 11px;
+
+                                            p{
+                                                color: #7D7D7D;
+                                                font-size: 14px;
+                                                font-family: "myriad_geo_bold";
+                                                
+                                                span{
+                                                    margin: 0 7px;
+                                                    color: #DBDBDB;
+                                                }
+                                                svg{
+                                                    margin-left: 8px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .show{
+                                    top: 48px;
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
+                            }
                         }
                     }
                 }

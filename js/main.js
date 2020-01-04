@@ -126,7 +126,9 @@ $(document).ready(function () {
         if ($('.hidden_more').hasClass('show') && n.target.closest(".sauce") == null) {
             changeText();
         }
-
+        if ($('.hidden_cards').hasClass('show') && n.target.closest(".choose_card") == null) {
+            changeText();
+        }
         if ($('.category').hasClass('border') && n.target.closest(".category") == null) {
             $('.category').removeClass('border');
         }
@@ -430,4 +432,23 @@ $(document).ready(function () {
     then close all select boxes:*/
     document.addEventListener("click", closeAllSelect);
 
+
+    $('.choose_card').click(function () {
+        $(this).toggleClass('active');
+    });
+    $('.choose_card').click(function () {
+        $(this).parent('.choose_or').find('.hidden_cards').toggleClass('show');
+    });
+
+    $('.choose_card').click(function () {
+        changeText(this.innerText);
+    });
+
+    // function changeText(str = null) {
+    //     if (str) {
+    //         $('.choose_card.active p').text(str.length > 12 ? str.slice(0, 12) + "..." : str);
+    //     }
+    //     // $('.hidden_more.show').removeClass('show');
+    //     // $('.choose_card.active').removeClass('active');
+    // }
 });
