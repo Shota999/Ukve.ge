@@ -118,11 +118,13 @@ a {
             .street{
                 font-size: 12px;
                 font-family: "myriad_geo_bold";
-                color: #C13458;
                 color: #A8A8A8;
                 display: flex;
                 align-items: center;
                 margin-top: 12px;
+                position: relative;
+                padding-left: 26px;
+                cursor: pointer;
 
                 &:first-child{
                     margin-top: 0;
@@ -131,10 +133,43 @@ a {
                     margin-right: 16px;
                 }
                 input[type="radio"]:checked {
-
                     + label {
                         color: #C13458;
                     }
+                }
+                input[type="radio"] {
+                    display: none;
+                }
+
+                label::before {
+                    content: "";
+                    display: inline-block;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    border: 3px solid #CECECE;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                label::after {
+                    content: "";
+                    display: none;
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    border: 0;
+                    background-color: #C13458;
+                    position: absolute;
+                    top: 4px;
+                    left: 4px;
+                }
+
+                input[type="radio"]:checked+label::after {
+                    display: inline-block;
                 }
             }
         }
@@ -4445,11 +4480,15 @@ body {
                                         .container{
                                             margin: 0;
                                             padding: 16px 11px;
+                                            display: flex;
+                                            align-items: center;
+                                            cursor: pointer;
 
-                                            p{
+                                            label{
                                                 color: #7D7D7D;
                                                 font-size: 14px;
                                                 font-family: "myriad_geo_bold";
+                                                cursor: pointer;
                                                 
                                                 span{
                                                     margin: 0 7px;
@@ -4458,6 +4497,9 @@ body {
                                                 svg{
                                                     margin-left: 8px;
                                                 }
+                                            }
+                                            input[type="radio"] {
+                                                display: none;
                                             }
                                         }
                                     }

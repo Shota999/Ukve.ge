@@ -134,7 +134,6 @@ a {
 .modal .get .radio .street {
   font-size: 12px;
   font-family: "myriad_geo_bold";
-  color: #C13458;
   color: #A8A8A8;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -143,6 +142,9 @@ a {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 12px;
+  position: relative;
+  padding-left: 26px;
+  cursor: pointer;
 }
 
 .modal .get .radio .street:first-child {
@@ -155,6 +157,48 @@ a {
 
 .modal .get .radio .street input[type="radio"]:checked + label {
   color: #C13458;
+}
+
+.modal .get .radio .street input[type="radio"] {
+  display: none;
+}
+
+.modal .get .radio .street label::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 3px solid #CECECE;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.modal .get .radio .street label::after {
+  content: "";
+  display: none;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  border: 0;
+  background-color: #C13458;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+.modal .get .radio .street input[type="radio"]:checked + label::after {
+  display: inline-block;
 }
 
 .modal .get .buttons {
@@ -5260,21 +5304,33 @@ body .main_content .basket .information_content .left .step3 .pay_methods .choos
 body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards .card .container {
   margin: 0;
   padding: 16px 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
 }
 
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards .card .container p {
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards .card .container label {
   color: #7D7D7D;
   font-size: 14px;
   font-family: "myriad_geo_bold";
+  cursor: pointer;
 }
 
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards .card .container p span {
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards .card .container label span {
   margin: 0 7px;
   color: #DBDBDB;
 }
 
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards .card .container p svg {
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards .card .container label svg {
   margin-left: 8px;
+}
+
+body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards .card .container input[type="radio"] {
+  display: none;
 }
 
 body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .show {

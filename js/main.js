@@ -127,7 +127,7 @@ $(document).ready(function () {
             changeText();
         }
         if ($('.hidden_cards').hasClass('show') && n.target.closest(".choose_card") == null) {
-            changeText();
+            changeCard();
         }
         if ($('.category').hasClass('border') && n.target.closest(".category") == null) {
             $('.category').removeClass('border');
@@ -440,15 +440,15 @@ $(document).ready(function () {
         $(this).parent('.choose_or').find('.hidden_cards').toggleClass('show');
     });
 
-    $('.choose_card').click(function () {
-        changeText(this.innerText);
+    $('.card>.container').click(function () {
+        changeCard(this.innerText);
     });
 
-    // function changeText(str = null) {
-    //     if (str) {
-    //         $('.choose_card.active p').text(str.length > 12 ? str.slice(0, 12) + "..." : str);
-    //     }
-    //     // $('.hidden_more.show').removeClass('show');
-    //     // $('.choose_card.active').removeClass('active');
-    // }
+    function changeCard(str = null) {
+        if (str) {
+            $('.choose_card.active p').text(str.length > 20 ? str.slice(0, 20) + "..." : str);
+        }
+        $('.hidden_cards.show').removeClass('show');
+        $('.choose_card.active').removeClass('active');
+    }
 });
