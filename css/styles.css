@@ -36,6 +36,7 @@ a {
   border-radius: 10px;
   position: relative;
   width: 196px;
+  height: 143px;
   padding: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,7 +79,6 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  margin-top: 32px;
 }
 
 .modal .modal-content .buttons button {
@@ -121,94 +121,6 @@ a {
 
 .modal .modal-content .leaflet-container .leaflet-pane .leaflet-marker-pane img {
   width: auto !important;
-}
-
-.modal .get {
-  width: 272px;
-}
-
-.modal .get .radio {
-  margin-top: 24px;
-}
-
-.modal .get .radio .street {
-  font-size: 12px;
-  font-family: "myriad_geo_bold";
-  color: #A8A8A8;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 12px;
-  position: relative;
-  padding-left: 26px;
-  cursor: pointer;
-}
-
-.modal .get .radio .street:first-child {
-  margin-top: 0;
-}
-
-.modal .get .radio .street label {
-  cursor: pointer;
-}
-
-.modal .get .radio .street input {
-  margin-right: 16px;
-}
-
-.modal .get .radio .street input[type="radio"]:checked + label {
-  color: #C13458;
-}
-
-.modal .get .radio .street input[type="radio"] {
-  display: none;
-}
-
-.modal .get .radio .street label::before {
-  content: "";
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  border: 3px solid #CECECE;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.modal .get .radio .street label::after {
-  content: "";
-  display: none;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  border: 0;
-  background-color: #C13458;
-  position: absolute;
-  top: 4px;
-  left: 4px;
-}
-
-.modal .get .radio .street input[type="radio"]:checked + label::after {
-  display: inline-block;
-}
-
-.modal .get .buttons {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .modal#zone_modal .modal-content {
@@ -793,6 +705,20 @@ body header .bottom_header .header_content .profile_cart .profile section {
   background-color: #f0f0f0;
 }
 
+body header .bottom_header .header_content .profile_cart .profile a:not(.facebook_registration) {
+  color: #6d6e71;
+  font-family: "myriad_geo_bold";
+  font-size: 13px;
+  margin-left: 16px;
+  line-height: 17px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body header .bottom_header .header_content .profile_cart .profile:hover a {
+  color: #a8a8a8;
+}
+
 body header .bottom_header .header_content .profile_cart .profile span {
   color: #6d6e71;
   font-family: "myriad_geo_bold";
@@ -847,6 +773,26 @@ body header .bottom_header .header_content .profile_cart .profile .profile_dropd
   font-family: "myriad_geo_bold";
   font-size: 13px;
   margin-bottom: 7px;
+}
+
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .invalid-feedback {
+  border-radius: 6px;
+  background-color: #ffffff;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 8px;
+}
+
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .invalid-feedback span {
+  color: #c13458;
+  font-size: 12px;
+  margin-left: 6px;
+  padding: 8px 0;
 }
 
 body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input {
@@ -912,6 +858,10 @@ body header .bottom_header .header_content .profile_cart .profile .profile_dropd
 
 body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .input svg path {
   fill: #d5d5d5;
+}
+
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization form .required {
+  border: 1px solid red;
 }
 
 body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .forgot_password {
@@ -1039,6 +989,8 @@ body header .bottom_header .header_content .profile_cart .profile .profile_dropd
   font-size: 10px;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .authorization .facebook_registration svg {
@@ -1150,6 +1102,26 @@ body header .bottom_header .header_content .profile_cart .profile .profile_dropd
   fill: #d5d5d5;
 }
 
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .invalid-feedback {
+  border-radius: 6px;
+  background-color: #ffffff;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 8px;
+}
+
+body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .invalid-feedback span {
+  color: #c13458;
+  font-size: 12px;
+  margin-left: 6px;
+  padding: 8px 0;
+}
+
 body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .required {
   border: 1px solid red;
 }
@@ -1234,6 +1206,8 @@ body header .bottom_header .header_content .profile_cart .profile .profile_dropd
   font-size: 10px;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body header .bottom_header .header_content .profile_cart .profile .profile_dropdown .user_profile_dropdown_inside .registration_side form .facebook_registration svg {
@@ -1398,6 +1372,10 @@ body header .bottom_header .header_content .profile_cart .cart .cart_body h4 {
   color: #6d6e71;
   font-family: "myriad_geo_bold";
   font-size: 13px;
+}
+
+body header .bottom_header .header_content .profile_cart .cart .cart_body h4.text-center {
+  text-align: center;
 }
 
 body header .bottom_header .header_content .profile_cart .cart .cart_body .cart_items {
@@ -3106,6 +3084,10 @@ body footer .bottom_container .rools:hover {
   opacity: 0.64;
 }
 
+body footer .bottom_container .unicode img {
+  height: 15px;
+}
+
 body .index_footer {
   margin-top: 0;
 }
@@ -3885,6 +3867,18 @@ body .main_content .profile .right form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+body .main_content .profile .right form .success {
+  color: #72b55b;
+  text-align: center;
+  margin-top: 5px;
+}
+
+body .main_content .profile .right form .error {
+  color: #c13458;
+  text-align: center;
+  margin-top: 5px;
 }
 
 body .main_content .profile .right form input {
@@ -5186,7 +5180,7 @@ body .main_content .basket .information_content .left .informations .pay_methods
 }
 
 body .main_content .basket .information_content .left .informations .pay_methods .pay .card p {
-  color: #A8A8A8;
+  color: #ffffff;
   font-family: "myriad_geo_bold";
   font-size: 14px;
 }
@@ -5216,131 +5210,12 @@ body .main_content .basket .information_content .left .informations .pay_methods
   background-color: #72b55b;
 }
 
-body .main_content .basket .information_content .left .informations .pay_methods .pay .active p {
-  color: #ffffff;
-}
-
 body .main_content .basket .information_content .left .step3 {
   height: 100%;
 }
 
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or {
-  width: 246px;
-  margin-top: 24px;
-}
-
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or p {
-  color: #A8A8A8;
-  font-size: 12px;
-  font-family: "miryad_geo_medium";
-  line-height: normal;
-}
-
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .choose_card {
-  background-color: #F8F8F8;
-  padding: 16px;
-  border-radius: 10px;
-  margin-top: 6px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  cursor: pointer;
-  position: relative;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
-}
-
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .choose_card p {
-  color: #A8A8A8;
-  font-size: 12px;
-  font-family: "myriad_geo_medium";
-  line-height: normal;
-}
-
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .choose_card .arrow {
-  width: 4px;
-  height: 6px;
-}
-
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .choose_card .arrow path {
-  fill: #A8A8A8;
-}
-
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .active {
-  border-radius: 10px 10px 0 0;
-  background-color: #C13458;
-}
-
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .active p {
-  color: #FFFFFF;
-}
-
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .active .arrow path {
-  fill: #FFFFFF;
-}
-
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
-  overflow-y: auto;
-  height: 117px;
-  background-color: #F8F8F8;
-  width: 100%;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
-  border-radius: 0 0 10px 10px;
-}
-
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards .card {
-  margin: 5px;
-  border-bottom: 1px solid #F0F0F0;
-}
-
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards .card .container {
-  margin: 0;
-  padding: 16px 11px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-}
-
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards .card .container label {
-  color: #7D7D7D;
-  font-size: 14px;
-  font-family: "myriad_geo_bold";
-  cursor: pointer;
-}
-
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards .card .container label span {
-  margin: 0 7px;
-  color: #DBDBDB;
-}
-
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards .card .container label svg {
-  margin-left: 8px;
-}
-
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .hidden_cards .card .container input[type="radio"] {
-  display: none;
-}
-
-body .main_content .basket .information_content .left .step3 .pay_methods .choose_or .show {
-  top: 48px;
-  visibility: visible;
-  opacity: 1;
+body .main_content .basket .information_content .left .step3 button {
+  margin-top: 100px;
 }
 
 body .main_content .basket .information_content .right {
@@ -5581,6 +5456,12 @@ body .main_content .out_off form .input:first-child {
   margin-top: 0;
 }
 
+body .main_content .out_off form .input .invalid-feedback {
+  color: #c13458;
+  font-size: 14px;
+  font-family: "myriad_geo_bold";
+}
+
 body .main_content .out_off form label {
   color: #A8A8A8;
   font-family: "myriad_geo_medium";
@@ -5761,6 +5642,8 @@ body .main_content .out_off form .facebook_registration {
   font-size: 10px;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body .main_content .out_off form .facebook_registration svg {
@@ -6113,24 +5996,24 @@ body .contact_form form button:hover svg path {
   fill: #c13458;
 }
 
-body #map {
+body #map-contact {
   height: 689px;
   margin-top: 120px;
   z-index: 8;
 }
 
-body #map ~ footer {
+body #map-contact ~ footer {
   margin-top: -120px;
   position: relative;
   z-index: 9;
 }
 
-body #map .leaflet-marker-pane img {
+body #map-contact .leaflet-marker-pane img {
   width: auto !important;
 }
 
 body .contact_footer {
-  margin-top: 0;
+  margin-top: 0px;
 }
 
 body .hide_map {
