@@ -151,6 +151,10 @@ a {
   margin-top: 0;
 }
 
+.modal .get .radio .street label {
+  cursor: pointer;
+}
+
 .modal .get .radio .street input {
   margin-right: 16px;
 }

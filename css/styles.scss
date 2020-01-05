@@ -129,6 +129,9 @@ a {
                 &:first-child{
                     margin-top: 0;
                 }
+                label{
+                    cursor: pointer;
+                }
                 input{
                     margin-right: 16px;
                 }
